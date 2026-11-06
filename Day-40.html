@@ -198,7 +198,12 @@ img, svg { max-width: 100%; }
 .reveal { border: 1px solid #bfdbfe; border-left: none; }
 .reading-box { background: #eff6ff; border-left: none; }
 /* --- Chỗ trống điền từ hiển thị dạng "......" không gạch chân, bấm vào mới hiện danh sách từ (theo ý anh 06/11) --- */
-.cloze-select { border: none; border-radius: 0; background: transparent; padding: 3px 2px; min-width: 90px; text-align: center; }
+.cloze-select { border: none; border-radius: 0; background: transparent; padding: 3px 2px; min-width: 90px; text-align: center; appearance: none; -webkit-appearance: none; }
+.cloze-select::-ms-expand { display: none; }
+/* --- Bài 4 Ngữ pháp mới: hộp giới thiệu điểm ngữ pháp + ví dụ (theo ý anh 06/11) --- */
+.gram-intro { background: #fff7ed; border: 1px solid #fed7aa; border-radius: 12px; padding: 12px 14px; margin: 10px 0; line-height: 1.7; }
+.gram-ex { margin: 8px 0; font-size: 16px; line-height: 1.9; }
+.gram-blank { font-weight: 700; letter-spacing: 1px; }
 .read-para-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
 .read-para-text { font-size: 19px; line-height: 2.15; text-align: justify; text-indent: 2em; margin: 0; color: #1e293b; }
 .read-para-trans { margin: 10px 0; font-size: 14px; color: #475569; line-height: 1.65; }
@@ -576,22 +581,29 @@ img, svg { max-width: 100%; }
 <div class="feedback" id="match-feedback" style="margin-top:10px;"></div>
 </div>
 <div class="card">
-<h2>⚖️ Bài 4: Bắt lỗi ngữ pháp HSK 2 <span class="badge">Tránh bẫy phòng thi</span></h2>
-<div class="sub" style="margin-bottom:8px;">Mỗi cặp dưới đây chỉ có <b>1 câu đúng ngữ pháp</b> (đã ẩn ký hiệu gợi ý). Hãy chọn câu đúng:</div>
+<h2>⚖️ Bài 4: Ngữ pháp — 过 — kinh nghiệm đã từng <span class="badge">Điểm ngữ pháp hôm nay</span></h2>
+<div class="gram-intro">
+<div><b>Công thức:</b> S + V + 过 + O</div>
+<div>Ôn: 过 đặt sau động từ nói anh đã từng làm việc gì. 过 nhấn mạnh kinh nghiệm.</div>
+</div>
+<div class="sub" style="margin-bottom:8px;">Nghe 2 ví dụ rồi làm 2 bài tập dưới đây:</div>
+<div class="gram-ex"><button class="tts-btn" onclick="speakRate('我去过公园。', 0.88)">🔊</button> <span class="hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>过<rt>guo</rt></ruby><ruby>公<rt>gōng</rt></ruby><ruby>园<rt>yuán</rt></ruby>。</span> <span class="hint">(Tôi đã từng đi công viên.)</span></div>
+<div class="gram-ex"><button class="tts-btn" onclick="speakRate('他去过图书馆。', 0.88)">🔊</button> <span class="hide-ruby"><ruby>他<rt>Tā</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>过<rt>guo</rt></ruby><ruby>图<rt>tú</rt></ruby><ruby>书<rt>shū</rt></ruby><ruby>馆<rt>guǎn</rt></ruby>。</span> <span class="hint">(Anh ấy đã từng đi thư viện.)</span></div>
 <div class="q-item" id="gram-1">
-<div><b>1. Câu có 了 chỉ sự việc đã xảy ra:</b> (Bạn khách sáo quá, cảm ơn bạn!)</div>
+<div><b>1. Điền từ đúng vào chỗ trống:</b> 我去<span class="gram-blank">......</span>博物馆。</div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, true, 'gram-1', '✓ Đúng! 了 trong câu đánh dấu sự việc đã xảy ra / hoàn thành.')">A. 你太客气了，谢谢你！</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'gram-1', '✗ Sai: việc đã xảy ra cần có 了 — câu đúng phải có 了.')">B. 你太客气，谢谢你！</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'gram-1', '✓ Đúng! 过 đặt sau động từ, trước tân ngữ: 去过博物馆.')">A. 过</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'gram-1', '✗ Chưa đúng. 过 đặt sau động từ, trước tân ngữ: 去过博物馆.')">B. 了</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'gram-1', '✗ Chưa đúng. 过 đặt sau động từ, trước tân ngữ: 去过博物馆.')">C. 很</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'gram-1', '✗ Chưa đúng. 过 đặt sau động từ, trước tân ngữ: 去过博物馆.')">D. 都</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
-<div class="q-item" id="gram-2">
-<div><b>2. So sánh với 比 không dùng 很:</b> (Đội Trung Quốc mạnh hơn đội Nhật Bản)</div>
-<div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, true, 'gram-2', '✓ Đúng! Cấu trúc: A + 比 + B + tính từ, không thêm 很。')">A. 中国队比日本队强。</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'gram-2', '✗ Sai: câu so sánh 比 KHÔNG dùng 很 trước tính từ — bỏ 很 đi.')">B. 中国队比日本队很强。</button>
+<div class="scramble-box" id="gram-scr-2" data-target="他去过图书馆。">
+<div><b>Câu 2:</b> Sắp xếp các từ thành câu đúng (Anh ấy đã từng đi thư viện.)</div>
+<div class="answer-zone"></div>
+<div class="word-bank" data-words="去过|图书馆|他"></div>
+<div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
-<div class="feedback" style="margin-top:6px;"></div></div>
 </div>
 <div class="card">
 <h2>📖 Bài 5: Hoàn thành đoạn văn ngắn <span class="badge">Điền từ vào chỗ trống</span></h2>
@@ -610,22 +622,22 @@ img, svg { max-width: 100%; }
 <div class="card">
 <h2>🧩 Bài 6: Sắp xếp câu (连词成句) <span class="badge">Tư duy trật tự từ</span></h2>
 <div class="sub" style="margin-bottom:8px;">Chạm vào từng từ ở khung xám để ghép thành câu hoàn chỉnh:</div>
-<div class="scramble-box" id="scr-1" data-target="这是我的儿子，他今年五岁。">
-<div><b>Câu 1:</b> Đây là con trai tôi, cháu năm nay năm tuổi.</div>
+<div class="scramble-box" id="scr-1" data-target="我的儿子很可爱，也很聪明。">
+<div><b>Câu 1:</b> Con trai tôi rất dễ thương, cũng rất thông minh.</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="今年|他|岁|，|五|我的|是|这|儿子|。"></div>
+<div class="word-bank" data-words="很|也|。|，|聪明|很|儿子|我的|可爱"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
-<div class="scramble-box" id="scr-2" data-target="这个孩子很可爱，也很聪明。">
-<div><b>Câu 2:</b> Đứa trẻ này rất đáng yêu, cũng rất thông minh.</div>
+<div class="scramble-box" id="scr-2" data-target="今天晚上我们一起吃饭，欢迎你来我家。">
+<div><b>Câu 2:</b> Tối nay chúng ta cùng ăn cơm, chào đón bạn đến nhà tôi.</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="可爱|孩子|也|，|。|聪明|很|很|这个"></div>
+<div class="word-bank" data-words="一起|晚上|我们|。|欢迎|饭|家|我|吃|，|你|今天|来"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
-<div class="scramble-box" id="scr-3" data-target="今天晚上我们一起吃饭，好吗？">
-<div><b>Câu 3:</b> Tối nay chúng ta cùng ăn cơm nhé, được không?</div>
+<div class="scramble-box" id="scr-3" data-target="这个孩子很客气，我非常感谢他。">
+<div><b>Câu 3:</b> Đứa trẻ này rất lễ phép, tôi cảm ơn cháu rất nhiều.</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="？|我们|今天|饭|吃|一起|晚上|吗|，|好"></div>
+<div class="word-bank" data-words="。|很|这个|我|，|客气|孩子|他|非常|感谢"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
 </div>
@@ -637,10 +649,10 @@ img, svg { max-width: 100%; }
 <div class="reading-zh hide-ruby">
 <section class="read-para">
 <div class="read-para-head"><button class="tts-btn" onclick="playChunked('read', 0.88, 0, 0)">🔊 Nghe đoạn này</button></div>
-<p class="read-para-text"><ruby>这<rt>Zhè</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>儿<rt>ér</rt></ruby><ruby>子<rt>zi</rt></ruby>，<ruby>他<rt>tā</rt></ruby><ruby>今<rt>jīn</rt></ruby><ruby>年<rt>nián</rt></ruby><ruby>五<rt>wǔ</rt></ruby><ruby>岁<rt>suì</rt></ruby>。 <ruby>今<rt>Jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>晚<rt>wǎn</rt></ruby><ruby>上<rt>shang</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>吃<rt>chī</rt></ruby><ruby>饭<rt>fàn</rt></ruby>，<ruby>好<rt>hǎo</rt></ruby><ruby>吗<rt>ma</rt></ruby>？ <ruby>这<rt>Zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>孩<rt>hái</rt></ruby><ruby>子<rt>zi</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>可<rt>kě</rt></ruby><ruby>爱<rt>ài</rt></ruby>，<ruby>也<rt>yě</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>聪<rt>cōng</rt></ruby><ruby>明<rt>ming</rt></ruby>。 <ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>迎<rt>yíng</rt></ruby><ruby>你<rt>nǐ</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>you</rt></ruby>。 <ruby>你<rt>Nǐ</rt></ruby><ruby>太<rt>tài</rt></ruby><ruby>客<rt>kè</rt></ruby><ruby>气<rt>qi</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>谢<rt>xiè</rt></ruby><ruby>谢<rt>xie</rt></ruby><ruby>你<rt>nǐ</rt></ruby>！</p>
+<p class="read-para-text"><ruby>这<rt>Zhè</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>儿<rt>ér</rt></ruby><ruby>子<rt>zi</rt></ruby>，<ruby>他<rt>tā</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>可<rt>kě</rt></ruby><ruby>爱<rt>ài</rt></ruby>。 <ruby>今<rt>Jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>晚<rt>wǎn</rt></ruby><ruby>上<rt>shang</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>吃<rt>chī</rt></ruby><ruby>饭<rt>fàn</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>儿<rt>ér</rt></ruby><ruby>子<rt>zi</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>去<rt>qù</rt></ruby>。 <ruby>这<rt>Zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>孩<rt>hái</rt></ruby><ruby>子<rt>zi</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>可<rt>kě</rt></ruby><ruby>爱<rt>ài</rt></ruby>，<ruby>是<rt>shì</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>儿<rt>ér</rt></ruby><ruby>子<rt>zi</rt></ruby>。 <ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>迎<rt>yíng</rt></ruby><ruby>你<rt>nǐ</rt></ruby><ruby>来<rt>lái</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>家<rt>jiā</rt></ruby><ruby>吃<rt>chī</rt></ruby><ruby>饭<rt>fàn</rt></ruby>。 <ruby>你<rt>Nǐ</rt></ruby><ruby>太<rt>tài</rt></ruby><ruby>客<rt>kè</rt></ruby><ruby>气<rt>qi</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>非<rt>fēi</rt></ruby><ruby>常<rt>cháng</rt></ruby><ruby>感<rt>gǎn</rt></ruby><ruby>谢<rt>xiè</rt></ruby><ruby>你<rt>nǐ</rt></ruby>。</p>
 </section>
 </div>
-<script>window.CHUNK_DATA = window.CHUNK_DATA || {}; window.CHUNK_DATA['read'] = ["这是我的儿子，他今年五岁。今天晚上我们一起吃饭，好吗？这个孩子很可爱，也很聪明。我们欢迎你，你是我们的朋友。你太客气了，谢谢你！"];</script>
+<script>window.CHUNK_DATA = window.CHUNK_DATA || {}; window.CHUNK_DATA['read'] = ["这是我的儿子，他很可爱。今天晚上我们一起吃饭，我的儿子也去。这个孩子很可爱，是我的儿子。我们欢迎你来我家吃饭。你太客气了，非常感谢你。"];</script>
 <div class="reading-Controls">
 <button class="tts-btn" onclick="playChunked('read', 0.88)">▶️ Nghe đoạn văn</button>
 <button class="tts-btn" id="chunk-pause-read" onclick="toggleChunkPause('read')">⏸️ Tạm dừng</button>
@@ -650,34 +662,34 @@ img, svg { max-width: 100%; }
 <button class="btn-sm" onclick="document.querySelector('.reading-zh').classList.toggle('hide-ruby')">🔤 Ẩn/Hiện Pinyin trên chữ</button>
 </div>
 <div class="reading-help" id="read-help">
-<div class="read-para-trans"><p>Đây là con trai tôi, cháu năm nay năm tuổi. Tối nay chúng ta cùng ăn cơm nhé, được không? Đứa trẻ này rất đáng yêu, cũng rất thông minh. Chúng tôi chào đón bạn, bạn là bạn của chúng tôi. Bạn khách sáo quá, cảm ơn bạn!</p></div>
+<div class="read-para-trans"><p>Đây là con trai tôi, cháu rất dễ thương. Tối nay chúng ta cùng ăn cơm, con trai tôi cũng đi. Đứa trẻ này rất đáng yêu, là con trai tôi. Chúng tôi chào đón bạn đến nhà tôi ăn cơm. Bạn khách sáo quá, cảm ơn bạn rất nhiều.</p></div>
 </div>
 </div>
 <div class="q-item read-q" id="read-1">
-<div class="read-q-head"><span class="read-q-num">1</span><span>这是我的谁？</span></div>
+<div class="read-q-head"><span class="read-q-num">1</span><span>我的儿子怎么样？</span></div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 这是我的儿子，他今年五岁。')">A. 孩子</button>
-<button class="mc-btn" onclick="checkMC(this, true, 'read-1', '✓ Chính xác! 这是我的儿子，他今年五岁。')">B. 儿子</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 这是我的儿子，他今年五岁。')">C. 女儿</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 这是我的儿子，他今年五岁。')">D. 朋友</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 这是我的儿子，他很可爱。')">A. 很忙</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 这是我的儿子，他很可爱。')">B. 很累</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 这是我的儿子，他很可爱。')">C. 不可爱</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'read-1', '✓ Chính xác! 这是我的儿子，他很可爱。')">D. 很可爱</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 <div class="q-item read-q" id="read-2">
-<div class="read-q-head"><span class="read-q-num">2</span><span>这个孩子怎么样？</span></div>
+<div class="read-q-head"><span class="read-q-num">2</span><span>今天晚上我们一起做什么？</span></div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, false, 'read-2', '✗ Chưa đúng: 这个孩子很可爱，也很聪明。')">A. 不可爱</button>
-<button class="mc-btn" onclick="checkMC(this, true, 'read-2', '✓ Chính xác! 这个孩子很可爱，也很聪明。')">B. 很可爱</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-2', '✗ Chưa đúng: 这个孩子很可爱，也很聪明。')">C. 很累</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-2', '✗ Chưa đúng: 这个孩子很可爱，也很聪明。')">D. 很忙</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-2', '✗ Chưa đúng: 今天晚上我们一起吃饭，我的儿子也去。')">A. 看电影</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'read-2', '✓ Chính xác! 今天晚上我们一起吃饭，我的儿子也去。')">B. 吃饭</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-2', '✗ Chưa đúng: 今天晚上我们一起吃饭，我的儿子也去。')">C. 去学校</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-2', '✗ Chưa đúng: 今天晚上我们一起吃饭，我的儿子也去。')">D. 去公园</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 <div class="q-item read-q" id="read-3">
-<div class="read-q-head"><span class="read-q-num">3</span><span>今天晚上我们一起做什么？</span></div>
+<div class="read-q-head"><span class="read-q-num">3</span><span>我们欢迎你来哪里吃饭？</span></div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, true, 'read-3', '✓ Chính xác! 今天晚上我们一起吃饭，好吗？')">A. 吃饭</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 今天晚上我们一起吃饭，好吗？')">B. 打球</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 今天晚上我们一起吃饭，好吗？')">C. 唱歌</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 今天晚上我们一起吃饭，好吗？')">D. 看电影</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 我们欢迎你来我家吃饭。')">A. 学校</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 我们欢迎你来我家吃饭。')">B. 电影院</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 我们欢迎你来我家吃饭。')">C. 超市</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'read-3', '✓ Chính xác! 我们欢迎你来我家吃饭。')">D. 我家</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 </div>
@@ -716,17 +728,17 @@ img, svg { max-width: 100%; }
 <div class="q-item" id="dlg-1">
 <div><b>Câu 1.</b> 小红的儿子今天在哪儿？</div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, true, 'dlg-1', '✓ Chính xác! 小红：我的儿子今天在家。')">A. 在家</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng: 小红：我的儿子今天在家。')">B. 在学校</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng: 小红：我的儿子今天在家。')">C. 在饭店</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng: 小红：我的儿子今天在家。')">D. 在公园</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng: 小红：我的儿子今天在家。')">A. 在公园</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng: 小红：我的儿子今天在家。')">B. 在饭店</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng: 小红：我的儿子今天在家。')">C. 在学校</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'dlg-1', '✓ Chính xác! 小红：我的儿子今天在家。')">D. 在家</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 <div class="q-item" id="dlg-2">
 <div><b>Câu 2.</b> 小明是小红的朋友吗？</div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, true, 'dlg-2', '✓ Chính xác! 小红：欢迎你来我家吃饭！')">A. 是朋友</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng: 小红：欢迎你来我家吃饭！')">B. 是老师</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng: 小红：欢迎你来我家吃饭！')">A. 是老师</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'dlg-2', '✓ Chính xác! 小红：欢迎你来我家吃饭！')">B. 是朋友</button>
 <button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng: 小红：欢迎你来我家吃饭！')">C. 是学生</button>
 <button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng: 小红：欢迎你来我家吃饭！')">D. 是服务员</button>
 </div>
@@ -743,10 +755,10 @@ img, svg { max-width: 100%; }
 <div class="q-item" id="dlg-4">
 <div><b>Câu 4.</b> 他们下午见面吗？</div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, true, 'dlg-4', '✓ Chính xác! 小明：好！下午见！小红：下午见！不客气！')">A. 他们见面</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng: 小明：好！下午见！小红：下午见！不客气！')">A. 他们去超市</button>
 <button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng: 小明：好！下午见！小红：下午见！不客气！')">B. 他们不见面</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng: 小明：好！下午见！小红：下午见！不客气！')">C. 他们去大学</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng: 小明：好！下午见！小红：下午见！不客气！')">D. 他们去超市</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'dlg-4', '✓ Chính xác! 小明：好！下午见！小红：下午见！不客气！')">C. 他们见面</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng: 小明：好！下午见！小红：下午见！不客气！')">D. 他们去大学</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 </div>
@@ -790,11 +802,11 @@ img, svg { max-width: 100%; }
 <p><b>Bài 2 (Nghe):</b> Câu 1: A — 这是我的儿子，他今年五岁。 &nbsp;|&nbsp; Câu 2: D — 这个孩子很可爱，也很聪明。</p>
 <p><b>Bài phụ (Pinyin):</b> Câu 1: C — érzi &nbsp;|&nbsp; Câu 2: A — fàn</p>
 <p><b>Bài 3 (Ghép cặp):</b> 儿子 = érzi · 饭 = fàn · 孩子 = háizi · 欢迎 = huānyíng · 客气 = kèqi</p>
-<p><b>Bài 4 (Ngữ pháp):</b> 1. A — 你太客气了，谢谢你！ &nbsp;|&nbsp; 2. A — 中国队比日本队强。</p>
+<p><b>Bài 4 (Ngữ pháp):</b> 1. A — 过 &nbsp;|&nbsp; 2. 他去过图书馆。</p>
 <p><b>Bài 5 (Đoạn văn):</b> 儿子 → 饭 → 孩子 → 欢迎 → 客气</p>
-<p><b>Bài 6 (Sắp xếp câu):</b><br>1. 这是我的儿子，他今年五岁。<br>2. 这个孩子很可爱，也很聪明。<br>3. 今天晚上我们一起吃饭，好吗？</p>
-<p><b>Bài 7 (Đọc hiểu):</b> 1. B — 儿子 &nbsp;|&nbsp; 2. B — 很可爱 &nbsp;|&nbsp; 3. A — 吃饭</p>
-<p><b>Bài 8 (Nghe hội thoại):</b> 1. A — 在家 &nbsp; 2. A — 是朋友 &nbsp; 3. A — 他有空儿 &nbsp; 4. A — 他们见面</p>
+<p><b>Bài 6 (Sắp xếp câu):</b><br>1. 我的儿子很可爱，也很聪明。<br>2. 今天晚上我们一起吃饭，欢迎你来我家。<br>3. 这个孩子很客气，我非常感谢他。</p>
+<p><b>Bài 7 (Đọc hiểu):</b> 1. D — 很可爱 &nbsp;|&nbsp; 2. B — 吃饭 &nbsp;|&nbsp; 3. D — 我家</p>
+<p><b>Bài 8 (Nghe hội thoại):</b> 1. D — 在家 &nbsp; 2. B — 是朋友 &nbsp; 3. A — 他有空儿 &nbsp; 4. C — 他们见面</p>
 </details>
 </div>
 <div class="footer">Học tốt nhé anh! Làm xong anh chép phần Tổng kết gửi em nhé — câu nào sai em sẽ đưa vào danh sách “Cần ôn thêm”.</div>
@@ -874,12 +886,12 @@ var ITEM_INFO = {
     "kèqi — khách sáo; lịch sự"
   ],
   "gram-1": [
-    "Ngữ pháp 1 (Câu có 了 chỉ sự việc đã xảy ra)",
-    "A — 你太客气了，谢谢你！"
+    "Ngữ pháp 1",
+    "A — 过"
   ],
   "gram-2": [
-    "Ngữ pháp 2 (So sánh với 比 không dùng 很)",
-    "A — 中国队比日本队强。"
+    "Ngữ pháp 2",
+    "他去过图书馆。"
   ],
   "cloze-task": [
     "Đoạn văn (5 chỗ trống)",
@@ -887,27 +899,27 @@ var ITEM_INFO = {
   ],
   "scr-1": [
     "Sắp xếp câu 1",
-    "这是我的儿子，他今年五岁。"
+    "我的儿子很可爱，也很聪明。"
   ],
   "scr-2": [
     "Sắp xếp câu 2",
-    "这个孩子很可爱，也很聪明。"
+    "今天晚上我们一起吃饭，欢迎你来我家。"
   ],
   "scr-3": [
     "Sắp xếp câu 3",
-    "今天晚上我们一起吃饭，好吗？"
+    "这个孩子很客气，我非常感谢他。"
   ],
   "read-1": [
     "Đọc hiểu câu 1",
-    "B — 儿子"
+    "D — 很可爱"
   ],
   "read-2": [
     "Đọc hiểu câu 2",
-    "B — 很可爱"
+    "B — 吃饭"
   ],
   "read-3": [
     "Đọc hiểu câu 3",
-    "A — 吃饭"
+    "D — 我家"
   ],
   "dlg-1": [
     "Nghe hội thoại 1 (小红的儿子今天在哪儿？)",
@@ -2998,6 +3010,8 @@ var DLG_LINES = [{"sp": "ming", "zh": "小红，你的儿子今天在家吗？�
 var dlgPlaying = false;
 var dlgPaused = false;
 var dlgRate = 0.88;
+var dlgIdx = 0; // câu hội thoại đang đọc / đang tạm dừng ở đó
+var dlgGen = 0; // tăng mỗi lần dừng/bắt đầu chuỗi mới: chuỗi cũ hết hiệu lực
 var DLG_VOICE_LS = 'dialogue-voices';
 var DLG_ZH_VOICES = [];
 function dlgVoiceKey(v) { return v.voiceURI || v.name; }
@@ -3126,38 +3140,51 @@ function dlgSpeak(i, onDone) {
   u.onerror = function () { if (onDone) onDone(); };
   window.speechSynthesis.speak(u);
 }
-function playDlgAll() {
+function playDlgAllFrom(start) {
   if (!('speechSynthesis' in window)) return;
   stopDlg();
   dlgPlaying = true;
-  var i = 0;
+  dlgPaused = false;
+  dlgIdx = (typeof start === 'number') ? start : 0;
+  var gen = ++dlgGen;
   (function next() {
-    if (!dlgPlaying || i >= DLG_LINES.length) { dlgPlaying = false; dlgPaused = false; updateDlgPlayBtn(); return; }
-    dlgSpeak(i, function () { i++; if (dlgPlaying) next(); });
+    if (gen !== dlgGen || !dlgPlaying || dlgIdx >= DLG_LINES.length) {
+      if (gen === dlgGen) { dlgPlaying = false; dlgPaused = false; updateDlgPlayBtn(); }
+      return;
+    }
+    dlgSpeak(dlgIdx, function () {
+      if (gen !== dlgGen || !dlgPlaying) return;
+      dlgIdx++;
+      next();
+    });
   })();
   updateDlgPlayBtn();
 }
+function playDlgAll() { playDlgAllFrom(0); }
 function updateDlgPlayBtn() {
   var b = document.getElementById('dlg-play-btn');
   if (b) b.textContent = (dlgPlaying && !dlgPaused) ? '⏸️' : '▶️';
 }
 function toggleDlgPlay() {
   if (!('speechSynthesis' in window)) return;
-  var ss = window.speechSynthesis;
   if (dlgPlaying && !dlgPaused) {
-    if (!ss.speaking) return;
-    ss.pause(); dlgPaused = true;
-  } else if (dlgPlaying && dlgPaused) {
-    if (!ss.paused) { dlgPaused = false; updateDlgPlayBtn(); return; }
-    ss.resume(); dlgPaused = false;
+    // Tạm dừng: hủy utterance đang đọc, nhớ vị trí (đọc tiếp sẽ đọc lại
+    // từ đầu câu đang dở). KHÔNG dùng pause()/resume(): trên Chrome/Android
+    // resume() sau pause() thường không đọc tiếp, chuỗi hội thoại chết hẳn.
+    var cur = dlgIdx;
+    stopDlg();
+    dlgIdx = cur;
+    dlgPaused = true;
+    updateDlgPlayBtn();
+  } else if (dlgPaused) {
+    // Đọc tiếp từ câu đang dừng.
+    playDlgAllFrom(dlgIdx);
   } else {
     playDlgAll();
-    return;
   }
-  updateDlgPlayBtn();
 }
 function restartDlg() { playDlgAll(); updateDlgPlayBtn(); }
-function stopDlg() { dlgPlaying = false; dlgPaused = false; if ('speechSynthesis' in window) { window.speechSynthesis.cancel(); window.speechSynthesis.resume(); } updateDlgPlayBtn(); }
+function stopDlg() { dlgGen++; dlgPlaying = false; dlgPaused = false; if ('speechSynthesis' in window) { window.speechSynthesis.cancel(); window.speechSynthesis.resume(); } updateDlgPlayBtn(); }
 function playDlgLine(i) { stopDlg(); dlgSpeak(i); }
 function previewDlgVoice(spId) {
   for (var i = 0; i < DLG_LINES.length; i++)
@@ -3271,6 +3298,9 @@ function chunkPauseBtn(id) { return document.getElementById('chunk-pause-' + id)
 function updateChunkPauseBtn(id) {
   var b = chunkPauseBtn(id);
   if (b) b.textContent = (chunkCur && chunkCur.id === id && chunkCur.paused) ? '▶️ Tiếp tục nghe' : '⏸️ Tạm dừng';
+  // Nút play/pause dạng icon (file tổng kết): ▶️ khi chưa đọc/tạm dừng, ⏸️ khi đang đọc.
+  var pb = document.getElementById('chunk-play-' + id);
+  if (pb) pb.textContent = (chunkCur && chunkCur.id === id && chunkCur.playing && !chunkCur.paused) ? '⏸️' : '▶️';
 }
 function stopChunked(id) {
   var stoppedId = null;
@@ -3291,7 +3321,7 @@ function playChunked(id, rate, start, end) {
   if (!chunks.length) return;
   stopChunked();
   if (typeof stopDlg === 'function') { try { stopDlg(); } catch (e) {} }
-  rate = rate || 0.88;
+  rate = (typeof chunkRate !== 'undefined' && chunkRate[id]) || rate || 0.88;
   start = (typeof start === 'number') ? start : 0;
   end = (typeof end === 'number') ? end : chunks.length - 1;
   chunkCur = { id: id, chunks: chunks, idx: start, end: end, rate: rate, playing: true, paused: false, gen: 0 };
@@ -3323,15 +3353,79 @@ function speakChunk(p, gen) {
 function toggleChunkPause(id) {
   if (!('speechSynthesis' in window)) return;
   if (!chunkCur || chunkCur.id !== id) return;
-  var ss = window.speechSynthesis;
-  if (ss.paused) { ss.resume(); chunkCur.paused = false; }
-  else if (ss.speaking) { ss.pause(); chunkCur.paused = true; }
-  else return;
-  updateChunkPauseBtn(id);
+  if (chunkCur.paused) {
+    // Đọc tiếp: đọc lại từ đầu chunk đang dừng (KHÔNG dùng pause()/
+    // resume(): trên Chrome/Android resume() sau pause() thường không đọc
+    // tiếp, chuỗi đọc chết hẳn).
+    chunkCur.paused = false;
+    updateChunkPauseBtn(id);
+    speakChunk(chunkCur, chunkCur.gen);
+  } else {
+    // Tạm dừng: hủy utterance đang đọc, giữ nguyên idx (đọc tiếp sẽ đọc
+    // lại chunk này). Tăng gen TRƯỚC khi cancel để callback onerror/onend
+    // của utterance bị hủy không động vào chuỗi nữa.
+    chunkCur.paused = true;
+    chunkCur.gen++;
+    window.speechSynthesis.cancel();
+    updateChunkPauseBtn(id);
+  }
 }
 function restartChunked(id) {
   var rate = (chunkCur && chunkCur.id === id) ? chunkCur.rate : 0.88;
   playChunked(id, rate);
+}
+
+// Tốc độ riêng từng player chunked (file tổng kết): thanh trượt tốc độ
+// ghi vào đây, playChunked dùng nó thay cho tốc độ mặc định 0.88.
+var chunkRate = {};
+function setChunkRateNum(id, v) {
+  var val = parseFloat(v);
+  if (isNaN(val)) val = 0.88;
+  val = Math.min(1.5, Math.max(0.5, val));
+  chunkRate[id] = val;
+  var r = document.getElementById('chunk-speed-range-' + id);
+  var n = document.getElementById('chunk-speed-num-' + id);
+  if (r) r.value = val;
+  if (n) n.value = val;
+}
+// Nút play/pause 1 nút duy nhất (file tổng kết, theo format Bài 8 mới):
+// chưa đọc thì đọc từ đầu, đang đọc/tạm dừng thì đổi trạng thái.
+function toggleChunkPlay(id) {
+  if (!('speechSynthesis' in window)) return;
+  if (chunkCur && chunkCur.id === id) { toggleChunkPause(id); return; }
+  playChunked(id, chunkRate[id] || 0.88);
+}
+// Nút Pinyin (file tổng kết): ẩn/hiện pinyin trên chữ trong hộp của
+// chính player đó + trạng thái nút (bật = nền xanh dương).
+function toggleChunkRuby(zhId, btnId) {
+  var zh = document.getElementById(zhId);
+  if (!zh) return;
+  zh.classList.toggle('hide-ruby');
+  var btn = document.getElementById(btnId);
+  if (btn) {
+    var on = !zh.classList.contains('hide-ruby');
+    btn.classList.toggle('on', on);
+    btn.classList.toggle('off', !on);
+  }
+}
+// Nút 👁️ dịch nghĩa kiểu truyện (file tổng kết): dịch nghĩa nằm trong hộp
+// chữ, ẩn bằng hide-trans.
+function toggleChunkTrans(zhId, btnId) {
+  var zh = document.getElementById(zhId);
+  if (!zh) return;
+  var show = zh.classList.contains('hide-trans');
+  zh.classList.toggle('hide-trans', !show);
+  var btn = document.getElementById(btnId);
+  if (btn) btn.classList.toggle('dlg-btn-on', show);
+}
+// Nút 👁️ dịch nghĩa kiểu Bài 7 (file tổng kết): dịch nghĩa ở hộp riêng,
+// hiện bằng .show.
+function toggleChunkHelp(helpId, btnId) {
+  var help = document.getElementById(helpId);
+  if (!help) return;
+  var shown = help.classList.toggle('show');
+  var btn = document.getElementById(btnId);
+  if (btn) btn.classList.toggle('dlg-btn-on', shown);
 }
 
 // ----- Ghi đè speak()/speakRate() của file mẫu (giữ nguyên chữ ký) -----
@@ -3340,6 +3434,7 @@ function restartChunked(id) {
 function speakRate(text, rate) {
   if (!('speechSynthesis' in window)) return;
   stopChunked();
+  if (typeof stopDlg === 'function') { try { stopDlg(); } catch (e) {} }
   window.speechSynthesis.cancel();
   var u = new SpeechSynthesisUtterance(text);
   u.lang = 'zh-CN'; u.rate = rate || 0.88;
