@@ -1,0 +1,2419 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HSK 2 — Ôn tập Ngữ pháp (40 điểm)</title>
+<style>
+* { box-sizing: border-box; }
+body { font-family: -apple-system, "Segoe UI", Roboto, sans-serif; margin: 0; background: #f4f1ea; color: #22252b; line-height: 1.55; }
+.wrap { max-width: 740px; margin: 0 auto; padding: 12px 14px 50px; }
+h1 { font-size: 22px; margin: 10px 0 4px; }
+.sub { color: #6b7280; font-size: 14px; margin-bottom: 14px; }
+.progress-bar { position: sticky; top: 0; z-index: 30; background: rgba(244,241,234,0.96); backdrop-filter: blur(4px); padding: 8px 0; border-bottom: 1px solid #e2ddd2; display: flex; justify-content: space-between; align-items: center; font-size: 13px; gap: 6px; flex-wrap: wrap; }
+.progress-track { flex: 1; min-width: 80px; height: 8px; background: #e2ddd2; border-radius: 4px; margin: 0 6px; overflow: hidden; }
+.progress-fill { height: 100%; background: #16a34a; width: 0%; transition: width 0.3s ease; }
+.card { background: #fff; border-radius: 14px; padding: 18px 20px; margin: 16px 0; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+.card h2 { font-size: 18px; margin: 0 0 12px; display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid #f4f1ea; padding-bottom: 8px; }
+.badge { font-size: 12px; font-weight: 600; background: #eef2ff; color: #3730a3; padding: 3px 8px; border-radius: 6px; }
+.char-section { border-top: 1px dashed #e5e0d5; padding-top: 14px; margin-top: 14px; }
+.char-section:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+.char-head { display: flex; gap: 16px; align-items: flex-start; justify-content: space-between; }
+.char-info { flex: 1; }
+.char-head .big { font-size: 38px; line-height: 1.15; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+.meta { color: #4b5563; font-size: 14.5px; margin-top: 4px; }
+.stroke-box { display: flex; flex-direction: column; align-items: center; gap: 6px; flex: none; }
+.stroke { width: 150px; height: 150px; border-radius: 10px; border: 2px solid #d6d1c4; background-color: #fff;
+  background-image: linear-gradient(to right, transparent 49.5%, #e5e0d5 49.5%, #e5e0d5 50.5%, transparent 50.5%), linear-gradient(to bottom, transparent 49.5%, #e5e0d5 49.5%, #e5e0d5 50.5%, transparent 50.5%), linear-gradient(45deg, transparent 49.5%, #f3f0e8 49.5%, #f3f0e8 50.5%, transparent 50.5%), linear-gradient(-45deg, transparent 49.5%, #f3f0e8 49.5%, #f3f0e8 50.5%, transparent 50.5%);
+  touch-action: none; user-select: none; -webkit-user-select: none; cursor: crosshair; }
+.stroke.quiz-active { border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37,99,235,0.15); }
+.stroke-controls { display: flex; gap: 4px; }
+.btn-sm { font-size: 12px; padding: 5px 9px; border-radius: 6px; border: 1px solid #d1d5db; background: #f9fafb; cursor: pointer; color: #374151; font-weight: 600; }
+.btn-sm:hover { background: #f3f4f6; }
+.btn-sm.active { background: #2563eb; color: #fff; border-color: #2563eb; }
+.quiz-status { font-size: 12px; color: #2563eb; min-height: 18px; font-weight: 600; text-align: center; }
+.tts-btn { background: #f3f4f6; border: 1px solid #e5e7eb; border-radius: 6px; cursor: pointer; font-size: 14px; padding: 3px 8px; vertical-align: middle; }
+.tts-btn:hover { background: #e5e7eb; }
+.label { font-weight: 700; margin-top: 10px; font-size: 14px; color: #374151; }
+table { border-collapse: collapse; width: 100%; margin: 6px 0; font-size: 13.5px; }
+td, th { border-bottom: 1px solid #ece7db; padding: 5px 6px; text-align: left; vertical-align: top; }
+th { color: #6b7280; font-weight: 600; }
+.mn { background: #fdf6e3; border-left: 3px solid #f59e0b; border-radius: 6px; padding: 8px 12px; font-size: 14px; margin-top: 4px; }
+.colloc { background: #f0fdf4; border-left: 3px solid #16a34a; border-radius: 6px; padding: 8px 12px; font-size: 14px; margin-top: 4px; }
+.sentence-box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px 12px; margin-top: 6px; }
+.sentence-zh { font-size: 18px; font-weight: 600; }
+.sentence-sub { font-size: 14px; color: #475569; margin-top: 4px; transition: filter 0.2s; }
+.blur { filter: blur(5px); cursor: pointer; user-select: none; }
+.blur:hover { filter: blur(2px); }
+.q-item { margin: 10px 0; padding: 10px 12px; background: #faf8f5; border-radius: 8px; }
+.hint { color: #6b7280; font-size: 13px; }
+.input-check { display: inline-flex; align-items: center; gap: 6px; margin-top: 6px; flex-wrap: wrap; position: relative; }
+.input-check input { padding: 6px 28px 6px 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 15px; width: 185px; }
+.input-check input:focus { outline: none; border-color: #2563eb; box-shadow: 0 0 0 2px rgba(37,99,235,0.15); }
+.btn-primary { padding: 6px 12px; background: #2563eb; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: 600; }
+.btn-primary:hover { background: #1d4ed8; }
+.feedback { font-size: 13px; font-weight: 600; margin-left: 4px; }
+.ok { color: #15803d; } .err { color: #b91c1c; }
+
+/* ====== Khung Gợi ý Bộ gõ Pinyin (Hỗ trợ Phân trang) ====== */
+.py-wrap { position: relative; display: inline-block; }
+.py-badge {
+  position: absolute; right: 7px; top: 50%; transform: translateY(-50%);
+  font-size: 10px; font-weight: 700; padding: 1px 5px; border-radius: 4px;
+  background: #dbeafe; color: #1e40af; pointer-events: none;
+}
+.py-badge.off { background: #e5e7eb; color: #6b7280; }
+.py-popup {
+  display: none; position: absolute; top: calc(100% + 5px); left: 0; z-index: 60;
+  background: #ffffff; border: 1.5px solid #2563eb; border-radius: 10px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.16); padding: 7px 9px; min-width: 300px; max-width: 94vw;
+  user-select: none; -webkit-user-select: none;
+}
+.py-popup.show { display: block; }
+.py-header {
+  display: flex; justify-content: space-between; align-items: center; gap: 8px;
+  border-bottom: 1px solid #e2e8f0; padding-bottom: 5px; margin-bottom: 6px;
+}
+.py-code { font-size: 13px; color: #1d4ed8; font-weight: 700; letter-spacing: 0.3px; }
+.py-pager { display: inline-flex; align-items: center; gap: 4px; }
+.py-page-info { font-size: 11.5px; color: #475569; font-weight: 600; min-width: 36px; text-align: center; }
+.py-page-btn {
+  border: 1px solid #cbd5e1; background: #f8fafc; color: #1e293b;
+  border-radius: 5px; padding: 2px 7px; font-size: 11px; font-weight: 700;
+  cursor: pointer; line-height: 1.3; transition: all 0.1s;
+}
+.py-page-btn:hover:not(:disabled) { background: #2563eb; color: #fff; border-color: #2563eb; }
+.py-page-btn:disabled { opacity: 0.35; cursor: default; }
+.py-cand-list { display: flex; flex-wrap: wrap; gap: 5px; min-height: 32px; align-items: center; }
+.py-cand {
+  display: inline-flex; align-items: baseline; gap: 3px; padding: 4px 9px;
+  border-radius: 6px; border: 1px solid #e2e8f0; background: #f8fafc;
+  cursor: pointer; font-size: 16px; font-weight: 600; color: #1e293b; transition: all 0.1s;
+}
+.py-cand:hover, .py-cand.active { background: #2563eb; color: #fff; border-color: #2563eb; }
+.py-cand .py-idx { font-size: 11px; color: #64748b; font-weight: 700; margin-right: 1px; }
+.py-cand:hover .py-idx, .py-cand.active .py-idx { color: #dbeafe; }
+.py-footer {
+  margin-top: 5px; padding-top: 4px; border-top: 1px dashed #e2e8f0;
+  font-size: 10.5px; color: #64748b; display: flex; justify-content: space-between;
+}
+
+.mc-options { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }
+@media (max-width: 520px) { .mc-options { grid-template-columns: 1fr; } }
+.mc-btn { text-align: left; padding: 8px 12px; background: #fff; border: 1px solid #cbd5e1; border-radius: 8px; cursor: pointer; font-size: 14.5px; transition: all 0.15s; }
+.mc-btn:hover { background: #f1f5f9; }
+.mc-btn.correct { background: #dcfce7; border-color: #16a34a; color: #14532d; font-weight: 600; }
+.mc-btn.wrong { background: #fee2e2; border-color: #dc2626; color: #7f1d1d; }
+.reveal { display: none; margin-top: 8px; font-size: 16px; background: #eff6ff; border-left: 3px solid #2563eb; border-radius: 6px; padding: 6px 10px; }
+.match-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 10px; }
+.match-col { display: flex; flex-direction: column; gap: 8px; }
+.match-card { padding: 10px 12px; background: #faf8f5; border: 2px solid #e2e8f0; border-radius: 8px; cursor: pointer; text-align: center; font-weight: 600; font-size: 15px; transition: all 0.15s; user-select: none; }
+.match-card.selected { border-color: #2563eb; background: #eff6ff; color: #1d4ed8; }
+.match-card.matched { border-color: #16a34a; background: #dcfce7; color: #15803d; cursor: default; opacity: 0.65; }
+.match-card.wrong-flash { border-color: #dc2626; background: #fee2e2; }
+.cloze-passage { font-size: 16.5px; line-height: 2.1; background: #faf8f5; padding: 14px; border-radius: 10px; }
+.cloze-select { font-size: 15px; padding: 3px 6px; border: 1px solid #94a3b8; border-radius: 6px; background: #fff; font-weight: 600; color: #1e293b; }
+
+/* ====== Bài đọc hiểu đoạn văn ====== */
+.reading-box {
+  background: #f8fafc; border: 1px solid #cbd5e1; border-left: 4px solid #2563eb;
+  border-radius: 10px; padding: 14px 16px; margin-bottom: 14px;
+}
+.reading-zh { font-size: 17.5px; line-height: 1.95; font-weight: 500; color: #1e293b; }
+.reading-Controls { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+.reading-help {
+  display: none; margin-top: 10px; padding-top: 10px; border-top: 1px dashed #cbd5e1;
+  font-size: 14px; color: #475569; line-height: 1.65;
+}
+.reading-help.show { display: block; }
+
+.scramble-box { margin: 12px 0; padding: 12px; background: #faf8f5; border-radius: 10px; }
+.word-bank, .answer-zone { display: flex; flex-wrap: wrap; gap: 8px; min-height: 44px; padding: 8px; border-radius: 8px; margin-top: 6px; align-items: center; }
+.word-bank { background: #eef2f6; }
+.answer-zone { background: #fff; border: 1px dashed #94a3b8; }
+.tile { padding: 5px 12px; background: #fff; border: 1px solid #cbd5e1; border-radius: 6px; cursor: pointer; font-size: 16px; font-weight: 600; box-shadow: 0 1px 2px rgba(0,0,0,0.05); user-select: none; }
+.tile:hover { background: #f1f5f9; }
+.summary-list { font-size: 14px; margin: 8px 0; padding-left: 18px; }
+.footer { color: #6b7280; font-size: 14px; text-align: center; margin-top: 24px; }
+
+/* ====== Tối ưu điện thoại (bổ sung 2026-11-04 theo phản hồi của anh) ====== */
+img, svg { max-width: 100%; }
+@media (max-width: 640px) {
+  .wrap { padding: 10px 10px 40px; }
+  h1 { font-size: 19px; }
+  .card { padding: 14px 13px; margin: 12px 0; border-radius: 12px; }
+  .card h2 { font-size: 16px; flex-wrap: wrap; gap: 6px; }
+  .char-head { flex-direction: column; }
+  .char-info { width: 100%; }
+  .stroke-box { align-self: center; }
+  .char-head .big { font-size: 34px; }
+  table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; font-size: 13px; }
+  .input-check input { width: auto; flex: 1 1 130px; min-width: 0; }
+  .py-wrap { flex: 1 1 130px; min-width: 0; }
+  .py-wrap input { width: 100%; }
+  .py-popup { min-width: 0; width: min(320px, 92vw); }
+  .cloze-passage { font-size: 15.5px; line-height: 2.0; padding: 11px; }
+  .cloze-select { max-width: 40vw; }
+  .reading-zh { font-size: 16.5px; }
+  .sentence-zh { font-size: 17px; }
+  .progress-bar { font-size: 12px; }
+  .mc-btn { font-size: 14px; }
+}
+
+/* ====== Pinyin ruby trên đầu chữ Hán (phần đoạn văn) ====== */
+.reading-zh { line-height: 2.15; }
+.reading-zh ruby rt { font-size: 0.52em; color: #2563eb; font-weight: 400; }
+.reading-zh.hide-ruby { line-height: 1.95; }
+.reading-zh.hide-ruby rt { display: none; }
+
+
+  /* ====== Flashcard ôn tập ====== */
+  .flash-scene { perspective: 900px; margin: 10px 0; }
+  .flash-card { position: relative; width: 100%; height: 170px; cursor: pointer; transform-style: preserve-3d; transition: transform 0.55s; }
+  .flash-card.flipped { transform: rotateY(180deg); }
+  .flash-face { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; border-radius: 14px; padding: 14px; text-align: center; }
+  .flash-front { background: linear-gradient(135deg, #eff6ff, #dbeafe); border: 2px solid #93c5fd; }
+  .flash-back { background: linear-gradient(135deg, #ecfdf5, #d1fae5); border: 2px solid #6ee7b7; transform: rotateY(180deg); }
+  .flash-hanzi { font-size: 2.6rem; font-weight: 800; color: #1e3a8a; line-height: 1.15; }
+  .flash-meaning { font-size: 1.45rem; font-weight: 700; color: #065f46; line-height: 1.3; }
+  .flash-sub { font-size: 1rem; color: #475569; }
+  .flash-tag { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em; color: #64748b; text-transform: uppercase; }
+  .flash-Controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 8px; }
+  .flash-count { font-weight: 700; color: #334155; }
+
+/* --- Công thức + lỗi thường gặp --- */
+.formula { background: #eef2ff; border: 1px solid #c7d2fe; border-radius: 8px; padding: 8px 10px; margin: 8px 0; font-weight: 600; }
+.mistake { background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 8px 10px; margin: 10px 0 2px; }
+.example { margin: 10px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="progress-bar">
+    <span>🎯 Tiến độ:</span>
+    <div class="progress-track"><div class="progress-fill" id="prog-fill"></div></div>
+    <b id="prog-text">0 / 33</b>
+    <button class="btn-sm active" id="ime-toggle-btn" onclick="toggleIME()" title="Bật/tắt chế độ gõ Pinyin trực tiếp">⌨️ Gõ Pinyin: BẬT</button>
+    <button class="btn-sm" onclick="resetAll()" title="Xoá tiến độ làm lại">↺</button>
+  </div>
+
+  <h1>📚 HSK 2 — Ôn tập Ngữ pháp · 40 điểm</h1>
+  <div class="sub">40 điểm ngữ pháp HSK 2 · ví dụ chỉ dùng từ 213 từ HSK 2 và từ các khóa trước · 33 bài tập có chấm điểm</div>
+<div class="card">
+<h2>📖 Ôn tập toàn bộ ngữ pháp HSK 2 <span class="badge">40 điểm · 33 bài tập</span></h2>
+<div class="sub" style="margin-bottom:8px;">Mỗi điểm có công thức, giải thích tiếng Việt, ví dụ có nghe đọc, và 1 lỗi thường gặp. Tất cả ví dụ và bài tập chỉ dùng từ 213 từ HSK 2 và từ các khóa trước.</div>
+<ul><li><b>Thì &amp; thể: 了 / 过 / 着</b> (5 điểm): 了 — hành động đã hoàn thành · 了 — thay đổi tình trạng · 过 — kinh nghiệm đã từng · 着 — trạng thái đang tiếp diễn · 正在 / 正 — đang làm gì</li><li><b>Câu so sánh: 比 / 比较 / 最</b> (5 điểm): 比 — A 比 B + tính từ · 比较 — tương đối · 最 — nhất · 比……多 / 比……少 — so sánh số lượng · 没有 — so sánh phủ định</li><li><b>Động từ khiếm khuyết: 要 / 会 / 能 / 可以</b> (5 điểm): 要 — muốn / cần / sẽ · 会 — biết (kỹ năng đã học) · 能 — có thể (khả năng / điều kiện) · 可以 — có thể / được phép · 应该 — nên</li><li><b>Bổ ngữ kết quả &amp; phương hướng</b> (5 điểm): 完 — bổ ngữ kết quả · 好 — bổ ngữ kết quả · 到 — bổ ngữ kết quả · 上 / 下 — bổ ngữ phương hướng · 进 / 出 / 回 — bổ ngữ phương hướng</li><li><b>Câu chữ 把 (cơ bản)</b> (5 điểm): 把 + N + V + 完 · 把 + N + V + 好 · 把 + N + V + 给 + 人 · 把 + N + V + 一下 · 把 + N + V + 完/好/了 + 吗</li><li><b>Liên từ &amp; cấu trúc</b> (5 điểm): 因为……所以…… · 或者……或者…… · 一边……，一边…… · ……的话 · 除了……以外</li><li><b>Thời gian &amp; khoảng thời gian</b> (5 điểm): 现在几点 · 时间 + 起床/上课/下课 · 每天 / 有时 / 有时候 · 多长时间 · 上个/下个/这个 + 星期</li><li><b>Cấu trúc thường dùng</b> (5 điểm): 比较 + Adj · 越来越 + Adj · 有一点儿 + Adj · Adj + 极了 · 对了</li></ul>
+<div class="hint">Làm theo thứ tự: đọc từng điểm, rồi làm 4 bài tập cuối file. Câu nào sai sẽ tự gom vào phần Tổng kết để gửi em.</div>
+</div>
+<div class="card"><h2>📂 Thì &amp; thể: 了 / 过 / 着 <span class="badge">5 điểm</span></h2></div>
+<div class="card">
+<h2>1. 了 — hành động đã hoàn thành <span class="badge">Thì &amp; thể: 了 / 过 / 着</span></h2>
+<div class="formula">📐 Công thức: S + V + 了 + O</div>
+<div>了 đặt sau động từ nói hành động đã xong: 我昨天看了电影 (hôm qua tôi đã xem phim). Thường đi với từ chỉ thời gian quá khứ như 昨天 hay 去年. Anh nhớ: 了 đứng sau động từ, trước tân ngữ, không đứng cuối câu khi đã có tân ngữ.</div>
+<div class="example">
+<div><b>我昨天看了电影。</b> <button class="tts-btn" onclick="speakRate('我昨天看了电影。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('我昨天看了电影。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Wǒ zuótiān kàn le diànyǐng. — Hôm qua tôi đã xem phim.</div>
+</div>
+<div class="example">
+<div><b>他去年去了博物馆。</b> <button class="tts-btn" onclick="speakRate('他去年去了博物馆。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('他去年去了博物馆。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Tā qùnián qù le bówùguǎn. — Năm ngoái anh ấy đã đi bảo tàng.</div>
+</div>
+<div class="example">
+<div><b>我买了一件衬衫。</b> <button class="tts-btn" onclick="speakRate('我买了一件衬衫。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('我买了一件衬衫。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Wǒ mǎi le yí jiàn chènshān. — Tôi đã mua một cái áo sơ mi.</div>
+</div>
+<div class="mistake">⚠️ <b>Lỗi thường gặp:</b><br>❌ Sai: <s>我昨天看电影了。</s><br>✅ Đúng: <b>我昨天看了电影。</b><br>Nói hành động đã xong có tân ngữ thì dùng 看了电影: 了 đặt sau động từ, không đặt cuối câu.</div>
+</div>
+<div class="card">
+<h2>2. 了 — thay đổi tình trạng <span class="badge">Thì &amp; thể: 了 / 过 / 着</span></h2>
+<div class="formula">📐 Công thức: S + Adj + 了 / S + V + 了</div>
+<div>了 ở cuối câu nói tình trạng đã đổi khác so với trước: 我现在很忙了 (bây giờ tôi bận rồi). Thường đi với 现在 hay 今天 để nhấn mạnh &quot;bây giờ thì...&quot;. Anh nhớ: 了 cuối câu này nói sự thay đổi, khác với 了 sau động từ ở g01.</div>
+<div class="example">
+<div><b>我现在很忙了。</b> <button class="tts-btn" onclick="speakRate('我现在很忙了。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('我现在很忙了。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Wǒ xiànzài hěn máng le. — Bây giờ tôi bận rồi.</div>
+</div>
+<div class="example">
+<div><b>今天他很累了。</b> <button class="tts-btn" onclick="speakRate('今天他很累了。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('今天他很累了。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Jīntiān tā hěn lèi le. — Hôm nay anh ấy mệt rồi.</div>
+</div>
+<div class="example">
+<div><b>他去年是学生，今年是老师了。</b> <button class="tts-btn" onclick="speakRate('他去年是学生，今年是老师了。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('他去年是学生，今年是老师了。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Tā qùnián shì xuésheng, jīnnián shì lǎoshī le. — Năm ngoái anh ấy là học sinh, năm nay là thầy giáo rồi.</div>
+</div>
+<div class="mistake">⚠️ <b>Lỗi thường gặp:</b><br>❌ Sai: <s>我现在很忙。</s><br>✅ Đúng: <b>我现在很忙了。</b><br>Muốn nói &quot;bây giờ thì bận rồi&quot; (đổi khác so với trước) thì thêm 了 cuối câu: 现在很忙了.</div>
+</div>
+<div class="card">
+<h2>3. 过 — kinh nghiệm đã từng <span class="badge">Thì &amp; thể: 了 / 过 / 着</span></h2>
+<div class="formula">📐 Công thức: S + V + 过 + O</div>
+<div>过 đặt sau động từ nói anh đã từng làm việc gì: 我吃过烤鸭 (tôi đã từng ăn vịt quay). 过 nhấn mạnh kinh nghiệm, không nói rõ khi nào. Anh nhớ: 过 đứng sau động từ, trước tân ngữ.</div>
+<div class="example">
+<div><b>我吃过烤鸭。</b> <button class="tts-btn" onclick="speakRate('我吃过烤鸭。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('我吃过烤鸭。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Wǒ chī guo kǎoyā. — Tôi đã từng ăn vịt quay.</div>
+</div>
+<div class="example">
+<div><b>我去过博物馆。</b> <button class="tts-btn" onclick="speakRate('我去过博物馆。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('我去过博物馆。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Wǒ qù guo bówùguǎn. — Tôi đã từng đi bảo tàng.</div>
+</div>
+<div class="example">
+<div><b>他看过这个电影。</b> <button class="tts-btn" onclick="speakRate('他看过这个电影。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('他看过这个电影。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Tā kàn guo zhè gè diànyǐng. — Anh ấy đã từng xem bộ phim này.</div>
+</div>
+<div class="mistake">⚠️ <b>Lỗi thường gặp:</b><br>❌ Sai: <s>我吃烤鸭过。</s><br>✅ Đúng: <b>我吃过烤鸭。</b><br>过 đặt sau động từ, trước tân ngữ: 吃过烤鸭, không nói 吃烤鸭过.</div>
+</div>
+<div class="card">
+<h2>4. 着 — trạng thái đang tiếp diễn <span class="badge">Thì &amp; thể: 了 / 过 / 着</span></h2>
+<div class="formula">📐 Công thức: S + V + 着 + O</div>
+<div>着 đặt sau động từ nói trạng thái còn tiếp tục: 他穿着红衬衫 (anh ấy đang mặc áo sơ mi đỏ). 着 nói &quot;đang trong trạng thái đó&quot;, khác 正在 nói hành động đang làm. Anh nhớ: 着 đứng sau động từ, không đứng trước.</div>
+<div class="example">
+<div><b>他穿着红衬衫。</b> <button class="tts-btn" onclick="speakRate('他穿着红衬衫。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('他穿着红衬衫。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Tā chuān zhe hóng chènshān. — Anh ấy đang mặc áo sơ mi đỏ.</div>
+</div>
+<div class="example">
+<div><b>他在家里看着电视。</b> <button class="tts-btn" onclick="speakRate('他在家里看着电视。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('他在家里看着电视。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Tā zài jiā lǐ kàn zhe diànshì. — Anh ấy đang ở nhà xem ti vi.</div>
+</div>
+<div class="example">
+<div><b>他坐着看电视。</b> <button class="tts-btn" onclick="speakRate('他坐着看电视。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('他坐着看电视。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Tā zuò zhe kàn diànshì. — Anh ấy đang ngồi xem ti vi.</div>
+</div>
+<div class="mistake">⚠️ <b>Lỗi thường gặp:</b><br>❌ Sai: <s>他着穿红衬衫。</s><br>✅ Đúng: <b>他穿着红衬衫。</b><br>着 đặt sau động từ: 穿着, không đặt trước động từ.</div>
+</div>
+<div class="card">
+<h2>5. 正在 / 正 — đang làm gì <span class="badge">Thì &amp; thể: 了 / 过 / 着</span></h2>
+<div class="formula">📐 Công thức: S + 正在 / 正 + V</div>
+<div>正在 đặt trước động từ nói hành động đang diễn ra ngay lúc này: 他正在看电影 (anh ấy đang xem phim). 正 ngắn gọn hơn, nghĩa giống 正在. Anh nhớ: 正在 đứng trước động từ, không đứng sau.</div>
+<div class="example">
+<div><b>他正在看电影。</b> <button class="tts-btn" onclick="speakRate('他正在看电影。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('他正在看电影。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Tā zhèngzài kàn diànyǐng. — Anh ấy đang xem phim.</div>
+</div>
+<div class="example">
+<div><b>我正在吃米饭。</b> <button class="tts-btn" onclick="speakRate('我正在吃米饭。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('我正在吃米饭。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Wǒ zhèngzài chī mǐfàn. — Tôi đang ăn cơm.</div>
+</div>
+<div class="example">
+<div><b>他正在打电话。</b> <button class="tts-btn" onclick="speakRate('他正在打电话。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('他正在打电话。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Tā zhèngzài dǎ diànhuà. — Anh ấy đang gọi điện thoại.</div>
+</div>
+<div class="mistake">⚠️ <b>Lỗi thường gặp:</b><br>❌ Sai: <s>他看电影正在。</s><br>✅ Đúng: <b>他正在看电影。</b><br>正在 đặt trước động từ: 正在看电影, không đặt cuối câu.</div>
+</div>
+<div class="card"><h2>📂 Câu so sánh: 比 / 比较 / 最 <span class="badge">5 điểm</span></h2></div>
+<div class="card">
+<h2>6. 比 — A 比 B + tính từ <span class="badge">Câu so sánh: 比 / 比较 / 最</span></h2>
+<div class="formula">📐 Công thức: A + 比 + B + Adj</div>
+<div>比 dùng để so sánh hai người hay hai vật: 这件衣服比那件贵 (cái áo này đắt hơn cái kia). Công thức: A 比 B + tính từ. Anh nhớ: 比 đặt giữa hai vật so sánh, tính từ đặt cuối câu.</div>
+<div class="example">
+<div><b>这件衣服比那件贵。</b> <button class="tts-btn" onclick="speakRate('这件衣服比那件贵。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('这件衣服比那件贵。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Zhè jiàn yīfu bǐ nà jiàn guì. — Cái áo này đắt hơn cái kia.</div>
+</div>
+<div class="example">
+<div><b>他比我忙。</b> <button class="tts-btn" onclick="speakRate('他比我忙。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('他比我忙。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Tā bǐ wǒ máng. — Anh ấy bận hơn tôi.</div>
+</div>
+<div class="example">
+<div><b>今天比昨天好。</b> <button class="tts-btn" onclick="speakRate('今天比昨天好。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('今天比昨天好。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Jīntiān bǐ zuótiān hǎo. — Hôm nay tốt hơn hôm qua.</div>
+</div>
+<div class="mistake">⚠️ <b>Lỗi thường gặp:</b><br>❌ Sai: <s>这件衣服贵比那件。</s><br>✅ Đúng: <b>这件衣服比那件贵。</b><br>比 đặt giữa hai vật: A 比 B + tính từ, không đặt tính từ trước 比.</div>
+</div>
+<div class="card">
+<h2>7. 比较 — tương đối <span class="badge">Câu so sánh: 比 / 比较 / 最</span></h2>
+<div class="formula">📐 Công thức: S + 比较 + Adj</div>
+<div>比较 đặt trước tính từ, nghĩa là tương đối, khá: 这件衬衫比较贵 (cái áo sơ mi này tương đối đắt). 比较 nhẹ hơn 很, không nhấn mạnh lắm. Anh nhớ: 比较 đứng trước tính từ, không đứng sau.</div>
+<div class="example">
+<div><b>这件衬衫比较贵。</b> <button class="tts-btn" onclick="speakRate('这件衬衫比较贵。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('这件衬衫比较贵。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Zhè jiàn chènshān bǐjiào guì. — Cái áo sơ mi này tương đối đắt.</div>
+</div>
+<div class="example">
+<div><b>他比较忙。</b> <button class="tts-btn" onclick="speakRate('他比较忙。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('他比较忙。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Tā bǐjiào máng. — Anh ấy tương đối bận.</div>
+</div>
+<div class="example">
+<div><b>这个电影比较好看。</b> <button class="tts-btn" onclick="speakRate('这个电影比较好看。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('这个电影比较好看。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Zhè gè diànyǐng bǐjiào hǎokàn. — Bộ phim này tương đối hay.</div>
+</div>
+<div class="mistake">⚠️ <b>Lỗi thường gặp:</b><br>❌ Sai: <s>这件衬衫贵比较。</s><br>✅ Đúng: <b>这件衬衫比较贵。</b><br>比较 đặt trước tính từ: 比较贵, không đặt sau tính từ.</div>
+</div>
+<div class="card">
+<h2>8. 最 — nhất <span class="badge">Câu so sánh: 比 / 比较 / 最</span></h2>
+<div class="formula">📐 Công thức: S + 最 + Adj / V</div>
+<div>最 đặt trước tính từ hay động từ, nghĩa là nhất: 这件衣服最贵 (cái áo này đắt nhất), 我最喜欢跳舞 (tôi thích nhảy nhất). Anh nhớ: 最 đứng trước tính từ hay động từ, không đứng sau.</div>
+<div class="example">
+<div><b>这件衣服最贵。</b> <button class="tts-btn" onclick="speakRate('这件衣服最贵。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('这件衣服最贵。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Zhè jiàn yīfu zuì guì. — Cái áo này đắt nhất.</div>
+</div>
+<div class="example">
+<div><b>我最喜欢吃烤鸭。</b> <button class="tts-btn" onclick="speakRate('我最喜欢吃烤鸭。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('我最喜欢吃烤鸭。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Wǒ zuì xǐhuan chī kǎoyā. — Tôi thích ăn vịt quay nhất.</div>
+</div>
+<div class="example">
+<div><b>他最喜欢跳舞。</b> <button class="tts-btn" onclick="speakRate('他最喜欢跳舞。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('他最喜欢跳舞。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Tā zuì xǐhuan tiàowǔ. — Anh ấy thích nhảy nhất.</div>
+</div>
+<div class="mistake">⚠️ <b>Lỗi thường gặp:</b><br>❌ Sai: <s>这件衣服贵最。</s><br>✅ Đúng: <b>这件衣服最贵。</b><br>最 đặt trước tính từ: 最贵, không đặt sau tính từ.</div>
+</div>
+<div class="card">
+<h2>9. 比……多 / 比……少 — so sánh số lượng <span class="badge">Câu so sánh: 比 / 比较 / 最</span></h2>
+<div class="formula">📐 Công thức: A + 比 + B + 多 / 少 + số lượng</div>
+<div>Muốn so sánh số lượng thì dùng 比 + 多/少 + số lượng: 我比他多两件衣服 (tôi nhiều hơn anh ấy hai cái áo). 多 là nhiều hơn, 少 là ít hơn. Anh nhớ: 多/少 đặt sau 比, trước số lượng.</div>
+<div class="example">
+<div><b>我比他多两件衣服。</b> <button class="tts-btn" onclick="speakRate('我比他多两件衣服。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('我比他多两件衣服。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Wǒ bǐ tā duō liǎng jiàn yīfu. — Tôi nhiều hơn anh ấy hai cái áo.</div>
+</div>
+<div class="example">
+<div><b>他比我少一个小时。</b> <button class="tts-btn" onclick="speakRate('他比我少一个小时。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('他比我少一个小时。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Tā bǐ wǒ shǎo yí gè xiǎoshí. — Anh ấy ít hơn tôi một tiếng.</div>
+</div>
+<div class="example">
+<div><b>今天的课比昨天的课多。</b> <button class="tts-btn" onclick="speakRate('今天的课比昨天的课多。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('今天的课比昨天的课多。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Jīntiān de kè bǐ zuótiān de kè duō. — Tiết học hôm nay nhiều hơn tiết học hôm qua.</div>
+</div>
+<div class="mistake">⚠️ <b>Lỗi thường gặp:</b><br>❌ Sai: <s>我多比他两件衣服。</s><br>✅ Đúng: <b>我比他多两件衣服。</b><br>多 đặt sau 比: 比他多两件衣服, không nói 多比他.</div>
+</div>
+<div class="card">
+<h2>10. 没有 — so sánh phủ định <span class="badge">Câu so sánh: 比 / 比较 / 最</span></h2>
+<div class="formula">📐 Công thức: A + 没有 + B + Adj</div>
+<div>没有 dùng để nói A kém B: 这件衣服没有那件贵 (cái áo này không đắt bằng cái kia). Công thức: A 没有 B + tính từ. Anh nhớ: 没有 thay cho 不比, nghĩa là &quot;không bằng&quot;.</div>
+<div class="example">
+<div><b>这件衣服没有那件贵。</b> <button class="tts-btn" onclick="speakRate('这件衣服没有那件贵。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('这件衣服没有那件贵。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Zhè jiàn yīfu méiyǒu nà jiàn guì. — Cái áo này không đắt bằng cái kia.</div>
+</div>
+<div class="example">
+<div><b>他没有我忙。</b> <button class="tts-btn" onclick="speakRate('他没有我忙。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('他没有我忙。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Tā méiyǒu wǒ máng. — Anh ấy không bận bằng tôi.</div>
+</div>
+<div class="example">
+<div><b>我的鞋没有他的好看。</b> <button class="tts-btn" onclick="speakRate('我的鞋没有他的好看。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('我的鞋没有他的好看。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Wǒ de xié méiyǒu tā de hǎokàn. — Giày của tôi không đẹp bằng giày của anh ấy.</div>
+</div>
+<div class="mistake">⚠️ <b>Lỗi thường gặp:</b><br>❌ Sai: <s>这件衣服没有贵那件。</s><br>✅ Đúng: <b>这件衣服没有那件贵。</b><br>没有 đặt giữa hai vật: A 没有 B + tính từ, không nói 没有贵那件.</div>
+</div>
+<div class="card"><h2>📂 Động từ khiếm khuyết: 要 / 会 / 能 / 可以 <span class="badge">5 điểm</span></h2></div>
+<div class="card">
+<h2>11. 要 — muốn / cần / sẽ <span class="badge">Động từ khiếm khuyết: 要 / 会 / 能 / 可以</span></h2>
+<div class="formula">📐 Công thức: S + 要 + V</div>
+<div>要 đặt trước động từ, nghĩa là muốn, cần hay sẽ làm gì: 我要买一件衬衫 (tôi muốn mua một cái áo sơ mi). 要 nói ý muốn hay dự định. Anh nhớ: 要 đứng trước động từ, không đứng sau.</div>
+<div class="example">
+<div><b>我要买一件衬衫。</b> <button class="tts-btn" onclick="speakRate('我要买一件衬衫。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('我要买一件衬衫。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Wǒ yào mǎi yí jiàn chènshān. — Tôi muốn mua một cái áo sơ mi.</div>
+</div>
+<div class="example">
+<div><b>我要去参观博物馆。</b> <button class="tts-btn" onclick="speakRate('我要去参观博物馆。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('我要去参观博物馆。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Wǒ yào qù cānguān bówùguǎn. — Tôi muốn đi tham quan bảo tàng.</div>
+</div>
+<div class="example">
+<div><b>他要打电话。</b> <button class="tts-btn" onclick="speakRate('他要打电话。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('他要打电话。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Tā yào dǎ diànhuà. — Anh ấy muốn gọi điện thoại.</div>
+</div>
+<div class="mistake">⚠️ <b>Lỗi thường gặp:</b><br>❌ Sai: <s>我买要一件衬衫。</s><br>✅ Đúng: <b>我要买一件衬衫。</b><br>要 đặt trước động từ: 要买, không đặt sau động từ.</div>
+</div>
+<div class="card">
+<h2>12. 会 — biết (kỹ năng đã học) <span class="badge">Động từ khiếm khuyết: 要 / 会 / 能 / 可以</span></h2>
+<div class="formula">📐 Công thức: S + 会 + V</div>
+<div>会 đặt trước động từ nói anh biết làm gì vì đã học: 我会唱歌 (tôi biết hát). 会 nói kỹ năng đã học được, khác 能 nói khả năng hay điều kiện cho phép. Anh nhớ: 会 đứng trước động từ, không đứng sau.</div>
+<div class="example">
+<div><b>我会唱歌。</b> <button class="tts-btn" onclick="speakRate('我会唱歌。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('我会唱歌。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Wǒ huì chànggē. — Tôi biết hát.</div>
+</div>
+<div class="example">
+<div><b>他会说法语。</b> <button class="tts-btn" onclick="speakRate('他会说法语。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('他会说法语。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Tā huì shuō Fǎyǔ. — Anh ấy biết nói tiếng Pháp.</div>
+</div>
+<div class="example">
+<div><b>我会做菜。</b> <button class="tts-btn" onclick="speakRate('我会做菜。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('我会做菜。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Wǒ huì zuòcài. — Tôi biết nấu ăn.</div>
+</div>
+<div class="mistake">⚠️ <b>Lỗi thường gặp:</b><br>❌ Sai: <s>我唱歌会。</s><br>✅ Đúng: <b>我会唱歌。</b><br>会 đặt trước động từ: 会唱歌, không đặt sau động từ.</div>
+</div>
+<div class="card">
+<h2>13. 能 — có thể (khả năng / điều kiện) <span class="badge">Động từ khiếm khuyết: 要 / 会 / 能 / 可以</span></h2>
+<div class="formula">📐 Công thức: S + 能 + V</div>
+<div>能 đặt trước động từ nói anh có khả năng hay điều kiện làm gì: 我能帮你 (tôi có thể giúp bạn). 能 khác 会: 会 là biết vì đã học, 能 là có thể vì sức khỏe, thời gian hay hoàn cảnh cho phép. Anh nhớ: 能 đứng trước động từ, phủ định là 不能.</div>
+<div class="example">
+<div><b>我能帮你。</b> <button class="tts-btn" onclick="speakRate('我能帮你。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('我能帮你。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Wǒ néng bāng nǐ. — Tôi có thể giúp bạn.</div>
+</div>
+<div class="example">
+<div><b>他今天不能上课。</b> <button class="tts-btn" onclick="speakRate('他今天不能上课。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('他今天不能上课。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Tā jīntiān bù néng shàngkè. — Hôm nay anh ấy không thể đi học.</div>
+</div>
+<div class="example">
+<div><b>你能借我一支笔吗？</b> <button class="tts-btn" onclick="speakRate('你能借我一支笔吗？', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('你能借我一支笔吗？', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Nǐ néng jiè wǒ yì zhī bǐ ma? — Bạn có thể cho tôi mượn một cây bút không?</div>
+</div>
+<div class="mistake">⚠️ <b>Lỗi thường gặp:</b><br>❌ Sai: <s>我帮你能。</s><br>✅ Đúng: <b>我能帮你。</b><br>能 đặt trước động từ: 能帮, không đặt sau động từ.</div>
+</div>
+<div class="card">
+<h2>14. 可以 — có thể / được phép <span class="badge">Động từ khiếm khuyết: 要 / 会 / 能 / 可以</span></h2>
+<div class="formula">📐 Công thức: S + 可以 + V</div>
+<div>可以 đặt trước động từ nói anh được phép hay có thể làm gì: 你可以在这里看电视 (bạn có thể xem ti vi ở đây). 可以 nhẹ hơn 能, thường dùng để xin phép hay cho phép. Anh nhớ: 可以 đứng trước động từ, phủ định là 不可以.</div>
+<div class="example">
+<div><b>你可以在这里看电视。</b> <button class="tts-btn" onclick="speakRate('你可以在这里看电视。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('你可以在这里看电视。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Nǐ kěyǐ zài zhè lǐ kàn diànshì. — Bạn có thể xem ti vi ở đây.</div>
+</div>
+<div class="example">
+<div><b>我可以试这件衣服吗？</b> <button class="tts-btn" onclick="speakRate('我可以试这件衣服吗？', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('我可以试这件衣服吗？', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Wǒ kěyǐ shì zhè jiàn yīfu ma? — Tôi có thể thử cái áo này không?</div>
+</div>
+<div class="example">
+<div><b>你可以帮我吗？</b> <button class="tts-btn" onclick="speakRate('你可以帮我吗？', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('你可以帮我吗？', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Nǐ kěyǐ bāng wǒ ma? — Bạn có thể giúp tôi không?</div>
+</div>
+<div class="mistake">⚠️ <b>Lỗi thường gặp:</b><br>❌ Sai: <s>你看电视可以在这里。</s><br>✅ Đúng: <b>你可以在这里看电视。</b><br>可以 đặt trước động từ và cụm nơi chốn: 可以在这里看电视, không đặt sau động từ.</div>
+</div>
+<div class="card">
+<h2>15. 应该 — nên <span class="badge">Động từ khiếm khuyết: 要 / 会 / 能 / 可以</span></h2>
+<div class="formula">📐 Công thức: S + 应该 + V</div>
+<div>应该 đặt trước động từ nói anh nên làm gì: 你应该早睡觉 (bạn nên đi ngủ sớm). 应该 nói lời khuyên hay bổn phận. Anh nhớ: 应该 đứng trước động từ, phủ định là 不应该.</div>
+<div class="example">
+<div><b>你应该早睡觉。</b> <button class="tts-btn" onclick="speakRate('你应该早睡觉。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('你应该早睡觉。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Nǐ yīnggāi zǎo shuìjiào. — Bạn nên đi ngủ sớm.</div>
+</div>
+<div class="example">
+<div><b>学生应该每天学习。</b> <button class="tts-btn" onclick="speakRate('学生应该每天学习。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('学生应该每天学习。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Xuésheng yīnggāi měitiān xuéxí. — Học sinh nên học mỗi ngày.</div>
+</div>
+<div class="example">
+<div><b>你应该帮他。</b> <button class="tts-btn" onclick="speakRate('你应该帮他。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('你应该帮他。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Nǐ yīnggāi bāng tā. — Bạn nên giúp anh ấy.</div>
+</div>
+<div class="mistake">⚠️ <b>Lỗi thường gặp:</b><br>❌ Sai: <s>你早睡觉应该。</s><br>✅ Đúng: <b>你应该早睡觉。</b><br>应该 đặt trước động từ: 应该睡觉, không đặt cuối câu.</div>
+</div>
+<div class="card"><h2>📂 Bổ ngữ kết quả &amp; phương hướng <span class="badge">5 điểm</span></h2></div>
+<div class="card">
+<h2>16. 完 — bổ ngữ kết quả <span class="badge">Bổ ngữ kết quả &amp; phương hướng</span></h2>
+<div class="formula">📐 Công thức: S + V + 完 + O</div>
+<div>完 đặt sau động từ nói hành động đã làm xong hẳn: 我吃完饭了 (tôi đã ăn cơm xong). 完 nhấn mạnh &quot;xong&quot;, khác 了 chỉ nói đã xảy ra. Anh nhớ: 完 đứng sau động từ, trước tân ngữ.</div>
+<div class="example">
+<div><b>我吃完饭了。</b> <button class="tts-btn" onclick="speakRate('我吃完饭了。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('我吃完饭了。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Wǒ chī wán fàn le. — Tôi đã ăn cơm xong.</div>
+</div>
+<div class="example">
+<div><b>他买完衣服了。</b> <button class="tts-btn" onclick="speakRate('他买完衣服了。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('他买完衣服了。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Tā mǎi wán yīfu le. — Anh ấy đã mua quần áo xong.</div>
+</div>
+<div class="example">
+<div><b>我看完电视了。</b> <button class="tts-btn" onclick="speakRate('我看完电视了。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('我看完电视了。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Wǒ kàn wán diànshì le. — Tôi đã xem ti vi xong.</div>
+</div>
+<div class="mistake">⚠️ <b>Lỗi thường gặp:</b><br>❌ Sai: <s>我吃饭完了。</s><br>✅ Đúng: <b>我吃完饭了。</b><br>Nói làm xong một việc có tân ngữ thì dùng 吃完饭: 完 đặt sau động từ, trước tân ngữ.</div>
+</div>
+<div class="card">
+<h2>17. 好 — bổ ngữ kết quả <span class="badge">Bổ ngữ kết quả &amp; phương hướng</span></h2>
+<div class="formula">📐 Công thức: S + V + 好 + O</div>
+<div>好 đặt sau động từ nói việc đã làm xong và đạt kết quả tốt: 我做好饭了 (tôi đã nấu cơm xong). 好 ở đây không phải &quot;tốt&quot; mà là &quot;xong, sẵn sàng&quot;. Anh nhớ: 好 đứng sau động từ, trước tân ngữ.</div>
+<div class="example">
+<div><b>我做好饭了。</b> <button class="tts-btn" onclick="speakRate('我做好饭了。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('我做好饭了。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Wǒ zuò hǎo fàn le. — Tôi đã nấu cơm xong.</div>
+</div>
+<div class="example">
+<div><b>他写好名字了。</b> <button class="tts-btn" onclick="speakRate('他写好名字了。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('他写好名字了。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Tā xiě hǎo míngzi le. — Anh ấy đã viết xong tên.</div>
+</div>
+<div class="example">
+<div><b>你准备好了吗？</b> <button class="tts-btn" onclick="speakRate('你准备好了吗？', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('你准备好了吗？', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Nǐ zhǔnbèi hǎo le ma? — Bạn đã chuẩn bị xong chưa?</div>
+</div>
+<div class="mistake">⚠️ <b>Lỗi thường gặp:</b><br>❌ Sai: <s>我做饭好了。</s><br>✅ Đúng: <b>我做好饭了。</b><br>Nói làm xong một việc có tân ngữ thì dùng 做好饭: 好 đặt sau động từ, trước tân ngữ.</div>
+</div>
+<div class="card">
+<h2>18. 到 — bổ ngữ kết quả <span class="badge">Bổ ngữ kết quả &amp; phương hướng</span></h2>
+<div class="formula">📐 Công thức: S + V + 到 + O</div>
+<div>到 đặt sau động từ chỉ giác quan hay tìm kiếm, nói đã đạt được kết quả: 我听到音乐了 (tôi đã nghe thấy nhạc), 他找到手机了 (anh ấy đã tìm thấy điện thoại). 到 nói &quot;được, thấy, tới&quot;. Anh nhớ: 到 đứng sau động từ, trước tân ngữ.</div>
+<div class="example">
+<div><b>我听到音乐了。</b> <button class="tts-btn" onclick="speakRate('我听到音乐了。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('我听到音乐了。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Wǒ tīng dào yīnyuè le. — Tôi đã nghe thấy nhạc.</div>
+</div>
+<div class="example">
+<div><b>他找到手机了。</b> <button class="tts-btn" onclick="speakRate('他找到手机了。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('他找到手机了。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Tā zhǎo dào shǒujī le. — Anh ấy đã tìm thấy điện thoại.</div>
+</div>
+<div class="example">
+<div><b>我在公园看到他了。</b> <button class="tts-btn" onclick="speakRate('我在公园看到他了。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('我在公园看到他了。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Wǒ zài gōngyuán kàn dào tā le. — Tôi đã nhìn thấy anh ấy ở công viên.</div>
+</div>
+<div class="mistake">⚠️ <b>Lỗi thường gặp:</b><br>❌ Sai: <s>我听音乐到了。</s><br>✅ Đúng: <b>我听到音乐了。</b><br>到 đặt sau động từ, trước tân ngữ: 听到音乐, không nói 听音乐到.</div>
+</div>
+<div class="card">
+<h2>19. 上 / 下 — bổ ngữ phương hướng <span class="badge">Bổ ngữ kết quả &amp; phương hướng</span></h2>
+<div class="formula">📐 Công thức: S + V + 上 / 下 + O</div>
+<div>上/下 đặt sau động từ nói hướng hay kết quả: 他穿上红衣服了 (anh ấy đã mặc áo đỏ vào), 他买下这件衣服了 (anh ấy đã mua cái áo này). 上 là lên/vào, 下 là xuống/mua xong. Anh nhớ: 上/下 đứng sau động từ, trước tân ngữ.</div>
+<div class="example">
+<div><b>他穿上红衣服了。</b> <button class="tts-btn" onclick="speakRate('他穿上红衣服了。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('他穿上红衣服了。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Tā chuān shàng hóng yīfu le. — Anh ấy đã mặc áo đỏ vào.</div>
+</div>
+<div class="example">
+<div><b>他在公园坐下了。</b> <button class="tts-btn" onclick="speakRate('他在公园坐下了。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('他在公园坐下了。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Tā zài gōngyuán zuò xià le. — Anh ấy đã ngồi xuống ở công viên.</div>
+</div>
+<div class="example">
+<div><b>他买下这件衣服了。</b> <button class="tts-btn" onclick="speakRate('他买下这件衣服了。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('他买下这件衣服了。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Tā mǎi xià zhè jiàn yīfu le. — Anh ấy đã mua cái áo này.</div>
+</div>
+<div class="mistake">⚠️ <b>Lỗi thường gặp:</b><br>❌ Sai: <s>他红衣服穿上了。</s><br>✅ Đúng: <b>他穿上红衣服了。</b><br>上 đặt sau động từ, trước tân ngữ: 穿上红衣服, không đặt tân ngữ trước động từ.</div>
+</div>
+<div class="card">
+<h2>20. 进 / 出 / 回 — bổ ngữ phương hướng <span class="badge">Bổ ngữ kết quả &amp; phương hướng</span></h2>
+<div class="formula">📐 Công thức: S + V + 进 / 出 / 回 + nơi chốn</div>
+<div>进/出/回 đặt sau động từ chỉ di chuyển, nói hướng đi: 他走进公园了 (anh ấy đã đi vào công viên), 他回到家了 (anh ấy đã về nhà). 进 là vào, 出 là ra, 回 là về. Anh nhớ: 进/出/回 đứng sau động từ, trước nơi chốn.</div>
+<div class="example">
+<div><b>他走进公园了。</b> <button class="tts-btn" onclick="speakRate('他走进公园了。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('他走进公园了。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Tā zǒu jìn gōngyuán le. — Anh ấy đã đi vào công viên.</div>
+</div>
+<div class="example">
+<div><b>他走出博物馆了。</b> <button class="tts-btn" onclick="speakRate('他走出博物馆了。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('他走出博物馆了。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Tā zǒu chū bówùguǎn le. — Anh ấy đã đi ra khỏi bảo tàng.</div>
+</div>
+<div class="example">
+<div><b>他回到家了。</b> <button class="tts-btn" onclick="speakRate('他回到家了。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('他回到家了。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Tā huí dào jiā le. — Anh ấy đã về nhà.</div>
+</div>
+<div class="mistake">⚠️ <b>Lỗi thường gặp:</b><br>❌ Sai: <s>他公园走进了。</s><br>✅ Đúng: <b>他走进公园了。</b><br>进 đặt sau động từ, trước nơi chốn: 走进公园, không đặt nơi chốn trước động từ.</div>
+</div>
+<div class="card"><h2>📂 Câu chữ 把 (cơ bản) <span class="badge">5 điểm</span></h2></div>
+<div class="card">
+<h2>21. 把 + N + V + 完 <span class="badge">Câu chữ 把 (cơ bản)</span></h2>
+<div class="formula">📐 Công thức: S + 把 + N + V + 完</div>
+<div>把 đặt tân ngữ lên trước động từ, nhấn mạnh việc làm xong: 把饭吃完 (ăn hết cơm), 把电视看完 (xem hết ti vi). Công thức: 把 + đồ vật + động từ + 完 (xong). Anh nhớ: 完 đặt sau động từ, không đặt trước 把.</div>
+<div class="example">
+<div><b>把饭吃完。</b> <button class="tts-btn" onclick="speakRate('把饭吃完。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('把饭吃完。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Bǎ fàn chī wán. — Ăn hết cơm đi.</div>
+</div>
+<div class="example">
+<div><b>把电视看完。</b> <button class="tts-btn" onclick="speakRate('把电视看完。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('把电视看完。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Bǎ diànshì kàn wán. — Xem hết ti vi đi.</div>
+</div>
+<div class="example">
+<div><b>把东西做完。</b> <button class="tts-btn" onclick="speakRate('把东西做完。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('把东西做完。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Bǎ dōngxi zuò wán. — Làm xong những thứ này đi.</div>
+</div>
+<div class="mistake">⚠️ <b>Lỗi thường gặp:</b><br>❌ Sai: <s>请把吃完饭。</s><br>✅ Đúng: <b>请把饭吃完。</b><br>把 + đồ vật + động từ + 完: 把饭吃完, không đặt 完 trước đồ vật.</div>
+</div>
+<div class="card">
+<h2>22. 把 + N + V + 好 <span class="badge">Câu chữ 把 (cơ bản)</span></h2>
+<div class="formula">📐 Công thức: S + 把 + N + V + 好</div>
+<div>V + 好 sau 把 chỉ làm xong và làm tốt: 把东西准备好 (chuẩn bị xong những thứ này), 把这件衣服穿好 (mặc xong chiếc áo này). Anh nhớ: 好 đặt sau động từ, không đặt trước 把.</div>
+<div class="example">
+<div><b>把东西准备好。</b> <button class="tts-btn" onclick="speakRate('把东西准备好。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('把东西准备好。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Bǎ dōngxi zhǔnbèi hǎo. — Chuẩn bị xong những thứ này đi.</div>
+</div>
+<div class="example">
+<div><b>把这件衣服穿好。</b> <button class="tts-btn" onclick="speakRate('把这件衣服穿好。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('把这件衣服穿好。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Bǎ zhè jiàn yīfu chuān hǎo. — Mặc xong chiếc áo này đi.</div>
+</div>
+<div class="example">
+<div><b>把东西做好。</b> <button class="tts-btn" onclick="speakRate('把东西做好。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('把东西做好。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Bǎ dōngxi zuò hǎo. — Làm xong những thứ này đi.</div>
+</div>
+<div class="mistake">⚠️ <b>Lỗi thường gặp:</b><br>❌ Sai: <s>请把准备好东西。</s><br>✅ Đúng: <b>请把东西准备好。</b><br>把 + đồ vật + động từ + 好: 把东西准备好.</div>
+</div>
+<div class="card">
+<h2>23. 把 + N + V + 给 + 人 <span class="badge">Câu chữ 把 (cơ bản)</span></h2>
+<div class="formula">📐 Công thức: S + 把 + N + 给 + 人</div>
+<div>把 + đồ vật + 给 + người: đưa cái gì cho ai: 把这支笔给你 (đưa cây bút này cho bạn), 把这件衣服给妈妈 (đưa chiếc áo này cho mẹ). Anh nhớ: 给 đặt sau đồ vật, người nhận đặt cuối.</div>
+<div class="example">
+<div><b>把这支笔给你。</b> <button class="tts-btn" onclick="speakRate('把这支笔给你。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('把这支笔给你。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Bǎ zhè zhī bǐ gěi nǐ. — Đưa cây bút này cho bạn.</div>
+</div>
+<div class="example">
+<div><b>把这件衣服给妈妈。</b> <button class="tts-btn" onclick="speakRate('把这件衣服给妈妈。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('把这件衣服给妈妈。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Bǎ zhè jiàn yīfu gěi māma. — Đưa chiếc áo này cho mẹ.</div>
+</div>
+<div class="example">
+<div><b>把门票给老师。</b> <button class="tts-btn" onclick="speakRate('把门票给老师。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('把门票给老师。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Bǎ ménpiào gěi lǎoshī. — Đưa vé cho thầy giáo.</div>
+</div>
+<div class="mistake">⚠️ <b>Lỗi thường gặp:</b><br>❌ Sai: <s>请把给妈妈这件衣服。</s><br>✅ Đúng: <b>请把这件衣服给妈妈。</b><br>把 + đồ vật + 给 + người: 把这件衣服给妈妈.</div>
+</div>
+<div class="card">
+<h2>24. 把 + N + V + 一下 <span class="badge">Câu chữ 把 (cơ bản)</span></h2>
+<div class="formula">📐 Công thức: S + 把 + N + V + 一下</div>
+<div>V + 一下 sau 把 chỉ làm thử một chút: 把这件衬衫试一下 (thử chiếc áo này một chút), 把电视看一下 (xem những bộ phim này một chút). Anh nhớ: 一下 đặt sau động từ, không đặt trước 把.</div>
+<div class="example">
+<div><b>把这件衬衫试一下。</b> <button class="tts-btn" onclick="speakRate('把这件衬衫试一下。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('把这件衬衫试一下。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Bǎ zhè jiàn chènshān shì yí xià. — Thử chiếc áo sơ mi này một chút.</div>
+</div>
+<div class="example">
+<div><b>把这双鞋试一下。</b> <button class="tts-btn" onclick="speakRate('把这双鞋试一下。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('把这双鞋试一下。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Bǎ zhè shuāng xié shì yí xià. — Thử đôi giày này một chút.</div>
+</div>
+<div class="example">
+<div><b>把电视看一下。</b> <button class="tts-btn" onclick="speakRate('把电视看一下。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('把电视看一下。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Bǎ diànshì kàn yí xià. — Xem ti vi một chút.</div>
+</div>
+<div class="mistake">⚠️ <b>Lỗi thường gặp:</b><br>❌ Sai: <s>请把试一下这件衬衫。</s><br>✅ Đúng: <b>请把这件衬衫试一下。</b><br>把 + đồ vật + động từ + 一下: 把这件衬衫试一下.</div>
+</div>
+<div class="card">
+<h2>25. 把 + N + V + 完/好/了 + 吗 <span class="badge">Câu chữ 把 (cơ bản)</span></h2>
+<div class="formula">📐 Công thức: S + 把 + N + V + 完/好/了 + 吗？</div>
+<div>Câu hỏi với 把 thêm 吗 ở cuối: 你把饭吃完了吗 (bạn đã ăn hết cơm chưa?), 你把这件衬衫买了吗 (bạn đã mua chiếc áo này chưa?). Anh nhớ: 吗 đặt cuối câu, 把 vẫn đặt trước đồ vật.</div>
+<div class="example">
+<div><b>你把饭吃完了吗？</b> <button class="tts-btn" onclick="speakRate('你把饭吃完了吗？', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('你把饭吃完了吗？', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Nǐ bǎ fàn chī wán le ma? — Bạn đã ăn hết cơm chưa?</div>
+</div>
+<div class="example">
+<div><b>你把这件衬衫买了吗？</b> <button class="tts-btn" onclick="speakRate('你把这件衬衫买了吗？', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('你把这件衬衫买了吗？', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Nǐ bǎ zhè jiàn chènshān mǎi le ma? — Bạn đã mua chiếc áo sơ mi này chưa?</div>
+</div>
+<div class="example">
+<div><b>你把东西准备好了吗？</b> <button class="tts-btn" onclick="speakRate('你把东西准备好了吗？', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('你把东西准备好了吗？', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Nǐ bǎ dōngxi zhǔnbèi hǎo le ma? — Bạn đã chuẩn bị xong những thứ này chưa?</div>
+</div>
+<div class="mistake">⚠️ <b>Lỗi thường gặp:</b><br>❌ Sai: <s>你饭把吃完了吗？</s><br>✅ Đúng: <b>你把饭吃完了吗？</b><br>把 đặt trước đồ vật: 把饭吃完了吗, không nói 饭把吃完.</div>
+</div>
+<div class="card"><h2>📂 Liên từ &amp; cấu trúc <span class="badge">5 điểm</span></h2></div>
+<div class="card">
+<h2>26. 因为……所以…… <span class="badge">Liên từ &amp; cấu trúc</span></h2>
+<div class="formula">📐 Công thức: 因为 + 原因，所以 + 结果</div>
+<div>因为 (vì) nêu lý do, 所以 (cho nên) nêu kết quả: 因为他很累，所以他去睡觉了 (vì anh ấy rất mệt, cho nên anh ấy đi ngủ). Anh nhớ: 因为 đặt đầu vế lý do, 所以 đặt đầu vế kết quả, không bỏ 所以.</div>
+<div class="example">
+<div><b>因为我很忙，所以我不去学校。</b> <button class="tts-btn" onclick="speakRate('因为我很忙，所以我不去学校。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('因为我很忙，所以我不去学校。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Yīnwèi wǒ hěn máng, suǒyǐ wǒ bú qù xuéxiào. — Vì tôi rất bận, cho nên tôi không đi học.</div>
+</div>
+<div class="example">
+<div><b>因为他很累，所以他去睡觉了。</b> <button class="tts-btn" onclick="speakRate('因为他很累，所以他去睡觉了。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('因为他很累，所以他去睡觉了。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Yīnwèi tā hěn lèi, suǒyǐ tā qù shuìjiào le. — Vì anh ấy rất mệt, cho nên anh ấy đi ngủ rồi.</div>
+</div>
+<div class="example">
+<div><b>因为他很喜欢唱歌，所以他每天唱歌。</b> <button class="tts-btn" onclick="speakRate('因为他很喜欢唱歌，所以他每天唱歌。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('因为他很喜欢唱歌，所以他每天唱歌。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Yīnwèi tā hěn xǐhuan chànggē, suǒyǐ tā měitiān chànggē. — Vì anh ấy rất thích hát, cho nên ngày nào anh ấy cũng hát.</div>
+</div>
+<div class="mistake">⚠️ <b>Lỗi thường gặp:</b><br>❌ Sai: <s>因为他很累他去睡觉了所以。</s><br>✅ Đúng: <b>因为他很累，所以他去睡觉了。</b><br>因为 đặt đầu vế lý do, 所以 đặt đầu vế kết quả: 因为……所以…….</div>
+</div>
+<div class="card">
+<h2>27. 或者……或者…… <span class="badge">Liên từ &amp; cấu trúc</span></h2>
+<div class="formula">📐 Công thức: A + 或者 + B</div>
+<div>或者 (hoặc là) nối hai lựa chọn: 你喝茶或者喝咖啡 (bạn uống trà hay uống cà phê?), 我们去学校或者去公园 (chúng ta đi học hay đi công viên?). Anh nhớ: 或者 đặt giữa hai lựa chọn, không đặt đầu câu.</div>
+<div class="example">
+<div><b>你喝茶或者喝咖啡？</b> <button class="tts-btn" onclick="speakRate('你喝茶或者喝咖啡？', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('你喝茶或者喝咖啡？', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Nǐ hē chá huòzhě hē kāfēi? — Bạn uống trà hay uống cà phê?</div>
+</div>
+<div class="example">
+<div><b>我们去学校或者去公园？</b> <button class="tts-btn" onclick="speakRate('我们去学校或者去公园？', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('我们去学校或者去公园？', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Wǒmen qù xuéxiào huòzhě qù gōngyuán? — Chúng ta đi học hay đi công viên?</div>
+</div>
+<div class="example">
+<div><b>他唱歌或者跳舞。</b> <button class="tts-btn" onclick="speakRate('他唱歌或者跳舞。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('他唱歌或者跳舞。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Tā chànggē huòzhě tiàowǔ. — Anh ấy hát hoặc nhảy.</div>
+</div>
+<div class="mistake">⚠️ <b>Lỗi thường gặp:</b><br>❌ Sai: <s>你喝茶喝咖啡或者？</s><br>✅ Đúng: <b>你喝茶或者喝咖啡？</b><br>或者 đặt giữa hai lựa chọn: 喝茶或者喝咖啡.</div>
+</div>
+<div class="card">
+<h2>28. 一边……，一边…… <span class="badge">Liên từ &amp; cấu trúc</span></h2>
+<div class="formula">📐 Công thức: S + 一边 + V1，一边 + V2</div>
+<div>一边……，一边…… (vừa……vừa……) chỉ hai việc làm cùng lúc: 他一边唱歌，一边跳舞 (anh ấy vừa hát vừa nhảy), 我一边看电视，一边吃饭 (tôi vừa xem ti vi vừa ăn cơm). Anh nhớ: phải có đủ hai 一边, không bỏ 一边 đầu tiên.</div>
+<div class="example">
+<div><b>他一边唱歌，一边跳舞。</b> <button class="tts-btn" onclick="speakRate('他一边唱歌，一边跳舞。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('他一边唱歌，一边跳舞。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Tā yìbiān chànggē, yìbiān tiàowǔ. — Anh ấy vừa hát vừa nhảy.</div>
+</div>
+<div class="example">
+<div><b>我一边看电视，一边吃饭。</b> <button class="tts-btn" onclick="speakRate('我一边看电视，一边吃饭。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('我一边看电视，一边吃饭。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Wǒ yìbiān kàn diànshì, yìbiān chī fàn. — Tôi vừa xem ti vi vừa ăn cơm.</div>
+</div>
+<div class="example">
+<div><b>他一边跳舞，一边听音乐。</b> <button class="tts-btn" onclick="speakRate('他一边跳舞，一边听音乐。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('他一边跳舞，一边听音乐。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Tā yìbiān tiàowǔ, yìbiān tīng yīnyuè. — Anh ấy vừa nhảy vừa nghe nhạc.</div>
+</div>
+<div class="mistake">⚠️ <b>Lỗi thường gặp:</b><br>❌ Sai: <s>他唱歌一边跳舞一边。</s><br>✅ Đúng: <b>他一边唱歌，一边跳舞。</b><br>一边……，一边…… phải có hai 一边: 一边唱歌，一边跳舞.</div>
+</div>
+<div class="card">
+<h2>29. ……的话 <span class="badge">Liên từ &amp; cấu trúc</span></h2>
+<div class="formula">📐 Công thức: S + V + 的话，……</div>
+<div>的话 (nếu……thì) đặt sau vế điều kiện: 你想去动物园的话，我们一起去 (nếu bạn muốn đi sở thú thì chúng ta cùng đi), 他想买衣服的话，可以去超市 (nếu anh ấy muốn mua quần áo thì có thể đi siêu thị). Anh nhớ: 的话 đặt cuối vế điều kiện, vế kết quả đặt sau dấu phẩy.</div>
+<div class="example">
+<div><b>你想去动物园的话，我们一起去。</b> <button class="tts-btn" onclick="speakRate('你想去动物园的话，我们一起去。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('你想去动物园的话，我们一起去。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Nǐ xiǎng qù dòngwùyuán de huà, wǒmen yìqǐ qù. — Nếu bạn muốn đi sở thú thì chúng ta cùng đi.</div>
+</div>
+<div class="example">
+<div><b>你想看电影的话，我和你一起去。</b> <button class="tts-btn" onclick="speakRate('你想看电影的话，我和你一起去。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('你想看电影的话，我和你一起去。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Nǐ xiǎng kàn diànyǐng de huà, wǒ hé nǐ yìqǐ qù. — Nếu bạn muốn xem phim thì tôi cùng bạn đi.</div>
+</div>
+<div class="example">
+<div><b>他想买衣服的话，可以去超市。</b> <button class="tts-btn" onclick="speakRate('他想买衣服的话，可以去超市。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('他想买衣服的话，可以去超市。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Tā xiǎng mǎi yīfu de huà, kěyǐ qù chāoshì. — Nếu anh ấy muốn mua quần áo thì có thể đi siêu thị.</div>
+</div>
+<div class="mistake">⚠️ <b>Lỗi thường gặp:</b><br>❌ Sai: <s>你想去动物园我们一起去的话。</s><br>✅ Đúng: <b>你想去动物园的话，我们一起去。</b><br>的话 đặt cuối vế điều kiện: 去动物园的话，我们一起去.</div>
+</div>
+<div class="card">
+<h2>30. 除了……以外 <span class="badge">Liên từ &amp; cấu trúc</span></h2>
+<div class="formula">📐 Công thức: 除了 + A + 以外，……</div>
+<div>除了……以外 (trừ……ra) chỉ ngoại lệ: 除了他以外，我们都去学校 (trừ anh ấy ra, chúng tôi đều đi học), 除了星期五以外，我每天去学校 (trừ thứ Sáu ra, ngày nào tôi cũng đi học). Anh nhớ: 除了 đặt đầu, 以外 đặt sau phần ngoại lệ.</div>
+<div class="example">
+<div><b>除了他以外，我们都去学校。</b> <button class="tts-btn" onclick="speakRate('除了他以外，我们都去学校。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('除了他以外，我们都去学校。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Chúle tā yǐwài, wǒmen dōu qù xuéxiào. — Trừ anh ấy ra, chúng tôi đều đi học.</div>
+</div>
+<div class="example">
+<div><b>除了星期五以外，我每天去学校。</b> <button class="tts-btn" onclick="speakRate('除了星期五以外，我每天去学校。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('除了星期五以外，我每天去学校。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Chúle xīngqīwǔ yǐwài, wǒ měitiān qù xuéxiào. — Trừ thứ Sáu ra, ngày nào tôi cũng đi học.</div>
+</div>
+<div class="example">
+<div><b>除了他以外，我不认识别人。</b> <button class="tts-btn" onclick="speakRate('除了他以外，我不认识别人。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('除了他以外，我不认识别人。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Chúle tā yǐwài, wǒ bú rènshi biérén. — Trừ anh ấy ra, tôi không quen ai khác.</div>
+</div>
+<div class="mistake">⚠️ <b>Lỗi thường gặp:</b><br>❌ Sai: <s>除了他，我们都去学校以外。</s><br>✅ Đúng: <b>除了他以外，我们都去学校。</b><br>除了 đặt đầu, 以外 đặt sau phần ngoại lệ: 除了他以外，我们都去学校.</div>
+</div>
+<div class="card"><h2>📂 Thời gian &amp; khoảng thời gian <span class="badge">5 điểm</span></h2></div>
+<div class="card">
+<h2>31. 现在几点 <span class="badge">Thời gian &amp; khoảng thời gian</span></h2>
+<div class="formula">📐 Công thức: 现在 + số + 点（+ 分）</div>
+<div>Hỏi giờ dùng 现在几点 (bây giờ mấy giờ?): 现在三点 (bây giờ 3 giờ), 现在七点半 (bây giờ 7 giờ rưỡi), 现在八点十分 (bây giờ 8 giờ 10 phút). Anh nhớ: 点 đặt sau số giờ, 分 đặt sau số phút, 半 nghĩa là rưỡi.</div>
+<div class="example">
+<div><b>现在三点。</b> <button class="tts-btn" onclick="speakRate('现在三点。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('现在三点。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Xiànzài sān diǎn. — Bây giờ 3 giờ.</div>
+</div>
+<div class="example">
+<div><b>现在七点半。</b> <button class="tts-btn" onclick="speakRate('现在七点半。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('现在七点半。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Xiànzài qī diǎn bàn. — Bây giờ 7 giờ rưỡi.</div>
+</div>
+<div class="example">
+<div><b>现在八点十分。</b> <button class="tts-btn" onclick="speakRate('现在八点十分。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('现在八点十分。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Xiànzài bā diǎn shí fēn. — Bây giờ 8 giờ 10 phút.</div>
+</div>
+<div class="mistake">⚠️ <b>Lỗi thường gặp:</b><br>❌ Sai: <s>现在点三。</s><br>✅ Đúng: <b>现在三点。</b><br>Số giờ đặt trước 点: 三点, không nói 点三.</div>
+</div>
+<div class="card">
+<h2>32. 时间 + 起床/上课/下课 <span class="badge">Thời gian &amp; khoảng thời gian</span></h2>
+<div class="formula">📐 Công thức: 时间 + 起床/上课/下课</div>
+<div>Giờ giấc đặt trước động từ chỉ hoạt động theo giờ: 我七点起床 (tôi dậy lúc 7 giờ), 我八点上课 (tôi vào học lúc 8 giờ), 我十二点下课 (tôi tan học lúc 12 giờ). Anh nhớ: giờ đặt trước động từ, không đặt cuối câu.</div>
+<div class="example">
+<div><b>我七点起床。</b> <button class="tts-btn" onclick="speakRate('我七点起床。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('我七点起床。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Wǒ qī diǎn qǐchuáng. — Tôi dậy lúc 7 giờ.</div>
+</div>
+<div class="example">
+<div><b>我八点上课。</b> <button class="tts-btn" onclick="speakRate('我八点上课。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('我八点上课。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Wǒ bā diǎn shàngkè. — Tôi vào học lúc 8 giờ.</div>
+</div>
+<div class="example">
+<div><b>我十二点下课。</b> <button class="tts-btn" onclick="speakRate('我十二点下课。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('我十二点下课。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Wǒ shí&#x27;èr diǎn xiàkè. — Tôi tan học lúc 12 giờ.</div>
+</div>
+<div class="mistake">⚠️ <b>Lỗi thường gặp:</b><br>❌ Sai: <s>我起床七点。</s><br>✅ Đúng: <b>我七点起床。</b><br>Giờ đặt trước động từ: 七点起床, không đặt cuối câu.</div>
+</div>
+<div class="card">
+<h2>33. 每天 / 有时 / 有时候 <span class="badge">Thời gian &amp; khoảng thời gian</span></h2>
+<div class="formula">📐 Công thức: 每天/有时/有时候 + V</div>
+<div>每天 (mỗi ngày) chỉ thói quen, 有时/有时候 (thỉnh thoảng) chỉ việc không thường xuyên: 我每天去学校 (ngày nào tôi cũng đi học), 他有时去公园 (thỉnh thoảng anh ấy đi công viên), 我有时候去看电影 (thỉnh thoảng tôi đi xem phim). Anh nhớ: 每天/有时/有时候 đặt trước động từ.</div>
+<div class="example">
+<div><b>我每天去学校。</b> <button class="tts-btn" onclick="speakRate('我每天去学校。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('我每天去学校。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Wǒ měitiān qù xuéxiào. — Ngày nào tôi cũng đi học.</div>
+</div>
+<div class="example">
+<div><b>他有时去公园。</b> <button class="tts-btn" onclick="speakRate('他有时去公园。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('他有时去公园。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Tā yǒushí qù gōngyuán. — Thỉnh thoảng anh ấy đi công viên.</div>
+</div>
+<div class="example">
+<div><b>我有时候去看电影。</b> <button class="tts-btn" onclick="speakRate('我有时候去看电影。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('我有时候去看电影。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Wǒ yǒushíhou qù kàn diànyǐng. — Thỉnh thoảng tôi đi xem phim.</div>
+</div>
+<div class="mistake">⚠️ <b>Lỗi thường gặp:</b><br>❌ Sai: <s>我去学校每天。</s><br>✅ Đúng: <b>我每天去学校。</b><br>每天/有时/有时候 đặt trước động từ: 每天去学校.</div>
+</div>
+<div class="card">
+<h2>34. 多长时间 <span class="badge">Thời gian &amp; khoảng thời gian</span></h2>
+<div class="formula">📐 Công thức: V + 多长时间 + 了？</div>
+<div>多长时间 (bao lâu) hỏi khoảng thời gian: 你去公园多长时间了 (bạn đi công viên bao lâu rồi?), 我去公园两个小时了 (tôi đi công viên 2 tiếng rồi). Trả lời bằng số + 小时/年. Anh nhớ: 多长时间 đặt sau động từ, 了 đặt cuối câu.</div>
+<div class="example">
+<div><b>你去公园多长时间了？</b> <button class="tts-btn" onclick="speakRate('你去公园多长时间了？', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('你去公园多长时间了？', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Nǐ qù gōngyuán duō cháng shíjiān le? — Bạn đi công viên bao lâu rồi?</div>
+</div>
+<div class="example">
+<div><b>我去公园两个小时了。</b> <button class="tts-btn" onclick="speakRate('我去公园两个小时了。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('我去公园两个小时了。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Wǒ qù gōngyuán liǎng gè xiǎoshí le. — Tôi đi công viên 2 tiếng rồi.</div>
+</div>
+<div class="example">
+<div><b>他学汉语多长时间了？</b> <button class="tts-btn" onclick="speakRate('他学汉语多长时间了？', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('他学汉语多长时间了？', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Tā xué Hànyǔ duō cháng shíjiān le? — Anh ấy học tiếng Hán bao lâu rồi?</div>
+</div>
+<div class="mistake">⚠️ <b>Lỗi thường gặp:</b><br>❌ Sai: <s>你去公园了多长时间？</s><br>✅ Đúng: <b>你去公园多长时间了？</b><br>多长时间 đặt sau động từ, 了 đặt cuối câu: 多长时间了.</div>
+</div>
+<div class="card">
+<h2>35. 上个/下个/这个 + 星期 <span class="badge">Thời gian &amp; khoảng thời gian</span></h2>
+<div class="formula">📐 Công thức: 上个/下个/这个 + 星期 + 天</div>
+<div>上个 (tuần trước), 下个 (tuần sau), 这个 (tuần này) đi với 星期 + thứ: 上个星期五我去看电影了 (thứ Sáu tuần trước tôi đi xem phim), 下个星期五我去动物园 (thứ Sáu tuần sau tôi đi sở thú). Anh nhớ: 上个/下个/这个 đặt trước 星期.</div>
+<div class="example">
+<div><b>上个星期五我去看电影了。</b> <button class="tts-btn" onclick="speakRate('上个星期五我去看电影了。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('上个星期五我去看电影了。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Shàng gè xīngqīwǔ wǒ qù kàn diànyǐng le. — Thứ Sáu tuần trước tôi đi xem phim rồi.</div>
+</div>
+<div class="example">
+<div><b>下个星期五我去动物园。</b> <button class="tts-btn" onclick="speakRate('下个星期五我去动物园。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('下个星期五我去动物园。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Xià gè xīngqīwǔ wǒ qù dòngwùyuán. — Thứ Sáu tuần sau tôi đi sở thú.</div>
+</div>
+<div class="example">
+<div><b>这个星期五我们去动物园。</b> <button class="tts-btn" onclick="speakRate('这个星期五我们去动物园。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('这个星期五我们去动物园。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Zhè gè xīngqīwǔ wǒmen qù dòngwùyuán. — Thứ Sáu tuần này chúng ta đi sở thú.</div>
+</div>
+<div class="mistake">⚠️ <b>Lỗi thường gặp:</b><br>❌ Sai: <s>星期五上个我去看电影了。</s><br>✅ Đúng: <b>上个星期五我去看电影了。</b><br>上个/下个/这个 đặt trước 星期: 上个星期五.</div>
+</div>
+<div class="card"><h2>📂 Cấu trúc thường dùng <span class="badge">5 điểm</span></h2></div>
+<div class="card">
+<h2>36. 比较 + Adj <span class="badge">Cấu trúc thường dùng</span></h2>
+<div class="formula">📐 Công thức: N + 比较 + Adj</div>
+<div>比较 (khá, tương đối) đặt trước tính từ, nhẹ hơn 很: 这件衬衫比较贵 (chiếc áo này khá đắt), 这双鞋比较便宜 (đôi giày này khá rẻ), 这件衣服比较大 (chiếc áo này khá to). Anh nhớ: 比较 đặt trước tính từ, không đặt sau.</div>
+<div class="example">
+<div><b>这件衬衫比较贵。</b> <button class="tts-btn" onclick="speakRate('这件衬衫比较贵。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('这件衬衫比较贵。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Zhè jiàn chènshān bǐjiào guì. — Chiếc áo sơ mi này khá đắt.</div>
+</div>
+<div class="example">
+<div><b>这双鞋比较便宜。</b> <button class="tts-btn" onclick="speakRate('这双鞋比较便宜。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('这双鞋比较便宜。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Zhè shuāng xié bǐjiào piányi. — Đôi giày này khá rẻ.</div>
+</div>
+<div class="example">
+<div><b>这件衣服比较大。</b> <button class="tts-btn" onclick="speakRate('这件衣服比较大。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('这件衣服比较大。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Zhè jiàn yīfu bǐjiào dà. — Chiếc áo này khá to.</div>
+</div>
+<div class="mistake">⚠️ <b>Lỗi thường gặp:</b><br>❌ Sai: <s>这件衬衫贵比较。</s><br>✅ Đúng: <b>这件衬衫比较贵。</b><br>比较 đặt trước tính từ: 比较贵, không nói 贵比较.</div>
+</div>
+<div class="card">
+<h2>37. 越来越 + Adj <span class="badge">Cấu trúc thường dùng</span></h2>
+<div class="formula">📐 Công thức: S + 越来越 + Adj</div>
+<div>越来越 (càng ngày càng) chỉ mức độ tăng dần: 他越来越忙 (anh ấy càng ngày càng bận), 他越来越累 (anh ấy càng ngày càng mệt), 他越来越喜欢唱歌 (anh ấy càng ngày càng thích hát). Anh nhớ: 越来越 đặt trước tính từ hay động từ, không đặt cuối câu.</div>
+<div class="example">
+<div><b>他越来越忙。</b> <button class="tts-btn" onclick="speakRate('他越来越忙。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('他越来越忙。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Tā yuè lái yuè máng. — Anh ấy càng ngày càng bận.</div>
+</div>
+<div class="example">
+<div><b>他越来越累。</b> <button class="tts-btn" onclick="speakRate('他越来越累。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('他越来越累。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Tā yuè lái yuè lèi. — Anh ấy càng ngày càng mệt.</div>
+</div>
+<div class="example">
+<div><b>他越来越喜欢唱歌。</b> <button class="tts-btn" onclick="speakRate('他越来越喜欢唱歌。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('他越来越喜欢唱歌。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Tā yuè lái yuè xǐhuan chànggē. — Anh ấy càng ngày càng thích hát.</div>
+</div>
+<div class="mistake">⚠️ <b>Lỗi thường gặp:</b><br>❌ Sai: <s>他高兴越来越。</s><br>✅ Đúng: <b>他越来越高兴。</b><br>越来越 đặt trước tính từ: 越来越高兴.</div>
+</div>
+<div class="card">
+<h2>38. 有一点儿 + Adj <span class="badge">Cấu trúc thường dùng</span></h2>
+<div class="formula">📐 Công thức: S + 有一点儿 + Adj</div>
+<div>有一点儿 (hơi, một chút) đặt trước tính từ chỉ mức độ nhẹ: 我有一点儿累 (tôi hơi mệt), 这杯茶有一点儿贵 (cốc trà này hơi đắt), 这件衬衫有一点儿大 (chiếc áo này hơi to). Anh nhớ: 有一点儿 đặt trước tính từ, 儿 đọc nhẹ: diǎn er.</div>
+<div class="example">
+<div><b>我有一点儿累。</b> <button class="tts-btn" onclick="speakRate('我有一点儿累。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('我有一点儿累。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Wǒ yǒu yìdiǎn er lèi. — Tôi hơi mệt.</div>
+</div>
+<div class="example">
+<div><b>这杯茶有一点儿贵。</b> <button class="tts-btn" onclick="speakRate('这杯茶有一点儿贵。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('这杯茶有一点儿贵。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Zhè bēi chá yǒu yìdiǎn er guì. — Cốc trà này hơi đắt.</div>
+</div>
+<div class="example">
+<div><b>这件衬衫有一点儿大。</b> <button class="tts-btn" onclick="speakRate('这件衬衫有一点儿大。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('这件衬衫有一点儿大。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Zhè jiàn chènshān yǒu yìdiǎn er dà. — Chiếc áo sơ mi này hơi to.</div>
+</div>
+<div class="mistake">⚠️ <b>Lỗi thường gặp:</b><br>❌ Sai: <s>这杯茶贵有一点儿。</s><br>✅ Đúng: <b>这杯茶有一点儿贵。</b><br>有一点儿 đặt trước tính từ: 有一点儿贵.</div>
+</div>
+<div class="card">
+<h2>39. Adj + 极了 <span class="badge">Cấu trúc thường dùng</span></h2>
+<div class="formula">📐 Công thức: Adj + 极了</div>
+<div>极了 (lắm, cực kỳ) đặt sau tính từ chỉ mức độ rất cao: 这件衬衫好看极了 (chiếc áo này đẹp lắm), 这杯茶好喝极了 (cốc trà này ngon lắm), 这件衣服好看极了 (bộ phim này hay lắm). Anh nhớ: 极了 đặt sau tính từ, không đặt trước.</div>
+<div class="example">
+<div><b>这件衬衫好看极了。</b> <button class="tts-btn" onclick="speakRate('这件衬衫好看极了。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('这件衬衫好看极了。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Zhè jiàn chènshān hǎokàn jí le. — Chiếc áo sơ mi này đẹp lắm.</div>
+</div>
+<div class="example">
+<div><b>这杯茶好喝极了。</b> <button class="tts-btn" onclick="speakRate('这杯茶好喝极了。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('这杯茶好喝极了。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Zhè bēi chá hǎohē jí le. — Cốc trà này ngon lắm.</div>
+</div>
+<div class="example">
+<div><b>这件衣服好看极了。</b> <button class="tts-btn" onclick="speakRate('这件衣服好看极了。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('这件衣服好看极了。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Zhè jiàn yīfu hǎokàn jí le. — Chiếc áo này đẹp lắm.</div>
+</div>
+<div class="mistake">⚠️ <b>Lỗi thường gặp:</b><br>❌ Sai: <s>这件衬衫好看了极了。</s><br>✅ Đúng: <b>这件衬衫好看极了。</b><br>极了 đặt sau tính từ: 好看极了, không nói 好看了极了.</div>
+</div>
+<div class="card">
+<h2>40. 对了 <span class="badge">Cấu trúc thường dùng</span></h2>
+<div class="formula">📐 Công thức: 对了，……</div>
+<div>对了 (à mà, nhân tiện) dùng khi chợt nhớ ra điều muốn nói: 对了，你明天去学校吗 (à mà, ngày mai bạn đi học không?), 对了，他今天不去学校 (à mà, hôm nay anh ấy không đi học). Anh nhớ: 对了 đặt đầu câu, sau đó là câu mới.</div>
+<div class="example">
+<div><b>对了，你明天去学校吗？</b> <button class="tts-btn" onclick="speakRate('对了，你明天去学校吗？', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('对了，你明天去学校吗？', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Duì le, nǐ míngtiān qù xuéxiào ma? — À mà, ngày mai bạn đi học không?</div>
+</div>
+<div class="example">
+<div><b>对了，他今天不去学校。</b> <button class="tts-btn" onclick="speakRate('对了，他今天不去学校。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('对了，他今天不去学校。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Duì le, tā jīntiān bú qù xuéxiào. — À mà, hôm nay anh ấy không đi học.</div>
+</div>
+<div class="example">
+<div><b>对了，我们一起去看电影吧。</b> <button class="tts-btn" onclick="speakRate('对了，我们一起去看电影吧。', 0.88)">🔊 Nghe</button> <button class="tts-btn" onclick="speakRate('对了，我们一起去看电影吧。', 0.6)">🐢 Nghe chậm</button></div>
+<div class="sentence-sub">Duì le, wǒmen yìqǐ qù kàn diànyǐng ba. — À mà, chúng ta cùng đi xem phim nhé.</div>
+</div>
+<div class="mistake">⚠️ <b>Lỗi thường gặp:</b><br>❌ Sai: <s>你明天去学校吗对了？</s><br>✅ Đúng: <b>对了，你明天去学校吗？</b><br>对了 đặt đầu câu: 对了，你明天去学校吗？</div>
+</div>
+<div class="card">
+<h2>✏️ Bài 1: Chọn câu đúng <span class="badge">10 câu</span></h2>
+<div class="sub" style="margin-bottom:8px;">Mỗi câu hỏi có 4 câu tiếng Hán, chỉ 1 câu đúng ngữ pháp. Trả lời đúng xong, câu đúng sẽ được đọc lên.</div>
+<div class="q-item" id="cc-1">
+<div><b>Câu 1.</b> Chọn câu đúng: <span class="hint">(选择正确的句子。)</span></div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'cc-1', '✗ Chưa đúng, đọc lại phần giải thích nhé!')">A. 去了他动物园。</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'cc-1', '✗ Chưa đúng, đọc lại phần giải thích nhé!')">B. 他了去动物园。</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'cc-1', '✓ Chính xác! 了 đặt sau động từ: 去了动物园。', '他去了动物园。')">C. 他去了动物园。</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'cc-1', '✗ Chưa đúng, đọc lại phần giải thích nhé!')">D. 他去动物园了了。</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="cc-2">
+<div><b>Câu 2.</b> Chọn câu đúng: <span class="hint">(选择正确的句子。)</span></div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'cc-2', '✗ Chưa đúng, đọc lại phần giải thích nhé!')">A. 我去动物园过。</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'cc-2', '✓ Chính xác! 过 đặt sau động từ chỉ kinh nghiệm: 去过动物园。', '我去过动物园。')">B. 我去过动物园。</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'cc-2', '✗ Chưa đúng, đọc lại phần giải thích nhé!')">C. 过我去动物园。</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'cc-2', '✗ Chưa đúng, đọc lại phần giải thích nhé!')">D. 我过去动物园。</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="cc-3">
+<div><b>Câu 3.</b> Chọn câu đúng: <span class="hint">(选择正确的句子。)</span></div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, true, 'cc-3', '✓ Chính xác! 着 đặt sau động từ chỉ trạng thái: 穿着一件红衬衫。', '他穿着一件红衬衫。')">A. 他穿着一件红衬衫。</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'cc-3', '✗ Chưa đúng, đọc lại phần giải thích nhé!')">B. 他穿着红衬衫一件。</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'cc-3', '✗ Chưa đúng, đọc lại phần giải thích nhé!')">C. 他着穿一件红衬衫。</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'cc-3', '✗ Chưa đúng, đọc lại phần giải thích nhé!')">D. 他穿一件红衬衫着。</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="cc-4">
+<div><b>Câu 4.</b> Chọn câu đúng: <span class="hint">(选择正确的句子。)</span></div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'cc-4', '✗ Chưa đúng, đọc lại phần giải thích nhé!')">A. 他唱歌会。</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'cc-4', '✗ Chưa đúng, đọc lại phần giải thích nhé!')">B. 会他唱歌。</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'cc-4', '✓ Chính xác! 会 đặt trước động từ: 会唱歌。', '他会唱歌。')">C. 他会唱歌。</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'cc-4', '✗ Chưa đúng, đọc lại phần giải thích nhé!')">D. 他会歌唱。</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="cc-5">
+<div><b>Câu 5.</b> Chọn câu đúng: <span class="hint">(选择正确的句子。)</span></div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'cc-5', '✗ Chưa đúng, đọc lại phần giải thích nhé!')">A. 可以他去学校。</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'cc-5', '✗ Chưa đúng, đọc lại phần giải thích nhé!')">B. 他去学校可以。</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'cc-5', '✗ Chưa đúng, đọc lại phần giải thích nhé!')">C. 他可以学校去。</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'cc-5', '✓ Chính xác! 可以 đặt trước động từ: 可以去学校。', '他可以去学校。')">D. 他可以去学校。</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="cc-6">
+<div><b>Câu 6.</b> Chọn câu đúng: <span class="hint">(选择正确的句子。)</span></div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'cc-6', '✗ Chưa đúng, đọc lại phần giải thích nhé!')">A. 请饭把吃完。</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'cc-6', '✗ Chưa đúng, đọc lại phần giải thích nhé!')">B. 请把吃完饭。</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'cc-6', '✗ Chưa đúng, đọc lại phần giải thích nhé!')">C. 请把饭完吃。</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'cc-6', '✓ Chính xác! 把 + đồ vật + động từ + 完: 把饭吃完。', '请把饭吃完。')">D. 请把饭吃完。</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="cc-7">
+<div><b>Câu 7.</b> Chọn câu đúng: <span class="hint">(选择正确的句子。)</span></div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'cc-7', '✗ Chưa đúng, đọc lại phần giải thích nhé!')">A. 所以因为他很累他去睡觉了。</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'cc-7', '✗ Chưa đúng, đọc lại phần giải thích nhé!')">B. 因为他很累，所以他睡觉去。</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'cc-7', '✗ Chưa đúng, đọc lại phần giải thích nhé!')">C. 因为他很累他去睡觉了所以。</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'cc-7', '✓ Chính xác! 因为 đặt đầu vế lý do, 所以 đặt đầu vế kết quả。', '因为他很累，所以他去睡觉了。')">D. 因为他很累，所以他去睡觉了。</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="cc-8">
+<div><b>Câu 8.</b> Chọn câu đúng: <span class="hint">(选择正确的句子。)</span></div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'cc-8', '✗ Chưa đúng, đọc lại phần giải thích nhé!')">A. 你喝茶喝咖啡或者？</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'cc-8', '✓ Chính xác! 或者 đặt giữa hai lựa chọn: 喝茶或者喝咖啡。', '你喝茶或者喝咖啡？')">B. 你喝茶或者喝咖啡？</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'cc-8', '✗ Chưa đúng, đọc lại phần giải thích nhé!')">C. 或者你喝茶喝咖啡？</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'cc-8', '✗ Chưa đúng, đọc lại phần giải thích nhé!')">D. 你或者喝茶喝咖啡？</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="cc-9">
+<div><b>Câu 9.</b> Chọn câu đúng: <span class="hint">(选择正确的句子。)</span></div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'cc-9', '✗ Chưa đúng, đọc lại phần giải thích nhé!')">A. 一边他唱歌，一边跳舞。</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'cc-9', '✗ Chưa đúng, đọc lại phần giải thích nhé!')">B. 他一边唱歌跳舞一边。</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'cc-9', '✓ Chính xác! 一边……，一边…… phải có hai 一边: 一边唱歌，一边跳舞。', '他一边唱歌，一边跳舞。')">C. 他一边唱歌，一边跳舞。</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'cc-9', '✗ Chưa đúng, đọc lại phần giải thích nhé!')">D. 他唱歌一边跳舞一边。</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="cc-10">
+<div><b>Câu 10.</b> Chọn câu đúng: <span class="hint">(选择正确的句子。)</span></div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'cc-10', '✗ Chưa đúng, đọc lại phần giải thích nhé!')">A. 这件贵衬衫比较。</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'cc-10', '✗ Chưa đúng, đọc lại phần giải thích nhé!')">B. 比较这件衬衫贵。</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'cc-10', '✓ Chính xác! 比较 đặt trước tính từ: 比较贵。', '这件衬衫比较贵。')">C. 这件衬衫比较贵。</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'cc-10', '✗ Chưa đúng, đọc lại phần giải thích nhé!')">D. 这件衬衫贵比较。</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+</div>
+<div class="card">
+<h2>✏️ Bài 2: Điền từ vào chỗ trống <span class="badge">10 câu</span></h2>
+<div class="sub" style="margin-bottom:8px;">Chọn từ/cụm từ đúng để điền vào chỗ trống ＿＿ trong câu.</div>
+<div class="q-item" id="fb-1">
+<div><b>Câu 1.</b> 他喝＿＿咖啡。</div>
+<div class="hint">Pinyin: Tā hē le kāfēi.</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'fb-1', '✗ Chưa đúng, xem lại nhé!')">A. 吧</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'fb-1', '✗ Chưa đúng, xem lại nhé!')">B. 吗</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'fb-1', '✓ Chính xác! Uống xong rồi, dùng 了: 喝了咖啡。', '他喝了咖啡。')">C. 了</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'fb-1', '✗ Chưa đúng, xem lại nhé!')">D. 呢</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="fb-2">
+<div><b>Câu 2.</b> 他没＿＿过动物园。</div>
+<div class="hint">Pinyin: Tā méi qù guo dòngwùyuán.</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'fb-2', '✗ Chưa đúng, xem lại nhé!')">A. 是</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'fb-2', '✗ Chưa đúng, xem lại nhé!')">B. 在</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'fb-2', '✗ Chưa đúng, xem lại nhé!')">C. 来</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'fb-2', '✓ Chính xác! Chưa từng đi, dùng 没 + 去过: 没去过动物园。', '他没去过动物园。')">D. 去</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="fb-3">
+<div><b>Câu 3.</b> 他穿＿＿一件红衬衫。</div>
+<div class="hint">Pinyin: Tā chuān zhe yí jiàn hóng chènshān.</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'fb-3', '✗ Chưa đúng, xem lại nhé!')">A. 了</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'fb-3', '✗ Chưa đúng, xem lại nhé!')">B. 吗</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'fb-3', '✗ Chưa đúng, xem lại nhé!')">C. 过</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'fb-3', '✓ Chính xác! Đang mặc, dùng 着: 穿着一件红衬衫。', '他穿着一件红衬衫。')">D. 着</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="fb-4">
+<div><b>Câu 4.</b> 他＿＿去学校。</div>
+<div class="hint">Pinyin: Tā kěyǐ qù xuéxiào.</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'fb-4', '✗ Chưa đúng, xem lại nhé!')">A. 要</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'fb-4', '✗ Chưa đúng, xem lại nhé!')">B. 想</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'fb-4', '✓ Chính xác! Có thể đi học, dùng 可以: 可以去学校。', '他可以去学校。')">C. 可以</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'fb-4', '✗ Chưa đúng, xem lại nhé!')">D. 会</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="fb-5">
+<div><b>Câu 5.</b> 请把饭＿＿。</div>
+<div class="hint">Pinyin: Qǐng bǎ fàn chī wán.</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'fb-5', '✗ Chưa đúng, xem lại nhé!')">A. 完</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'fb-5', '✗ Chưa đúng, xem lại nhé!')">B. 吃</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'fb-5', '✗ Chưa đúng, xem lại nhé!')">C. 了</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'fb-5', '✓ Chính xác! Ăn hết cơm, dùng 把 + 饭 + 吃完: 把饭吃完。', '请把饭吃完。')">D. 吃完</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="fb-6">
+<div><b>Câu 6.</b> 因为他很累，＿＿他去睡觉了。</div>
+<div class="hint">Pinyin: Yīnwèi tā hěn lèi, suǒyǐ tā qù shuìjiào le.</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'fb-6', '✗ Chưa đúng, xem lại nhé!')">A. 但是</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'fb-6', '✓ Chính xác! Vì……cho nên……, dùng 所以: 因为他很累，所以他去睡觉了。', '因为他很累，所以他去睡觉了。')">B. 所以</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'fb-6', '✗ Chưa đúng, xem lại nhé!')">C. 还是</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'fb-6', '✗ Chưa đúng, xem lại nhé!')">D. 和</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="fb-7">
+<div><b>Câu 7.</b> 你喝茶＿＿喝咖啡？</div>
+<div class="hint">Pinyin: Nǐ hē chá huòzhě hē kāfēi?</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'fb-7', '✗ Chưa đúng, xem lại nhé!')">A. 和</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'fb-7', '✗ Chưa đúng, xem lại nhé!')">B. 还是</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'fb-7', '✗ Chưa đúng, xem lại nhé!')">C. 在</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'fb-7', '✓ Chính xác! Hỏi lựa chọn dùng 或者: 喝茶或者喝咖啡？', '你喝茶或者喝咖啡？')">D. 或者</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="fb-8">
+<div><b>Câu 8.</b> 他一边＿＿，一边跳舞。</div>
+<div class="hint">Pinyin: Tā yìbiān chànggē, yìbiān tiàowǔ.</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, true, 'fb-8', '✓ Chính xác! Vừa hát vừa nhảy: 一边唱歌，一边跳舞。', '他一边唱歌，一边跳舞。')">A. 唱歌</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'fb-8', '✗ Chưa đúng, xem lại nhé!')">B. 吃饭</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'fb-8', '✗ Chưa đúng, xem lại nhé!')">C. 去学校</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'fb-8', '✗ Chưa đúng, xem lại nhé!')">D. 看电影</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="fb-9">
+<div><b>Câu 9.</b> 这件衬衫＿＿贵。</div>
+<div class="hint">Pinyin: Zhè jiàn chènshān bǐjiào guì.</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'fb-9', '✗ Chưa đúng, xem lại nhé!')">A. 非常</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'fb-9', '✓ Chính xác! Khá đắt, dùng 比较: 比较贵。', '这件衬衫比较贵。')">B. 比较</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'fb-9', '✗ Chưa đúng, xem lại nhé!')">C. 太</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'fb-9', '✗ Chưa đúng, xem lại nhé!')">D. 很</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="fb-10">
+<div><b>Câu 10.</b> 现在＿＿点？</div>
+<div class="hint">Pinyin: Xiànzài sān diǎn?</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, true, 'fb-10', '✓ Chính xác! Bây giờ 3 giờ: 现在三点。', '现在三点？')">A. 三</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'fb-10', '✗ Chưa đúng, xem lại nhé!')">B. 九</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'fb-10', '✗ Chưa đúng, xem lại nhé!')">C. 八</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'fb-10', '✗ Chưa đúng, xem lại nhé!')">D. 七</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+</div>
+<div class="card">
+<h2>✏️ Bài 3: Sửa lỗi sai <span class="badge">8 câu</span></h2>
+<div class="sub" style="margin-bottom:8px;">Mỗi câu hỏi có 2 câu: 1 câu sai và 1 câu đúng. Hãy chọn câu đúng.</div>
+<div class="q-item" id="ce-1">
+<div><b>Câu 1.</b> Câu nào đúng ngữ pháp?</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, true, 'ce-1', '✓ Chính xác! 了 đặt sau động từ: 去了公园, không đặt trước động từ.', '他去了公园。')">A. 他去了公园。</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'ce-1', '✗ Chưa đúng: 了 đặt sau động từ: 去了公园, không đặt trước động từ.')">B. 他了去公园。</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="ce-2">
+<div><b>Câu 2.</b> Câu nào đúng ngữ pháp?</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, true, 'ce-2', '✓ Chính xác! 过 đặt sau động từ chỉ kinh nghiệm: 去过动物园, không nói 过去动物园。', '我去过动物园。')">A. 我去过动物园。</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'ce-2', '✗ Chưa đúng: 过 đặt sau động từ chỉ kinh nghiệm: 去过动物园, không nói 过去动物园。')">B. 我过去动物园。</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="ce-3">
+<div><b>Câu 3.</b> Câu nào đúng ngữ pháp?</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'ce-3', '✗ Chưa đúng: 着 đặt sau động từ chỉ trạng thái: 穿着一件红衬衫, không đặt cuối câu。')">A. 他穿一件红衬衫着。</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'ce-3', '✓ Chính xác! 着 đặt sau động từ chỉ trạng thái: 穿着一件红衬衫, không đặt cuối câu。', '他穿着一件红衬衫。')">B. 他穿着一件红衬衫。</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="ce-4">
+<div><b>Câu 4.</b> Câu nào đúng ngữ pháp?</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'ce-4', '✗ Chưa đúng: 可以 đặt trước động từ: 可以去学校, không đặt sau nơi chốn。')">A. 他学校可以去。</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'ce-4', '✓ Chính xác! 可以 đặt trước động từ: 可以去学校, không đặt sau nơi chốn。', '他可以去学校。')">B. 他可以去学校。</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="ce-5">
+<div><b>Câu 5.</b> Câu nào đúng ngữ pháp?</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, true, 'ce-5', '✓ Chính xác! 把 + đồ vật + động từ + 完: 把饭吃完, không đặt 完 trước đồ vật。', '请把饭吃完。')">A. 请把饭吃完。</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'ce-5', '✗ Chưa đúng: 把 + đồ vật + động từ + 完: 把饭吃完, không đặt 完 trước đồ vật。')">B. 请把吃完饭。</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="ce-6">
+<div><b>Câu 6.</b> Câu nào đúng ngữ pháp?</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, true, 'ce-6', '✓ Chính xác! 因为 đặt đầu vế lý do, 所以 đặt đầu vế kết quả: 因为……所以…….', '因为他很累，所以他去睡觉了。')">A. 因为他很累，所以他去睡觉了。</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'ce-6', '✗ Chưa đúng: 因为 đặt đầu vế lý do, 所以 đặt đầu vế kết quả: 因为……所以…….')">B. 因为他很累他去睡觉了所以。</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="ce-7">
+<div><b>Câu 7.</b> Câu nào đúng ngữ pháp?</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, false, 'ce-7', '✗ Chưa đúng: 一边……，一边…… phải có hai 一边: 一边唱歌，一边跳舞。')">A. 他唱歌一边跳舞一边。</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'ce-7', '✓ Chính xác! 一边……，一边…… phải có hai 一边: 一边唱歌，一边跳舞。', '他一边唱歌，一边跳舞。')">B. 他一边唱歌，一边跳舞。</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+<div class="q-item" id="ce-8">
+<div><b>Câu 8.</b> Câu nào đúng ngữ pháp?</div>
+<div class="mc-options">
+<button class="mc-btn" onclick="checkMC(this, true, 'ce-8', '✓ Chính xác! 比较 đặt trước tính từ: 比较贵, không nói 贵比较。', '这件衬衫比较贵。')">A. 这件衬衫比较贵。</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'ce-8', '✗ Chưa đúng: 比较 đặt trước tính từ: 比较贵, không nói 贵比较。')">B. 这件衬衫贵比较。</button>
+</div>
+<div class="feedback" style="margin-top:6px;"></div></div>
+</div>
+<div class="card">
+<h2>🧩 Bài 4: Sắp xếp câu (连词成句) <span class="badge">5 câu</span></h2>
+<div class="sub" style="margin-bottom:8px;">Chạm vào từng từ ở khung xám để ghép thành câu hoàn chỉnh:</div>
+<div class="scramble-box" id="scr-1" data-target="他去了公园。">
+<div><b>Câu 1:</b> Anh ấy đã đi công viên.</div>
+<div class="answer-zone"></div>
+<div class="word-bank" data-words="去|了|公园|他|。"></div>
+<div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
+</div>
+<div class="scramble-box" id="scr-2" data-target="我去过动物园。">
+<div><b>Câu 2:</b> Tôi đã đi sở thú rồi.</div>
+<div class="answer-zone"></div>
+<div class="word-bank" data-words="去|我|过|。|动物园"></div>
+<div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
+</div>
+<div class="scramble-box" id="scr-3" data-target="请把饭吃完。">
+<div><b>Câu 3:</b> Xin ăn hết cơm đi.</div>
+<div class="answer-zone"></div>
+<div class="word-bank" data-words="把|。|请|吃完|饭"></div>
+<div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
+</div>
+<div class="scramble-box" id="scr-4" data-target="他穿着一件红衬衫。">
+<div><b>Câu 4:</b> Anh ấy đang mặc một chiếc áo sơ mi đỏ.</div>
+<div class="answer-zone"></div>
+<div class="word-bank" data-words="一件|穿着|。|他|红衬衫"></div>
+<div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
+</div>
+<div class="scramble-box" id="scr-5" data-target="他越来越高兴。">
+<div><b>Câu 5:</b> Anh ấy càng ngày càng vui.</div>
+<div class="answer-zone"></div>
+<div class="word-bank" data-words="。|他|越来越|高兴"></div>
+<div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
+</div>
+</div>
+<div class="card">
+<h2>📋 Tổng kết để gửi em <span class="badge">Câu cần ôn lại</span></h2>
+<div>Đúng <b id="sum-score">0 / 33</b> mục.</div>
+<ul class="summary-list" id="wrong-list"><li>Chưa có câu sai nào — anh làm đến đâu, câu sai sẽ tự gom vào đây.</li></ul>
+<div class="input-check">
+<button class="btn-primary" onclick="copySummary()">📋 Chép kết quả</button>
+<button class="btn-sm" onclick="resetAll()">↺ Làm lại từ đầu</button>
+<span class="feedback" id="copy-fb"></span>
+</div>
+<div class="hint" style="margin-top:6px;">Chép xong, anh dán kết quả gửi em qua WhatsApp — em sẽ đưa các điểm anh sai vào danh sách “Cần ôn thêm”. Tiến độ của anh được lưu ngay trong máy, mở lại trang vẫn còn nguyên.</div>
+</div>
+<div class="card">
+<h2>✅ Đáp án toàn bài</h2>
+<details>
+<summary style="cursor:pointer; font-weight:700;">Chạm để mở đáp án khi đã làm xong</summary>
+<p><b>Bài 1 (Chọn câu đúng):</b> 1. 他去了动物园。 &nbsp;|&nbsp; 2. 我去过动物园。 &nbsp;|&nbsp; 3. 他穿着一件红衬衫。 &nbsp;|&nbsp; 4. 他会唱歌。 &nbsp;|&nbsp; 5. 他可以去学校。 &nbsp;|&nbsp; 6. 请把饭吃完。 &nbsp;|&nbsp; 7. 因为他很累，所以他去睡觉了。 &nbsp;|&nbsp; 8. 你喝茶或者喝咖啡？ &nbsp;|&nbsp; 9. 他一边唱歌，一边跳舞。 &nbsp;|&nbsp; 10. 这件衬衫比较贵。</p>
+<p><b>Bài 2 (Điền từ):</b> 1. 了 &nbsp;|&nbsp; 2. 去 &nbsp;|&nbsp; 3. 着 &nbsp;|&nbsp; 4. 可以 &nbsp;|&nbsp; 5. 吃完 &nbsp;|&nbsp; 6. 所以 &nbsp;|&nbsp; 7. 或者 &nbsp;|&nbsp; 8. 唱歌 &nbsp;|&nbsp; 9. 比较 &nbsp;|&nbsp; 10. 三</p>
+<p><b>Bài 3 (Sửa lỗi):</b> 1. 他去了公园。 &nbsp;|&nbsp; 2. 我去过动物园。 &nbsp;|&nbsp; 3. 他穿着一件红衬衫。 &nbsp;|&nbsp; 4. 他可以去学校。 &nbsp;|&nbsp; 5. 请把饭吃完。 &nbsp;|&nbsp; 6. 因为他很累，所以他去睡觉了。 &nbsp;|&nbsp; 7. 他一边唱歌，一边跳舞。 &nbsp;|&nbsp; 8. 这件衬衫比较贵。</p>
+<p><b>Bài 4 (Xếp câu):</b> 1. 他去了公园。 &nbsp;|&nbsp; 2. 我去过动物园。 &nbsp;|&nbsp; 3. 请把饭吃完。 &nbsp;|&nbsp; 4. 他穿着一件红衬衫。 &nbsp;|&nbsp; 5. 他越来越高兴。</p>
+</details>
+</div>
+<div class="footer">Học tốt nhé anh! Làm xong anh chép phần Tổng kết gửi em nhé — điểm nào sai em sẽ đưa vào danh sách “Cần ôn thêm”.</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.5.0/dist/hanzi-writer.min.js"></script>
+<script>
+// ====== Trạng thái + lưu trữ (localStorage) ======
+var LS_KEY = 'hsk2-ngu-phap';
+var TOTAL_TASKS = 33;
+var ITEM_INFO = {
+  "cc-1": [
+    "Chọn câu đúng 1",
+    "他去了动物园。"
+  ],
+  "cc-2": [
+    "Chọn câu đúng 2",
+    "我去过动物园。"
+  ],
+  "cc-3": [
+    "Chọn câu đúng 3",
+    "他穿着一件红衬衫。"
+  ],
+  "cc-4": [
+    "Chọn câu đúng 4",
+    "他会唱歌。"
+  ],
+  "cc-5": [
+    "Chọn câu đúng 5",
+    "他可以去学校。"
+  ],
+  "cc-6": [
+    "Chọn câu đúng 6",
+    "请把饭吃完。"
+  ],
+  "cc-7": [
+    "Chọn câu đúng 7",
+    "因为他很累，所以他去睡觉了。"
+  ],
+  "cc-8": [
+    "Chọn câu đúng 8",
+    "你喝茶或者喝咖啡？"
+  ],
+  "cc-9": [
+    "Chọn câu đúng 9",
+    "他一边唱歌，一边跳舞。"
+  ],
+  "cc-10": [
+    "Chọn câu đúng 10",
+    "这件衬衫比较贵。"
+  ],
+  "fb-1": [
+    "Điền từ 1",
+    "了"
+  ],
+  "fb-2": [
+    "Điền từ 2",
+    "去"
+  ],
+  "fb-3": [
+    "Điền từ 3",
+    "着"
+  ],
+  "fb-4": [
+    "Điền từ 4",
+    "可以"
+  ],
+  "fb-5": [
+    "Điền từ 5",
+    "吃完"
+  ],
+  "fb-6": [
+    "Điền từ 6",
+    "所以"
+  ],
+  "fb-7": [
+    "Điền từ 7",
+    "或者"
+  ],
+  "fb-8": [
+    "Điền từ 8",
+    "唱歌"
+  ],
+  "fb-9": [
+    "Điền từ 9",
+    "比较"
+  ],
+  "fb-10": [
+    "Điền từ 10",
+    "三"
+  ],
+  "ce-1": [
+    "Sửa lỗi 1",
+    "他去了公园。"
+  ],
+  "ce-2": [
+    "Sửa lỗi 2",
+    "我去过动物园。"
+  ],
+  "ce-3": [
+    "Sửa lỗi 3",
+    "他穿着一件红衬衫。"
+  ],
+  "ce-4": [
+    "Sửa lỗi 4",
+    "他可以去学校。"
+  ],
+  "ce-5": [
+    "Sửa lỗi 5",
+    "请把饭吃完。"
+  ],
+  "ce-6": [
+    "Sửa lỗi 6",
+    "因为他很累，所以他去睡觉了。"
+  ],
+  "ce-7": [
+    "Sửa lỗi 7",
+    "他一边唱歌，一边跳舞。"
+  ],
+  "ce-8": [
+    "Sửa lỗi 8",
+    "这件衬衫比较贵。"
+  ],
+  "scr-1": [
+    "Sắp xếp câu 1",
+    "他去了公园。"
+  ],
+  "scr-2": [
+    "Sắp xếp câu 2",
+    "我去过动物园。"
+  ],
+  "scr-3": [
+    "Sắp xếp câu 3",
+    "请把饭吃完。"
+  ],
+  "scr-4": [
+    "Sắp xếp câu 4",
+    "他穿着一件红衬衫。"
+  ],
+  "scr-5": [
+    "Sắp xếp câu 5",
+    "他越来越高兴。"
+  ]
+};
+var state = { done: {}, wrong: {}, inputs: {}, selects: [], mc: {}, matched: [], scr: {}, imeOn: true };
+try { var raw = localStorage.getItem(LS_KEY); if (raw) { var p = JSON.parse(raw); for (var k in p) state[k] = p[k]; } } catch (e) {}
+if (typeof state.imeOn !== 'boolean') state.imeOn = true;
+
+function save() { try { localStorage.setItem(LS_KEY, JSON.stringify(state)); } catch (e) {} }
+function doneCount() { return Object.keys(state.done).length; }
+function updateProgress() {
+  var d = doneCount();
+  document.getElementById('prog-fill').style.width = Math.min(100, Math.round(d / TOTAL_TASKS * 100)) + '%';
+  document.getElementById('prog-text').textContent = d + ' / ' + TOTAL_TASKS;
+  var sc = document.getElementById('sum-score'); if (sc) sc.textContent = d + ' / ' + TOTAL_TASKS;
+}
+function renderSummary() {
+  var ul = document.getElementById('wrong-list'); if (!ul) return;
+  var ids = Object.keys(state.wrong);
+  if (!ids.length) { ul.innerHTML = '<li>Chưa có câu sai nào — anh làm đến đâu, câu sai sẽ tự gom vào đây.</li>'; return; }
+  ul.innerHTML = ids.map(function (id) { var inf = ITEM_INFO[id]; return '<li>' + inf[0] + ' → đáp án: <b>' + inf[1] + '</b></li>'; }).join('');
+}
+function markDone(id) { state.done[id] = true; delete state.wrong[id]; save(); updateProgress(); renderSummary(); }
+function recordWrong(id) { if (!state.done[id]) state.wrong[id] = true; save(); renderSummary(); }
+function resetAll() { if (!confirm('Xoá toàn bộ tiến độ đã lưu và làm lại từ đầu?')) return; try { localStorage.removeItem(LS_KEY); } catch (e) {} location.reload(); }
+
+// ====== TTS ======
+function speakRate(text, rate) {
+  if (!('speechSynthesis' in window)) return;
+  window.speechSynthesis.cancel();
+  var u = new SpeechSynthesisUtterance(text); u.lang = 'zh-CN'; u.rate = rate || 0.88;
+  window.speechSynthesis.speak(u);
+}
+function speak(text) { speakRate(text, 0.88); }
+
+// ====== BỘ GÕ PINYIN NHIỀU TRANG (Offline HSK Dictionary + Cloud 30 Candidates) ======
+var PAGE_SIZE = 6;
+var LOCAL_PY_DICT = {
+  "beifang": [
+    "北方",
+    "北方的",
+    "倍放",
+    "被访",
+    "备方"
+  ],
+  "beibian": [
+    "北边",
+    "北面",
+    "北部"
+  ],
+  "bei": [
+    "北",
+    "被",
+    "杯",
+    "背",
+    "倍",
+    "备",
+    "悲",
+    "碑",
+    "辈",
+    "贝",
+    "臂",
+    "卑",
+    "北边",
+    "北方",
+    "北京"
+  ],
+  "fang": [
+    "方",
+    "房",
+    "放",
+    "访",
+    "防",
+    "芳",
+    "仿",
+    "妨",
+    "纺",
+    "坊",
+    "房间",
+    "方法",
+    "方向",
+    "方面"
+  ],
+  "bian": [
+    "边",
+    "变",
+    "便",
+    "遍",
+    "编",
+    "辩",
+    "扁",
+    "辨",
+    "鞭",
+    "贬",
+    "变化",
+    "方便",
+    "东边",
+    "北边"
+  ],
+  "chengshi": [
+    "城市",
+    "诚实",
+    "程式",
+    "盛事",
+    "成事"
+  ],
+  "cheng": [
+    "城",
+    "成",
+    "程",
+    "乘",
+    "盛",
+    "称",
+    "诚",
+    "承",
+    "呈",
+    "撑",
+    "橙",
+    "惩",
+    "城市",
+    "成功",
+    "成为",
+    "成绩"
+  ],
+  "shi": [
+    "市",
+    "是",
+    "时",
+    "事",
+    "室",
+    "试",
+    "师",
+    "十",
+    "石",
+    "食",
+    "识",
+    "实",
+    "史",
+    "使",
+    "始",
+    "式",
+    "世",
+    "势",
+    "视",
+    "士",
+    "示",
+    "适",
+    "时间",
+    "时候",
+    "事情"
+  ],
+  "jihui": [
+    "机会",
+    "集会",
+    "几回",
+    "忌讳",
+    "记会"
+  ],
+  "ji": [
+    "机",
+    "技",
+    "几",
+    "记",
+    "级",
+    "急",
+    "极",
+    "己",
+    "计",
+    "季",
+    "际",
+    "继",
+    "寄",
+    "既",
+    "纪",
+    "鸡",
+    "积",
+    "基",
+    "激",
+    "及",
+    "吉",
+    "集",
+    "击",
+    "饥",
+    "机会",
+    "技术",
+    "自己"
+  ],
+  "hui": [
+    "会",
+    "回",
+    "灰",
+    "挥",
+    "辉",
+    "恢",
+    "悔",
+    "毁",
+    "汇",
+    "绘",
+    "惠",
+    "慧",
+    "会议",
+    "回答",
+    "回家"
+  ],
+  "dui": [
+    "队",
+    "对",
+    "堆",
+    "兑",
+    "敦",
+    "怼",
+    "队伍",
+    "队长",
+    "排队",
+    "足球队"
+  ],
+  "duiwu": [
+    "队伍",
+    "队"
+  ],
+  "bi": [
+    "比",
+    "笔",
+    "必",
+    "鼻",
+    "毕",
+    "币",
+    "闭",
+    "避",
+    "壁",
+    "臂",
+    "碧",
+    "逼",
+    "彼",
+    "比较",
+    "比赛",
+    "笔记本"
+  ],
+  "bijiao": [
+    "比较",
+    "比"
+  ],
+  "bisai": [
+    "比赛",
+    "比"
+  ],
+  "fangjian": [
+    "房间",
+    "坊间"
+  ],
+  "jian": [
+    "间",
+    "件",
+    "见",
+    "健",
+    "简",
+    "建",
+    "剑",
+    "减",
+    "检",
+    "坚",
+    "肩",
+    "艰",
+    "兼",
+    "监",
+    "渐",
+    "箭",
+    "浅",
+    "房间",
+    "健康",
+    "见面",
+    "简单"
+  ],
+  "jishu": [
+    "技术",
+    "记述",
+    "基数",
+    "奇数",
+    "计数"
+  ],
+  "shu": [
+    "术",
+    "束",
+    "书",
+    "树",
+    "数",
+    "叔",
+    "输",
+    "舒",
+    "熟",
+    "暑",
+    "属",
+    "署",
+    "鼠",
+    "蔬",
+    "梳",
+    "竖",
+    "恕",
+    "数学",
+    "舒服",
+    "暑假"
+  ],
+  "jiayou": [
+    "加油",
+    "家有",
+    "佳友",
+    "加倍",
+    "加油站"
+  ],
+  "jia": [
+    "加",
+    "家",
+    "假",
+    "价",
+    "架",
+    "驾",
+    "嫁",
+    "佳",
+    "夹",
+    "甲",
+    "钾",
+    "稼",
+    "加油",
+    "大家",
+    "家庭",
+    "参加"
+  ],
+  "you": [
+    "油",
+    "有",
+    "又",
+    "友",
+    "右",
+    "游",
+    "由",
+    "邮",
+    "优",
+    "忧",
+    "幽",
+    "悠",
+    "尤",
+    "犹",
+    "诱",
+    "幼",
+    "朋友",
+    "游泳",
+    "有名",
+    "有点儿"
+  ],
+  "jieshu": [
+    "结束",
+    "借书",
+    "接住",
+    "节数",
+    "解说"
+  ],
+  "jie": [
+    "结",
+    "节",
+    "姐",
+    "借",
+    "接",
+    "街",
+    "界",
+    "解",
+    "届",
+    "戒",
+    "杰",
+    "洁",
+    "捷",
+    "竭",
+    "截",
+    "皆",
+    "阶",
+    "结束",
+    "节目",
+    "姐姐",
+    "介绍"
+  ],
+  "jinzhang": [
+    "紧张",
+    "进账",
+    "金章",
+    "晋升"
+  ],
+  "jin": [
+    "紧",
+    "进",
+    "近",
+    "今",
+    "斤",
+    "金",
+    "尽",
+    "仅",
+    "禁",
+    "劲",
+    "锦",
+    "谨",
+    "津",
+    "筋",
+    "巾",
+    "紧张",
+    "今天",
+    "进去",
+    "最近"
+  ],
+  "zhang": [
+    "张",
+    "长",
+    "丈",
+    "账",
+    "章",
+    "掌",
+    "涨",
+    "障",
+    "帐",
+    "杖",
+    "樟",
+    "彰",
+    "紧张",
+    "校长",
+    "队长"
+  ],
+  "jingcai": [
+    "精彩",
+    "精采",
+    "敬才",
+    "竞猜",
+    "净菜"
+  ],
+  "jing": [
+    "精",
+    "经",
+    "京",
+    "睛",
+    "静",
+    "景",
+    "惊",
+    "警",
+    "敬",
+    "境",
+    "镜",
+    "竟",
+    "竞",
+    "净",
+    "井",
+    "颈",
+    "晶",
+    "精彩",
+    "经常",
+    "经过",
+    "北京",
+    "眼睛"
+  ],
+  "cai": [
+    "彩",
+    "才",
+    "菜",
+    "猜",
+    "采",
+    "财",
+    "裁",
+    "材",
+    "踩",
+    "睬",
+    "精彩",
+    "刚才",
+    "菜单"
+  ],
+  "mi": [
+    "迷",
+    "米",
+    "密",
+    "蜜",
+    "谜",
+    "弥",
+    "觅",
+    "秘",
+    "眯",
+    "靡",
+    "球迷",
+    "迷上",
+    "迷路",
+    "米饭"
+  ],
+  "mishang": [
+    "迷上",
+    "米上"
+  ],
+  "qiumi": [
+    "球迷",
+    "求迷"
+  ],
+  "zuqiu": [
+    "足球",
+    "足"
+  ],
+  "women": [
+    "我们",
+    "我"
+  ],
+  "tamen": [
+    "他们",
+    "她们",
+    "它们"
+  ]
+};
+
+function getLocalCandidates(py) {
+  py = py.toLowerCase().replace(/[^a-z]/g, '');
+  if (!py) return [];
+  var res = [];
+  function addList(arr) {
+    if (!arr) return;
+    for (var i = 0; i < arr.length; i++) {
+      if (res.indexOf(arr[i]) < 0) res.push(arr[i]);
+    }
+  }
+  if (LOCAL_PY_DICT[py]) addList(LOCAL_PY_DICT[py]);
+  Object.keys(LOCAL_PY_DICT).forEach(function (k) {
+    if (k !== py && k.indexOf(py) === 0) addList(LOCAL_PY_DICT[k]);
+  });
+  return res;
+}
+
+var imeFetchTimer = null;
+function queryCloudCandidates(py, cb) {
+  if (!navigator.onLine || py.length < 1) return;
+  clearTimeout(imeFetchTimer);
+  imeFetchTimer = setTimeout(function () {
+    var url = 'https://inputtools.google.com/request?text=' + encodeURIComponent(py) + '&itc=zh-t-i0-pinyin&num=30&cp=0&cs=1&ie=utf-8&oe=utf-8';
+    fetch(url).then(function (r) { return r.json(); }).then(function (data) {
+      if (data && data[0] === 'SUCCESS' && data[1] && data[1][0] && data[1][0][1]) {
+        cb(data[1][0][1]);
+      }
+    }).catch(function () {});
+  }, 85);
+}
+
+function toggleIME() {
+  state.imeOn = !state.imeOn;
+  save();
+  syncIMEUI();
+}
+
+function syncIMEUI() {
+  var btn = document.getElementById('ime-toggle-btn');
+  if (btn) {
+    btn.textContent = state.imeOn ? '⌨️ Gõ Pinyin: BẬT' : '⌨️ Gõ Pinyin: TẮT';
+    btn.classList.toggle('active', state.imeOn);
+  }
+  document.querySelectorAll('.py-badge').forEach(function (b) {
+    b.textContent = state.imeOn ? '拼' : 'A';
+    b.classList.toggle('off', !state.imeOn);
+  });
+  if (!state.imeOn) {
+    document.querySelectorAll('.py-popup').forEach(function (p) { p.classList.remove('show'); });
+  }
+}
+
+function attachPinyinIME(inp) {
+  var wrap = document.createElement('div');
+  wrap.className = 'py-wrap';
+  inp.parentNode.insertBefore(wrap, inp);
+  wrap.appendChild(inp);
+
+  var badge = document.createElement('span');
+  badge.className = 'py-badge';
+  badge.textContent = '拼';
+  wrap.appendChild(badge);
+
+  var popup = document.createElement('div');
+  popup.className = 'py-popup';
+  popup.innerHTML =
+    '<div class="py-header">' +
+      '<span class="py-code"></span>' +
+      '<div class="py-pager">' +
+        '<button type="button" class="py-page-btn py-prev" title="Trang trước (- hoặc , hoặc ↑)">◀</button>' +
+        '<span class="py-page-info">1/1</span>' +
+        '<button type="button" class="py-page-btn py-next" title="Trang sau (= hoặc . hoặc ↓)">▶</button>' +
+      '</div>' +
+    '</div>' +
+    '<div class="py-cand-list"></div>' +
+    '<div class="py-footer">' +
+      '<span>Chọn: <b>1–6</b> / <b>Space</b></span>' +
+      '<span>Lật trang: <b>- / =</b> · <b>, / .</b> · <b>◀ / ▶</b></span>' +
+    '</div>';
+  wrap.appendChild(popup);
+
+  popup.addEventListener('mousedown', function (e) { e.preventDefault(); });
+  popup.addEventListener('touchstart', function (e) { e.stopPropagation(); }, { passive: true });
+
+  var codeEl = popup.querySelector('.py-code');
+  var pageInfoEl = popup.querySelector('.py-page-info');
+  var prevBtn = popup.querySelector('.py-prev');
+  var nextBtn = popup.querySelector('.py-next');
+  var listEl = popup.querySelector('.py-cand-list');
+
+  var currentCands = [];
+  var currentPage = 0;
+  var activeIdx = 0;
+  var currentPy = '';
+
+  function totalPages() {
+    return Math.max(1, Math.ceil(currentCands.length / PAGE_SIZE));
+  }
+
+  function pageSlice() {
+    var start = currentPage * PAGE_SIZE;
+    return currentCands.slice(start, start + PAGE_SIZE);
+  }
+
+  function changePage(delta) {
+    var tp = totalPages();
+    if (tp <= 1) return;
+    var nextP = currentPage + delta;
+    if (nextP < 0) nextP = tp - 1;
+    if (nextP >= tp) nextP = 0;
+    currentPage = nextP;
+    activeIdx = 0;
+    renderPopup();
+    inp.focus();
+  }
+
+  prevBtn.onclick = function (e) { e.preventDefault(); changePage(-1); };
+  nextBtn.onclick = function (e) { e.preventDefault(); changePage(1); };
+
+  function extractTrailingPinyin(val) {
+    var m = val.match(/([a-zA-Z']+)$/);
+    return m ? m[1] : '';
+  }
+
+  function renderPopup() {
+    if (!state.imeOn || !currentPy || !currentCands.length) {
+      popup.classList.remove('show');
+      return;
+    }
+    var tp = totalPages();
+    if (currentPage >= tp) currentPage = tp - 1;
+    if (currentPage < 0) currentPage = 0;
+
+    var items = pageSlice();
+    if (activeIdx >= items.length) activeIdx = Math.max(0, items.length - 1);
+
+    codeEl.textContent = '🔤 ' + currentPy;
+    pageInfoEl.textContent = (currentPage + 1) + '/' + tp;
+    prevBtn.disabled = tp <= 1;
+    nextBtn.disabled = tp <= 1;
+
+    listEl.innerHTML = '';
+    items.forEach(function (hz, idx) {
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'py-cand' + (idx === activeIdx ? ' active' : '');
+      btn.innerHTML = '<span class="py-idx">' + (idx + 1) + '.</span>' + hz;
+      btn.onclick = function (e) {
+        e.preventDefault();
+        pickCandidateOnPage(idx);
+      };
+      listEl.appendChild(btn);
+    });
+    popup.classList.add('show');
+  }
+
+  function pickCandidateOnPage(idxOnPage) {
+    var absIdx = currentPage * PAGE_SIZE + idxOnPage;
+    if (!currentCands[absIdx] || !currentPy) return;
+    var chosen = currentCands[absIdx];
+    var val = inp.value;
+    inp.value = val.slice(0, val.length - currentPy.length) + chosen;
+    currentPy = '';
+    currentCands = [];
+    currentPage = 0;
+    activeIdx = 0;
+    popup.classList.remove('show');
+    var box = inp.closest('.q-item');
+    if (box) { state.inputs[box.id] = inp.value; save(); }
+    inp.focus();
+  }
+
+  function updateCandidates() {
+    if (!state.imeOn) { popup.classList.remove('show'); return; }
+    var py = extractTrailingPinyin(inp.value);
+    if (!py) {
+      popup.classList.remove('show');
+      currentPy = '';
+      currentCands = [];
+      currentPage = 0;
+      activeIdx = 0;
+      return;
+    }
+    if (py !== currentPy) {
+      currentPage = 0;
+      activeIdx = 0;
+    }
+    currentPy = py;
+    var local = getLocalCandidates(py);
+    currentCands = local;
+    renderPopup();
+
+    queryCloudCandidates(py, function (cloudList) {
+      if (extractTrailingPinyin(inp.value) !== py) return;
+      var merged = cloudList.slice();
+      local.forEach(function (item) {
+        if (merged.indexOf(item) < 0) merged.push(item);
+      });
+      currentCands = merged;
+      renderPopup();
+    });
+  }
+
+  inp.addEventListener('input', function () {
+    var box = inp.closest('.q-item');
+    if (box) { state.inputs[box.id] = inp.value; save(); }
+    updateCandidates();
+  });
+
+  inp.addEventListener('keydown', function (e) {
+    var isPopupOpen = popup.classList.contains('show') && currentCands.length > 0;
+    if (isPopupOpen) {
+      var items = pageSlice();
+      if (e.key >= '1' && e.key <= '6') {
+        var idx = parseInt(e.key, 10) - 1;
+        if (items[idx]) {
+          e.preventDefault();
+          pickCandidateOnPage(idx);
+          return;
+        }
+      }
+      if (e.key === ' ') {
+        e.preventDefault();
+        pickCandidateOnPage(activeIdx);
+        return;
+      }
+      if (e.key === '=' || e.key === '+' || e.key === '.' || e.key === ']' || e.key === 'PageDown' || e.key === 'ArrowDown') {
+        e.preventDefault();
+        changePage(1);
+        return;
+      }
+      if (e.key === '-' || e.key === '_' || e.key === ',' || e.key === '[' || e.key === 'PageUp' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        changePage(-1);
+        return;
+      }
+      if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        if (activeIdx + 1 < items.length) {
+          activeIdx++;
+          renderPopup();
+        } else if (totalPages() > 1) {
+          changePage(1);
+        } else {
+          activeIdx = 0;
+          renderPopup();
+        }
+        return;
+      }
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        if (activeIdx > 0) {
+          activeIdx--;
+          renderPopup();
+        } else if (totalPages() > 1) {
+          changePage(-1);
+          activeIdx = pageSlice().length - 1;
+          renderPopup();
+        } else {
+          activeIdx = items.length - 1;
+          renderPopup();
+        }
+        return;
+      }
+      if (e.key === 'Escape') {
+        popup.classList.remove('show');
+        return;
+      }
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        pickCandidateOnPage(activeIdx);
+        return;
+      }
+    }
+    if (e.key === 'Enter') {
+      var b = inp.closest('.input-check').querySelector('.btn-primary');
+      if (b) b.click();
+    }
+  });
+
+  inp.addEventListener('blur', function () {
+    setTimeout(function () { popup.classList.remove('show'); }, 180);
+  });
+  inp.addEventListener('focus', function () {
+    updateCandidates();
+  });
+}
+
+// ====== Hanzi Writer: Xem nét + Tập viết ======
+var writers = {}, modeByBox = {}, loopTimers = {};
+var BOXES = [];
+BOXES.forEach(function (b) {
+  modeByBox[b.box] = 'anim';
+  var w = HanziWriter.create(b.box, b.char, {
+    width: 146, height: 146, padding: 8, showOutline: true, outlineColor: '#cbd5e1',
+    strokeColor: '#171c26', highlightColor: '#dc2626', drawingColor: '#2563eb', drawingWidth: 20,
+    strokeAnimationSpeed: 1, delayBetweenStrokes: 240, showHintAfterMisses: 1
+  });
+  writers[b.box] = w; runAnimLoop(b.box, b.char);
+});
+function runAnimLoop(boxId, ch) {
+  if (modeByBox[boxId] !== 'anim') return;
+  clearTimeout(loopTimers[boxId]);
+  writers[boxId].animateCharacter().then(function () {
+    if (modeByBox[boxId] !== 'anim') return;
+    loopTimers[boxId] = setTimeout(function () { runAnimLoop(boxId, ch); }, 900);
+  });
+}
+function setMode(boxId, ch, mode, btn) {
+  var parent = btn.parentElement;
+  Array.from(parent.children).forEach(function (b) { b.classList.remove('active'); });
+  btn.classList.add('active');
+  modeByBox[boxId] = mode; clearTimeout(loopTimers[boxId]);
+  var boxEl = document.getElementById(boxId), statusEl = document.getElementById('status-' + boxId);
+  if (mode === 'anim') {
+    boxEl.classList.remove('quiz-active'); statusEl.style.color = '#6b7280'; statusEl.textContent = 'Đang chạy nét mẫu';
+    writers[boxId].cancelQuiz(); writers[boxId].showCharacter(); runAnimLoop(boxId, ch);
+  } else {
+    boxEl.classList.add('quiz-active'); statusEl.style.color = '#2563eb'; statusEl.textContent = '✍️ Kéo chuột/ngón tay viết nét 1...';
+    writers[boxId].hideCharacter(); writers[boxId].showOutline();
+    writers[boxId].quiz({
+      onMistake: function (sd) { statusEl.style.color = '#dc2626'; statusEl.textContent = 'Sai nét ' + (sd.strokeNum + 1) + ', nhìn gợi ý đỏ nhé!'; },
+      onCorrectStroke: function (sd) { statusEl.style.color = '#2563eb'; statusEl.textContent = 'Đúng nét ' + (sd.strokeNum + 1) + '! Còn ' + sd.strokesRemaining + ' nét'; },
+      onComplete: function (sum) { statusEl.style.color = '#15803d'; statusEl.textContent = '🎉 Tuyệt vời! (Sai ' + sum.totalMistakes + ' lần) - Bấm Xem nét để xem lại'; speak(ch); }
+    });
+  }
+}
+
+// ====== Điền chữ (Ôn nhanh + Tự kiểm tra) ======
+function paintInput(box, okState) {
+  var input = box.querySelector('input'), fb = box.querySelector('.feedback');
+  if (okState) { fb.textContent = '✓ Chính xác!'; fb.className = 'feedback ok'; input.style.borderColor = '#16a34a'; }
+  else { fb.textContent = '✗ Chưa đúng, thử lại!'; fb.className = 'feedback err'; input.style.borderColor = '#dc2626'; }
+}
+function checkInput(btn) {
+  var box = btn.closest('.q-item'), expected = box.getAttribute('data-ans').trim(), input = box.querySelector('input');
+  var trailing = input.value.match(/([a-zA-Z']+)$/);
+  if (state.imeOn && trailing) {
+    var cands = getLocalCandidates(trailing[1]);
+    if (cands.length) {
+      input.value = input.value.slice(0, input.value.length - trailing[1].length) + cands[0];
+    }
+  }
+  state.inputs[box.id] = input.value;
+  if (input.value.trim() === expected) { paintInput(box, true); speak(expected); markDone(box.id); }
+  else { paintInput(box, false); recordWrong(box.id); }
+  save();
+}
+
+document.querySelectorAll('.q-item input').forEach(attachPinyinIME);
+
+// ====== Trắc nghiệm (Nghe / Ngữ pháp / Đọc hiểu / Pinyin) ======
+function checkMC(btn, isCorrect, taskId, expl, speakText) {
+  var box = document.getElementById(taskId), fb = box.querySelector('.feedback');
+  var btns = Array.from(box.querySelectorAll('.mc-btn'));
+  btns.forEach(function (b) { b.classList.remove('correct', 'wrong'); });
+  state.mc[taskId] = { idx: btns.indexOf(btn), correct: !!isCorrect };
+  if (isCorrect) {
+    btn.classList.add('correct'); fb.className = 'feedback ok'; fb.textContent = expl || '✓ Chính xác!';
+    var rev = box.querySelector('.reveal'); if (rev) rev.style.display = 'block';
+    if (speakText) speak(speakText);
+    markDone(taskId);
+  } else {
+    btn.classList.add('wrong'); fb.className = 'feedback err'; fb.textContent = expl || '✗ Chưa đúng, thử lại nhé!';
+    recordWrong(taskId);
+  }
+  save();
+}
+
+// ====== Ghép cặp ======
+var matchPairs = [];
+var leftOrder = []; var rightOrder = [];
+var selectedLeft = null, selectedRight = null;
+function pairById(id) { return matchPairs.filter(function (p) { return p.id === id; })[0]; }
+function initMatching() {
+  var leftCol = document.getElementById('match-left'), rightCol = document.getElementById('match-right');
+  leftOrder.forEach(function (id) { var item = pairById(id); var el = document.createElement('div'); el.className = 'match-card'; el.textContent = item.zh; el.dataset.id = item.id; el.onclick = function () { selectMatch(el, 'left', item.zh); }; leftCol.appendChild(el); });
+  rightOrder.forEach(function (id) { var item = pairById(id); var el = document.createElement('div'); el.className = 'match-card'; el.textContent = item.vi; el.dataset.id = item.id; el.onclick = function () { selectMatch(el, 'right'); }; rightCol.appendChild(el); });
+}
+function selectMatch(el, side, zhSpeak) {
+  if (el.classList.contains('matched')) return;
+  if (zhSpeak) speak(zhSpeak);
+  if (side === 'left') { if (selectedLeft) selectedLeft.classList.remove('selected'); selectedLeft = el; el.classList.add('selected'); }
+  else { if (selectedRight) selectedRight.classList.remove('selected'); selectedRight = el; el.classList.add('selected'); }
+  if (selectedLeft && selectedRight) {
+    var l = selectedLeft, r = selectedRight; selectedLeft = null; selectedRight = null;
+    if (l.dataset.id === r.dataset.id) {
+      l.classList.remove('selected'); r.classList.remove('selected'); l.classList.add('matched'); r.classList.add('matched');
+      if (state.matched.indexOf(l.dataset.id) < 0) state.matched.push(l.dataset.id);
+      markDone('match-' + l.dataset.id);
+      if (state.matched.length === matchPairs.length) { var fb = document.getElementById('match-feedback'); fb.className = 'feedback ok'; fb.textContent = '🎉 Đã ghép đúng toàn bộ 5 từ!'; }
+    } else {
+      recordWrong('match-' + l.dataset.id);
+      l.classList.add('wrong-flash'); r.classList.add('wrong-flash');
+      setTimeout(function () { l.classList.remove('selected', 'wrong-flash'); r.classList.remove('selected', 'wrong-flash'); }, 450);
+    }
+    save();
+  }
+}
+
+// ====== Đoạn văn điền từ ======
+function checkCloze() {
+  var selects = document.querySelectorAll('#cloze-box .cloze-select'), allOk = true;
+  selects.forEach(function (sel, i) {
+    state.selects[i] = sel.value;
+    if (sel.value === sel.getAttribute('data-ans')) { sel.style.borderColor = '#16a34a'; sel.style.backgroundColor = '#dcfce7'; }
+    else { sel.style.borderColor = '#dc2626'; sel.style.backgroundColor = '#fee2e2'; allOk = false; }
+  });
+  var fb = document.getElementById('cloze-fb');
+  if (allOk) { fb.className = 'feedback ok'; fb.textContent = '✓ Hoàn hảo! Cả 5 từ đều khớp ngữ cảnh.'; markDone('cloze-task'); }
+  else { fb.className = 'feedback err'; fb.textContent = '✗ Có chỗ trống chưa đúng (ô màu đỏ), hãy kiểm tra lại!'; recordWrong('cloze-task'); }
+  save();
+}
+document.querySelectorAll('#cloze-box .cloze-select').forEach(function (sel, i) {
+  sel.addEventListener('change', function () { state.selects[i] = sel.value; save(); });
+});
+
+// ====== Sắp xếp câu ======
+function makeTile(w, box) {
+  var tile = document.createElement('span'); tile.className = 'tile'; tile.textContent = w;
+  tile.onclick = function () {
+    var bank = box.querySelector('.word-bank'), zone = box.querySelector('.answer-zone');
+    if (tile.parentElement === bank) zone.appendChild(tile); else bank.appendChild(tile);
+    saveScramble(box);
+  };
+  return tile;
+}
+function saveScramble(box) {
+  state.scr[box.id] = Array.from(box.querySelector('.answer-zone').children).map(function (el) { return el.textContent; });
+  save();
+}
+function renderScramble(box) {
+  var bank = box.querySelector('.word-bank'), zone = box.querySelector('.answer-zone'), fb = box.querySelector('.feedback');
+  bank.innerHTML = ''; zone.innerHTML = ''; fb.textContent = '';
+  var words = bank.getAttribute('data-words').split('|');
+  var placed = (state.scr[box.id] || []).slice();
+  var remaining = words.slice();
+  placed.forEach(function (w) { var i = remaining.indexOf(w); if (i >= 0) { remaining.splice(i, 1); zone.appendChild(makeTile(w, box)); } });
+  remaining.forEach(function (w) { bank.appendChild(makeTile(w, box)); });
+}
+function resetScramble(btn) { var box = btn.closest('.scramble-box'); state.scr[box.id] = []; save(); renderScramble(box); }
+function checkScramble(btn) {
+  var box = btn.closest('.scramble-box'), target = box.getAttribute('data-target');
+  var zone = box.querySelector('.answer-zone'), fb = box.querySelector('.feedback');
+  var current = Array.from(zone.children).map(function (el) { return el.textContent; }).join('');
+  saveScramble(box);
+  if (current === target) { fb.textContent = '✓ Chuẩn ngữ pháp!'; fb.className = 'feedback ok'; speak(target); markDone(box.id); }
+  else { fb.textContent = '✗ Trật tự từ chưa đúng, thử xếp lại nhé!'; fb.className = 'feedback err'; recordWrong(box.id); }
+}
+
+// ====== Tổng kết / chép kết quả ======
+function copySummary() {
+  var ids = Object.keys(state.wrong);
+  var lines = ['PHIẾU BÀI TẬP HSK 2 — ÔN NGỮ PHÁP (40 điểm)', 'Đúng ' + doneCount() + ' / ' + TOTAL_TASKS + ' mục.'];
+  if (ids.length) { lines.push('Câu cần ôn lại:'); ids.forEach(function (id) { lines.push('- ' + ITEM_INFO[id][0] + ' → đáp án: ' + ITEM_INFO[id][1]); }); }
+  else lines.push('Không có câu sai nào. 🎉');
+  var text = lines.join('\n'), fb = document.getElementById('copy-fb');
+  function done() { fb.className = 'feedback ok'; fb.textContent = '✓ Đã chép! Anh dán gửi em qua WhatsApp nhé.'; }
+  if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(text).then(done, function () { fallback(); }); } else fallback();
+  function fallback() { var ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select(); try { document.execCommand('copy'); done(); } catch (e) { fb.className = 'feedback err'; fb.textContent = 'Không chép tự động được, anh mở Tổng kết xem trực tiếp nhé.'; } document.body.removeChild(ta); }
+}
+
+// ====== Khôi phục trạng thái đã lưu ======
+function restore() {
+  syncIMEUI();
+  document.querySelectorAll('.q-item').forEach(function (box) {
+    if (!box.id) return;
+    var input = box.querySelector('input');
+    if (input && state.inputs[box.id] != null) { input.value = state.inputs[box.id]; if (state.done[box.id]) paintInput(box, true); }
+  });
+  document.querySelectorAll('#cloze-box .cloze-select').forEach(function (sel, i) { if (state.selects[i]) sel.value = state.selects[i]; });
+  if (state.done['cloze-task']) { var fb = document.getElementById('cloze-fb'); fb.className = 'feedback ok'; fb.textContent = '✓ Hoàn hảo! Cả 5 từ đều khớp ngữ cảnh.'; document.querySelectorAll('#cloze-box .cloze-select').forEach(function (sel) { sel.style.borderColor = '#16a34a'; sel.style.backgroundColor = '#dcfce7'; }); }
+  Object.keys(state.mc).forEach(function (id) {
+    var box = document.getElementById(id); if (!box) return;
+    var rec = state.mc[id], btns = box.querySelectorAll('.mc-btn'), btn = btns[rec.idx]; if (!btn) return;
+    if (rec.correct) { btn.classList.add('correct'); var fb = box.querySelector('.feedback'); fb.className = 'feedback ok'; fb.textContent = '✓ Đã trả lời đúng.'; var rev = box.querySelector('.reveal'); if (rev) rev.style.display = 'block'; }
+    else btn.classList.add('wrong');
+  });
+  state.matched.forEach(function (id) {
+    document.querySelectorAll('.match-card').forEach(function (el) { if (el.dataset.id === id) el.classList.add('matched'); });
+  });
+  if (matchPairs.length && state.matched.length === matchPairs.length) { var mfb = document.getElementById('match-feedback'); if (mfb) { mfb.className = 'feedback ok'; mfb.textContent = '🎉 Đã ghép đúng toàn bộ 5 từ!'; } }
+  document.querySelectorAll('.scramble-box').forEach(function (box) {
+    renderScramble(box);
+    if (state.done[box.id]) { var fb = box.querySelector('.feedback'); fb.textContent = '✓ Chuẩn ngữ pháp!'; fb.className = 'feedback ok'; }
+  });
+  updateProgress(); renderSummary();
+}
+initMatching();
+restore();
+
+</script>
+<script>
+// ====== Flashcard ôn tập (mọi từ đã học các ngày trước; chiều thẻ ngẫu nhiên) ======
+var FLASH_DATA = [];
+var flashDeck = [], flashIdx = 0;
+function flashShuffleDeck() {
+  flashDeck = FLASH_DATA.map(function (w) { return { w: w, hanziFront: Math.random() < 0.5 }; });
+  for (var i = flashDeck.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = flashDeck[i]; flashDeck[i] = flashDeck[j]; flashDeck[j] = t; }
+  flashIdx = 0;
+}
+function flashRender() {
+  var wrap = document.getElementById('flash-wrap');
+  if (!wrap) return;
+  if (!FLASH_DATA.length) { wrap.style.display = 'none'; return; }
+  var cur = flashDeck[flashIdx], w = cur.w;
+  var front = document.getElementById('flash-front'), back = document.getElementById('flash-back');
+  if (cur.hanziFront) {
+    front.innerHTML = '<div class="flash-tag">Chữ Hán</div><div class="flash-hanzi">' + w.word + '</div><div class="flash-sub">Chạm để lật — nhớ nghĩa của từ này</div>';
+    back.innerHTML = '<div class="flash-tag">Nghĩa</div><div class="flash-meaning">' + w.meaning + '</div><div class="flash-sub">' + w.pinyin + ' · Hán Việt: ' + w.hanviet + '</div>';
+  } else {
+    front.innerHTML = '<div class="flash-tag">Nghĩa tiếng Việt</div><div class="flash-meaning">' + w.meaning + '</div><div class="flash-sub">Chạm để lật — nhớ chữ Hán của nghĩa này</div>';
+    back.innerHTML = '<div class="flash-tag">Chữ Hán</div><div class="flash-hanzi">' + w.word + '</div><div class="flash-sub">' + w.pinyin + ' · Hán Việt: ' + w.hanviet + '</div>';
+  }
+  document.getElementById('flash-card').classList.remove('flipped');
+  document.getElementById('flash-count').textContent = 'Thẻ ' + (flashIdx + 1) + ' / ' + flashDeck.length;
+}
+function flashFlip() { var c = document.getElementById('flash-card'); if (c) c.classList.toggle('flipped'); }
+function flashNext() { if (flashIdx < flashDeck.length - 1) { flashIdx++; flashRender(); } }
+function flashPrev() { if (flashIdx > 0) { flashIdx--; flashRender(); } }
+function flashReshuffle() { flashShuffleDeck(); flashRender(); }
+
+flashShuffleDeck(); flashRender();
+</script>
+</body>
+</html>
