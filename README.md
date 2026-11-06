@@ -1,8 +1,38 @@
-# HSK 2 — Bài học tiếng Trung (Day 1–43)
+# HSK 2 — Bài học mỗi ngày
 
-Học từ Bài 1 lên Bài 10, mỗi ngày 5 từ mới, 7 ngày/tuần. Tổng 213 từ / 43 ngày.
+Bộ bài học HSK 2: 43 ngày, mỗi ngày 5 từ mới, học từ Bài 1 đến Bài 10. Tổng 213 từ / 43 ngày.
 
-| Ngày | Bài | Từ mới | Link |
+👉 **Mở trang mục lục (đầy đủ 43 ngày):**
+
+**[https://vinhnd2026.github.io/HSK2/](https://vinhnd2026.github.io/HSK2/)**
+
+## 📚 Mục lục các khóa học
+
+| Khóa học | Từ mới | Số ngày | Trang học |
+|---|---|---|---|
+| HSK 1 | 178 | 36 | [Mở](https://vinhnd2026.github.io/HSK1/) |
+| HSK 2 | 213 | 43 | [Mở](https://vinhnd2026.github.io/HSK2/) |
+| HSK 3 | 197 | 40 | [Mở](https://vinhnd2026.github.io/HSK3/) |
+| HSK 4 | 191 | 39 | [Mở](https://vinhnd2026.github.io/HSK4/) |
+| HSK 3 — bản theo ngày (Homework) | 198 | 36 | [Mở](https://vinhnd2026.github.io/Homework/) |
+| Trung cấp 1 | 266 | 54 | ⏳ đang hoàn thiện |
+| Trung cấp 2 | 355 | 71 | ⏳ đang hoàn thiện |
+| Trung cấp 3 | 236 | 48 | ⏳ đang hoàn thiện |
+| Trung cấp 4 | 206 | 42 | ⏳ đang hoàn thiện |
+| Cao cấp 1 | 447 | 90 | ⏳ đang hoàn thiện |
+| Cao cấp 2 | 405 | 81 | ⏳ đang hoàn thiện |
+| Cao cấp 3 | 353 | 71 | ⏳ đang hoàn thiện |
+| Cao cấp 4 | 357 | 72 | ⏳ đang hoàn thiện |
+
+## Bổ sung (học sau khi xong 43 ngày)
+
+- **📖 Ôn tập Ngữ pháp HSK 2 (40 điểm + 33 bài tập):** [Bai-Hoc-On-Ngu-Phap-HSK2.html](https://vinhnd2026.github.io/HSK2/Bai-Hoc-On-Ngu-Phap-HSK2.html) — pinyin hiện sẵn trong mọi ví dụ.
+- **📚 Bài Tổng Kết HSK 2:** [Bai-Hoc-Tong-Ket-HSK2.html](https://vinhnd2026.github.io/HSK2/Bai-Hoc-Tong-Ket-HSK2.html) — flashcard toàn bộ từ, bảng từ vựng 10 bài, 8 bài tập tổng kết (62 bài tập), truyện tổng kết dùng đủ toàn bộ từ vựng.
+
+Bấm vào từng ngày bên dưới để mở thẳng trang bài học của ngày đó.
+(Bài học được mở trực tiếp trên trình duyệt, không cần tải file về.)
+
+| Ngày | Bài | Từ mới | Bài học |
 |---|---|---|---|
 | Day 1 | Bài 1 | 别人, 常, 常常, 唱, 唱歌 | [Mở bài học](https://vinhnd2026.github.io/HSK2/Day-01.html) |
 | Day 2 | Bài 1 | 次, 打, 打球, 电视, 歌 | [Mở bài học](https://vinhnd2026.github.io/HSK2/Day-02.html) |
@@ -47,3 +77,13 @@ Học từ Bài 1 lên Bài 10, mỗi ngày 5 từ mới, 7 ngày/tuần. Tổng
 | Day 41 | Bài 10 | 辣, 麻烦, 麻婆豆腐, 女儿, 怕 | [Mở bài học](https://vinhnd2026.github.io/HSK2/Day-41.html) |
 | Day 42 | Bài 10 | 敲门, 酸, 糖醋鱼, 添, 添麻烦 | [Mở bài học](https://vinhnd2026.github.io/HSK2/Day-42.html) |
 | Day 43 | Bài 10 | 甜, 辛苦, 做客 | [Mở bài học](https://vinhnd2026.github.io/HSK2/Day-43.html) |
+
+## Tài liệu kèm theo
+
+- [Lịch học HSK 2 (Excel)](https://github.com/vinhnd2026/HSK2/blob/main/Lich-hoc-hsk2.xlsx)
+
+## Ghi chú
+
+- Mỗi bài học có flashcard 20 từ (20 từ gần nhất đã học trước đó), bài nghe, nối từ, bẫy ngữ pháp, điền từ, xếp câu, đọc hiểu và đáp án.
+- Cuối tuần Bài 7 là đoạn văn đọc hiểu tổng kết tuần.
+- Tiến độ làm bài được lưu riêng trên trình duyệt của từng người học.
