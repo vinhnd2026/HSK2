@@ -636,6 +636,7 @@ img, svg { max-width: 100%; }
 <div class="gram-ex"><button class="tts-btn" onclick="speakRate('现在是上午。', 0.88)">🔊</button> <span class="hide-ruby"><ruby>现<rt>Xiàn</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>上<rt>shàng</rt></ruby><ruby>午<rt>wǔ</rt></ruby>。</span> <span class="hint">(Bây giờ là buổi sáng.)</span></div>
 <div class="gram-ex"><button class="tts-btn" onclick="speakRate('现在是晚上。', 0.88)">🔊</button> <span class="hide-ruby"><ruby>现<rt>Xiàn</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>晚<rt>wǎn</rt></ruby><ruby>上<rt>shang</rt></ruby>。</span> <span class="hint">(Bây giờ là buổi tối.)</span></div>
 <div class="gram-ex"><button class="tts-btn" onclick="speakRate('现在几点？', 0.88)">🔊</button> <span class="hide-ruby"><ruby>现<rt>Xiàn</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>几<rt>jǐ</rt></ruby><ruby>点<rt>diǎn</rt></ruby>？</span> <span class="hint">(Bây giờ mấy giờ?)</span></div>
+
 <div class="q-item" id="gram-1">
 <div><b>1. Điền từ đúng vào chỗ trống:</b> 现在<span class="gram-blank">......</span>上午。</div>
 <div class="mc-options">
@@ -669,22 +670,22 @@ img, svg { max-width: 100%; }
 <div class="card">
 <h2>🧩 Bài 6: Sắp xếp câu (连词成句) <span class="badge">Tư duy trật tự từ</span></h2>
 <div class="sub" style="margin-bottom:8px;">Chạm vào từng từ ở khung xám để ghép thành câu hoàn chỉnh:</div>
-<div class="scramble-box" id="scr-1" data-target="我去参观博物馆，博物馆的风景非常好。">
-<div><b>Câu 1:</b> Tôi đi tham quan bảo tàng, phong cảnh của bảo tàng rất đẹp.</div>
+<div class="scramble-box" id="scr-1" data-target="我去参观博物馆，博物馆的风景非常好，我非常喜欢博物馆。">
+<div><b>Câu 1:</b> Tôi đi tham quan bảo tàng, phong cảnh của bảo tàng rất đẹp, tôi rất thích bảo tàng.</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="我|博物馆|。|博物馆|非常|好|的|风景|，|去|参观"></div>
+<div class="word-bank" data-words="的|博物馆|参观|博物馆|非常|我|喜欢|好|我|非常|博物馆|风景|。|去|，|，"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
-<div class="scramble-box" id="scr-2" data-target="我去图书馆看风景，风景非常好。">
-<div><b>Câu 2:</b> Tôi đi thư viện ngắm phong cảnh, phong cảnh rất đẹp.</div>
+<div class="scramble-box" id="scr-2" data-target="我去图书馆看风景，风景非常好，我看这本课本。">
+<div><b>Câu 2:</b> Tôi đi thư viện ngắm phong cảnh, phong cảnh rất đẹp, tôi đọc cuốn sách giáo khoa này.</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="图书馆|，|好|非常|。|去|风景|风景|我|看"></div>
+<div class="word-bank" data-words="，|风景|我|非常|看|看|，|好|课|。|我|这|图书馆|风景|去|本|本"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
-<div class="scramble-box" id="scr-3" data-target="我们去博物馆参观，也去图书馆学习。">
-<div><b>Câu 3:</b> Chúng tôi đi bảo tàng tham quan, cũng đi thư viện học.</div>
+<div class="scramble-box" id="scr-3" data-target="我们去博物馆参观，也去图书馆学习，博物馆非常大。">
+<div><b>Câu 3:</b> Chúng tôi đi bảo tàng tham quan, cũng đi thư viện học, bảo tàng rất to.</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="去|去|学习|，|图书馆|也|参观|我们|。|博物馆"></div>
+<div class="word-bank" data-words="非常|图书馆|大|我们|学习|去|去|博物馆|也|，|博物馆|，|参观|。"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
 </div>
@@ -696,10 +697,10 @@ img, svg { max-width: 100%; }
 <div class="reading-zh hide-ruby">
 <section class="read-para">
 <div class="read-para-head"><button class="tts-btn" onclick="playChunked('read', 0.88, 0, 4)">🔊 Nghe đoạn này</button></div>
-<p class="read-para-text"><ruby>我<rt>Wǒ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>博<rt>bó</rt></ruby><ruby>物<rt>wù</rt></ruby><ruby>馆<rt>guǎn</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>风<rt>fēng</rt></ruby><ruby>景<rt>jǐng</rt></ruby>，<ruby>风<rt>fēng</rt></ruby><ruby>景<rt>jǐng</rt></ruby><ruby>非<rt>fēi</rt></ruby><ruby>常<rt>cháng</rt></ruby><ruby>好<rt>hǎo</rt></ruby>。 <ruby>我<rt>Wǒ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>博<rt>bó</rt></ruby><ruby>物<rt>wù</rt></ruby><ruby>馆<rt>guǎn</rt></ruby>，<ruby>也<rt>yě</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>图<rt>tú</rt></ruby><ruby>书<rt>shū</rt></ruby><ruby>馆<rt>guǎn</rt></ruby>。 <ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>参<rt>cān</rt></ruby><ruby>观<rt>guān</rt></ruby><ruby>博<rt>bó</rt></ruby><ruby>物<rt>wù</rt></ruby><ruby>馆<rt>guǎn</rt></ruby>，<ruby>博<rt>bó</rt></ruby><ruby>物<rt>wù</rt></ruby><ruby>馆<rt>guǎn</rt></ruby><ruby>非<rt>fēi</rt></ruby><ruby>常<rt>cháng</rt></ruby><ruby>大<rt>dà</rt></ruby>。 <ruby>博<rt>Bó</rt></ruby><ruby>物<rt>wù</rt></ruby><ruby>馆<rt>guǎn</rt></ruby><ruby>非<rt>fēi</rt></ruby><ruby>常<rt>cháng</rt></ruby><ruby>大<rt>dà</rt></ruby>，<ruby>风<rt>fēng</rt></ruby><ruby>景<rt>jǐng</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>非<rt>fēi</rt></ruby><ruby>常<rt>cháng</rt></ruby><ruby>好<rt>hǎo</rt></ruby>。 <ruby>这<rt>Zhè</rt></ruby><ruby>里<rt>lǐ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>风<rt>fēng</rt></ruby><ruby>景<rt>jǐng</rt></ruby><ruby>非<rt>fēi</rt></ruby><ruby>常<rt>cháng</rt></ruby><ruby>好<rt>hǎo</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>这<rt>zhè</rt></ruby><ruby>里<rt>lǐ</rt></ruby>。</p>
+<p class="read-para-text"><ruby>我<rt>Wǒ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>博<rt>bó</rt></ruby><ruby>物<rt>wù</rt></ruby><ruby>馆<rt>guǎn</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>东<rt>dōng</rt></ruby><ruby>西<rt>xi</rt></ruby>，<ruby>东<rt>dōng</rt></ruby><ruby>西<rt>xi</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby>。 <ruby>我<rt>Wǒ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>博<rt>bó</rt></ruby><ruby>物<rt>wù</rt></ruby><ruby>馆<rt>guǎn</rt></ruby>，<ruby>也<rt>yě</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>图<rt>tú</rt></ruby><ruby>书<rt>shū</rt></ruby><ruby>馆<rt>guǎn</rt></ruby>。 <ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>参<rt>cān</rt></ruby><ruby>观<rt>guān</rt></ruby><ruby>博<rt>bó</rt></ruby><ruby>物<rt>wù</rt></ruby><ruby>馆<rt>guǎn</rt></ruby>，<ruby>博<rt>bó</rt></ruby><ruby>物<rt>wù</rt></ruby><ruby>馆<rt>guǎn</rt></ruby><ruby>非<rt>fēi</rt></ruby><ruby>常<rt>cháng</rt></ruby><ruby>大<rt>dà</rt></ruby>。 <ruby>博<rt>Bó</rt></ruby><ruby>物<rt>wù</rt></ruby><ruby>馆<rt>guǎn</rt></ruby><ruby>非<rt>fēi</rt></ruby><ruby>常<rt>cháng</rt></ruby><ruby>大<rt>dà</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>博<rt>bó</rt></ruby><ruby>物<rt>wù</rt></ruby><ruby>馆<rt>guǎn</rt></ruby>。 <ruby>这<rt>Zhè</rt></ruby><ruby>里<rt>lǐ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>风<rt>fēng</rt></ruby><ruby>景<rt>jǐng</rt></ruby><ruby>非<rt>fēi</rt></ruby><ruby>常<rt>cháng</rt></ruby><ruby>好<rt>hǎo</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>这<rt>zhè</rt></ruby><ruby>里<rt>lǐ</rt></ruby>。</p>
 </section>
 </div>
-<script>window.CHUNK_DATA = window.CHUNK_DATA || {}; window.CHUNK_DATA['read'] = ["我去博物馆看风景，风景非常好。", "我去博物馆，也去图书馆。", "我们去参观博物馆，博物馆非常大。", "博物馆非常大，风景也非常好。", "这里的风景非常好，我很喜欢这里。"];</script>
+<script>window.CHUNK_DATA = window.CHUNK_DATA || {}; window.CHUNK_DATA['read'] = ["我去博物馆看东西，东西很好。", "我去博物馆，也去图书馆。", "我们去参观博物馆，博物馆非常大。", "博物馆非常大，我很喜欢博物馆。", "这里的风景非常好，我很喜欢这里。"];</script>
 <div class="reading-Controls">
 <button class="tts-btn dlg-play-btn" id="chunk-play-read" onclick="toggleChunkPlay('read')" title="Nghe / Tạm dừng">▶️</button>
 <button class="tts-btn" onclick="restartChunked('read')">↺ Nghe lại từ đầu</button>
@@ -708,16 +709,16 @@ img, svg { max-width: 100%; }
 <button class="btn-sm" onclick="document.querySelector('.reading-zh').classList.toggle('hide-ruby')">🔤 Ẩn/Hiện Pinyin trên chữ</button>
 </div>
 <div class="reading-help" id="read-help">
-<div class="read-para-trans"><p>Tôi đi bảo tàng ngắm phong cảnh, phong cảnh rất đẹp. Tôi đi bảo tàng, cũng đi thư viện. Chúng tôi đi tham quan bảo tàng, bảo tàng rất lớn. Bảo tàng rất lớn, phong cảnh cũng rất đẹp. Phong cảnh ở đây rất đẹp, tôi rất thích nơi này.</p></div>
+<div class="read-para-trans"><p>Tôi đi bảo tàng xem đồ vật, đồ vật rất tốt. Tôi đi bảo tàng, cũng đi thư viện. Chúng tôi đi tham quan bảo tàng, bảo tàng rất lớn. Bảo tàng rất lớn, tôi rất thích bảo tàng. Phong cảnh ở đây rất đẹp, tôi rất thích nơi này.</p></div>
 </div>
 </div>
 <div class="q-item read-q" id="read-1">
 <div class="read-q-head"><span class="read-q-num">1</span><span>我去博物馆看什么？</span></div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, true, 'read-1', '✓ Chính xác! 我去博物馆看风景，风景非常好。')">A. 风景</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 我去博物馆看风景，风景非常好。')">B. 电视</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 我去博物馆看风景，风景非常好。')">C. 电影</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 我去博物馆看风景，风景非常好。')">D. 歌</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'read-1', '✓ Chính xác! 我去博物馆看东西，东西很好。')">A. 东西</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 我去博物馆看东西，东西很好。')">B. 电视</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 我去博物馆看东西，东西很好。')">C. 电影</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-1', '✗ Chưa đúng: 我去博物馆看东西，东西很好。')">D. 歌</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 <div class="q-item read-q" id="read-2">
@@ -760,7 +761,7 @@ img, svg { max-width: 100%; }
 <div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>昨<rt>Zuó</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>博<rt>bó</rt></ruby><ruby>物<rt>wù</rt></ruby><ruby>馆<rt>guǎn</rt></ruby><ruby>参<rt>cān</rt></ruby><ruby>观<rt>guān</rt></ruby>。<ruby>我<rt>Wǒ</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>博<rt>bó</rt></ruby><ruby>物<rt>wù</rt></ruby><ruby>馆<rt>guǎn</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Hôm qua tôi đi tham quan bảo tàng. Tôi thích bảo tàng. Bạn cũng thích không?</div></div>
 <div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>博<rt>Bó</rt></ruby><ruby>物<rt>wù</rt></ruby><ruby>馆<rt>guǎn</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>什<rt>shén</rt></ruby><ruby>么<rt>me</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>我<rt>Wǒ</rt></ruby><ruby>明<rt>míng</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>去<rt>qù</rt></ruby>。</span><div class="dlg-vi">Bảo tàng có gì? Bạn đi không? Ngày mai tôi cũng đi.</div></div>
 <div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>博<rt>Bó</rt></ruby><ruby>物<rt>wù</rt></ruby><ruby>馆<rt>guǎn</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>照<rt>zhào</rt></ruby><ruby>片<rt>piàn</rt></ruby>，<ruby>照<rt>zhào</rt></ruby><ruby>片<rt>piàn</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>漂<rt>piào</rt></ruby><ruby>亮<rt>liang</rt></ruby>。<ruby>我<rt>Wǒ</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>博<rt>bó</rt></ruby><ruby>物<rt>wù</rt></ruby><ruby>馆<rt>guǎn</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Bảo tàng có rất nhiều ảnh, rất đẹp. Tôi thích bảo tàng. Bạn đi không?</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>汉<rt>Hàn</rt></ruby><ruby>语<rt>yǔ</rt></ruby><ruby>课<rt>kè</rt></ruby><ruby>本<rt>běn</rt></ruby>。<ruby>明<rt>Míng</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>再<rt>zài</rt></ruby><ruby>去<rt>qù</rt></ruby>。<ruby>好<rt>Hǎo</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Tôi có một quyển sách giáo khoa tiếng Trung. Ngày mai chúng ta lại đi. Được không?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>汉<rt>Hàn</rt></ruby><ruby>语<rt>yǔ</rt></ruby><ruby>课<rt>kè</rt></ruby><ruby>本<rt>běn</rt></ruby>，<ruby>课<rt>kè</rt></ruby><ruby>本<rt>běn</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>看<rt>kàn</rt></ruby>。</span><div class="dlg-vi">Tôi có một quyển sách giáo khoa tiếng Trung, sách rất hay.</div></div>
 <div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>课<rt>kè</rt></ruby><ruby>本<rt>běn</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>怎<rt>zěn</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>样<rt>yàng</rt></ruby>？<ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>影<rt>yǐng</rt></ruby>。</span><div class="dlg-vi">Sách giáo khoa của bạn có hay không? Bạn thấy thế nào? Chúng ta cùng đi xem phim.</div></div>
 <div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>课<rt>Kè</rt></ruby><ruby>本<rt>běn</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>看<rt>kàn</rt></ruby>。<ruby>照<rt>Zhào</rt></ruby><ruby>片<rt>piàn</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>风<rt>fēng</rt></ruby><ruby>景<rt>jǐng</rt></ruby><ruby>怎<rt>zěn</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>样<rt>yàng</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>我<rt>Wǒ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby>。</span><div class="dlg-vi">Sách rất hay. Phong cảnh trong ảnh thế nào? Bạn thích không? Tôi thấy rất tốt.</div></div>
 <div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>风<rt>Fēng</rt></ruby><ruby>景<rt>jǐng</rt></ruby><ruby>非<rt>fēi</rt></ruby><ruby>常<rt>cháng</rt></ruby><ruby>好<rt>hǎo</rt></ruby>！<ruby>我<rt>Wǒ</rt></ruby><ruby>非<rt>fēi</rt></ruby><ruby>常<rt>cháng</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>博<rt>bó</rt></ruby><ruby>物<rt>wù</rt></ruby><ruby>馆<rt>guǎn</rt></ruby>。<ruby>我<rt>Wǒ</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>博<rt>bó</rt></ruby><ruby>物<rt>wù</rt></ruby><ruby>馆<rt>guǎn</rt></ruby>。<ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>去<rt>qù</rt></ruby>。</span><div class="dlg-vi">Phong cảnh rất đẹp! Tôi rất thích bảo tàng. Tôi thích bảo tàng. Chúng ta cùng đi.</div></div>
@@ -853,8 +854,8 @@ img, svg { max-width: 100%; }
 <p><b>Bài 3 (Ghép cặp):</b> 本 = běn · 博物馆 = bówùguǎn · 参观 = cānguān · 非常 = fēicháng · 风景 = fēngjǐng</p>
 <p><b>Bài 4 (Ngữ pháp):</b> 1. C — 是 &nbsp;|&nbsp; 2. 现在是下午。</p>
 <p><b>Bài 5 (Đoạn văn):</b> 本 → 博物馆 → 参观 → 非常 → 风景</p>
-<p><b>Bài 6 (Sắp xếp câu):</b><br>1. 我去参观博物馆，博物馆的风景非常好。<br>2. 我去图书馆看风景，风景非常好。<br>3. 我们去博物馆参观，也去图书馆学习。</p>
-<p><b>Bài 7 (Đọc hiểu):</b> 1. A — 风景 &nbsp;|&nbsp; 2. D — 非常大 &nbsp;|&nbsp; 3. B — 非常好</p>
+<p><b>Bài 6 (Sắp xếp câu):</b><br>1. 我去参观博物馆，博物馆的风景非常好，我非常喜欢博物馆。<br>2. 我去图书馆看风景，风景非常好，我看这本课本。<br>3. 我们去博物馆参观，也去图书馆学习，博物馆非常大。</p>
+<p><b>Bài 7 (Đọc hiểu):</b> 1. A — 东西 &nbsp;|&nbsp; 2. D — 非常大 &nbsp;|&nbsp; 3. B — 非常好</p>
 <p><b>Bài 8 (Nghe hội thoại):</b> 1. A — 博物馆 &nbsp; 2. B — 非常喜欢 &nbsp; 3. D — 博物馆 &nbsp; 4. C — 汉语课本</p>
 </details>
 </div>
@@ -948,19 +949,19 @@ var ITEM_INFO = {
   ],
   "scr-1": [
     "Sắp xếp câu 1",
-    "我去参观博物馆，博物馆的风景非常好。"
+    "我去参观博物馆，博物馆的风景非常好，我非常喜欢博物馆。"
   ],
   "scr-2": [
     "Sắp xếp câu 2",
-    "我去图书馆看风景，风景非常好。"
+    "我去图书馆看风景，风景非常好，我看这本课本。"
   ],
   "scr-3": [
     "Sắp xếp câu 3",
-    "我们去博物馆参观，也去图书馆学习。"
+    "我们去博物馆参观，也去图书馆学习，博物馆非常大。"
   ],
   "read-1": [
     "Đọc hiểu câu 1",
-    "A — 风景"
+    "A — 东西"
   ],
   "read-2": [
     "Đọc hiểu câu 2",
@@ -3055,7 +3056,7 @@ flashShuffleDeck(); flashRender();
 <script>
 // ====== Bài 8: Nghe hội thoại ======
 var DLG_SPEAKERS = [{"color": "#2563eb", "gender": "nam", "id": "ming", "name": "小明", "py": "Xiǎo Míng", "vi": "Minh"}, {"color": "#db2777", "gender": "nữ", "id": "hong", "name": "小红", "py": "Xiǎo Hóng", "vi": "Hồng"}];
-var DLG_LINES = [{"sp": "ming", "zh": "小红，昨天你去哪儿？你喜欢吗？我很喜欢。"}, {"sp": "hong", "zh": "昨天我去博物馆参观。我喜欢博物馆。你也喜欢吗？"}, {"sp": "ming", "zh": "博物馆有什么？你去吗？我明天也去。"}, {"sp": "hong", "zh": "博物馆有照片，照片很漂亮。我喜欢博物馆。你去吗？"}, {"sp": "ming", "zh": "我有汉语课本。明天我们再去。好吗？"}, {"sp": "hong", "zh": "你的课本好看吗？你觉得怎么样？我们一起去看电影。"}, {"sp": "ming", "zh": "课本很好看。照片的风景怎么样？你喜欢吗？我觉得很好。"}, {"sp": "hong", "zh": "风景非常好！我非常喜欢博物馆。我喜欢博物馆。我们一起去。"}, {"sp": "ming", "zh": "你参观博物馆，你高兴吗？你去吗？我很喜欢。"}, {"sp": "hong", "zh": "我很高兴。明天你去博物馆吗？好吗？明天我们再去。"}, {"sp": "ming", "zh": "明天我去博物馆参观。你跟我去吗？你明天去吗？我明天也去。"}, {"sp": "hong", "zh": "好！我跟你去。我们一起参观博物馆。我喜欢博物馆。你觉得怎么样？"}, {"sp": "ming", "zh": "博物馆在哪儿？你喜欢吗？我们一起唱歌。"}, {"sp": "hong", "zh": "博物馆在学校对面。学校很大。我很喜欢。"}, {"sp": "ming", "zh": "好！明天见！我很高兴。你喜欢吗？"}];
+var DLG_LINES = [{"sp": "ming", "zh": "小红，昨天你去哪儿？你喜欢吗？我很喜欢。"}, {"sp": "hong", "zh": "昨天我去博物馆参观。我喜欢博物馆。你也喜欢吗？"}, {"sp": "ming", "zh": "博物馆有什么？你去吗？我明天也去。"}, {"sp": "hong", "zh": "博物馆有照片，照片很漂亮。我喜欢博物馆。你去吗？"}, {"sp": "ming", "zh": "我有汉语课本，课本很好看。"}, {"sp": "hong", "zh": "你的课本好看吗？你觉得怎么样？我们一起去看电影。"}, {"sp": "ming", "zh": "课本很好看。照片的风景怎么样？你喜欢吗？我觉得很好。"}, {"sp": "hong", "zh": "风景非常好！我非常喜欢博物馆。我喜欢博物馆。我们一起去。"}, {"sp": "ming", "zh": "你参观博物馆，你高兴吗？你去吗？我很喜欢。"}, {"sp": "hong", "zh": "我很高兴。明天你去博物馆吗？好吗？明天我们再去。"}, {"sp": "ming", "zh": "明天我去博物馆参观。你跟我去吗？你明天去吗？我明天也去。"}, {"sp": "hong", "zh": "好！我跟你去。我们一起参观博物馆。我喜欢博物馆。你觉得怎么样？"}, {"sp": "ming", "zh": "博物馆在哪儿？你喜欢吗？我们一起唱歌。"}, {"sp": "hong", "zh": "博物馆在学校对面。学校很大。我很喜欢。"}, {"sp": "ming", "zh": "好！明天见！我很高兴。你喜欢吗？"}];
 var dlgPlaying = false;
 var dlgPaused = false;
 var dlgRate = 0.88;
