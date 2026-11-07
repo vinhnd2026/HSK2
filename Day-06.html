@@ -531,6 +531,7 @@ img, svg { max-width: 100%; }
 <div class="gram-ex"><button class="tts-btn" onclick="speakRate('我正在跳舞。', 0.88)">🔊</button> <span class="hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>正<rt>zhèng</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>跳<rt>tiào</rt></ruby><ruby>舞<rt>wǔ</rt></ruby>。</span> <span class="hint">(Tôi đang nhảy.)</span></div>
 <div class="gram-ex"><button class="tts-btn" onclick="speakRate('他正在听音乐。', 0.88)">🔊</button> <span class="hide-ruby"><ruby>他<rt>Tā</rt></ruby><ruby>正<rt>zhèng</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>听<rt>tīng</rt></ruby><ruby>音<rt>yīn</rt></ruby><ruby>乐<rt>yuè</rt></ruby>。</span> <span class="hint">(Anh ấy đang nghe nhạc.)</span></div>
 <div class="gram-ex"><button class="tts-btn" onclick="speakRate('他正看电影。', 0.88)">🔊</button> <span class="hide-ruby"><ruby>他<rt>Tā</rt></ruby><ruby>正<rt>zhèng</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>影<rt>yǐng</rt></ruby>。</span> <span class="hint">(Anh ấy đang xem phim.)</span></div>
+
 <div class="q-item" id="gram-1">
 <div><b>1. Điền từ đúng vào chỗ trống:</b> 他<span class="gram-blank">......</span>看电影。</div>
 <div class="mc-options">
@@ -565,22 +566,22 @@ img, svg { max-width: 100%; }
 <div class="card">
 <h2>🧩 Bài 6: Sắp xếp câu (连词成句) <span class="badge">Tư duy trật tự từ</span></h2>
 <div class="sub" style="margin-bottom:8px;">Chạm vào từng từ ở khung xám để ghép thành câu hoàn chỉnh:</div>
-<div class="scramble-box" id="scr-1" data-target="他正在听音乐，我只喜欢唱歌。">
-<div><b>Câu 1:</b> Anh ấy đang nghe nhạc, tôi chỉ thích hát.</div>
+<div class="scramble-box" id="scr-1" data-target="他正在听音乐，我只喜欢唱歌，也正在唱歌。">
+<div><b>Câu 1:</b> Anh ấy đang nghe nhạc, tôi chỉ thích hát, cũng đang hát.</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="音乐|他|只|我|。|听|喜欢|，|正在|唱歌"></div>
+<div class="word-bank" data-words="音乐|他|喜欢|听|也|，|只|我|，|正在|唱歌|唱歌|。|正在"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
-<div class="scramble-box" id="scr-2" data-target="哥哥正打篮球，弟弟只看电视。">
-<div><b>Câu 2:</b> Anh trai đang chơi bóng rổ, em trai chỉ xem ti vi.</div>
+<div class="scramble-box" id="scr-2" data-target="哥哥正打篮球，弟弟只看电视，哥哥也只喜欢打篮球。">
+<div><b>Câu 2:</b> Anh trai đang chơi bóng rổ, em trai chỉ xem ti vi, anh trai cũng chỉ thích chơi bóng rổ.</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="只|正|电视|打|看|篮球|哥哥|。|，|弟弟"></div>
+<div class="word-bank" data-words="篮球|电视|也|。|打|正|喜欢|只|，|只|看|哥哥|弟弟|打|篮球|，|哥哥"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
-<div class="scramble-box" id="scr-3" data-target="我在听音乐，也在唱歌。">
-<div><b>Câu 3:</b> Tôi đang nghe nhạc, cũng đang hát.</div>
+<div class="scramble-box" id="scr-3" data-target="我在听音乐，也在唱歌，我只听音乐，不看电视。">
+<div><b>Câu 3:</b> Tôi đang nghe nhạc, cũng đang hát, tôi chỉ nghe nhạc, không xem ti vi.</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="，|在|。|音乐|唱歌|我|在|也|听"></div>
+<div class="word-bank" data-words="也|，|在|只|听|，|看|，|唱歌|我|我|电视|音乐|音乐|在|。|听|不"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
 </div>
@@ -592,14 +593,14 @@ img, svg { max-width: 100%; }
 <div class="reading-zh hide-ruby">
 <section class="read-para">
 <div class="read-para-head"><button class="tts-btn" onclick="playChunked('read', 0.88, 0, 3)">🔊 Nghe đoạn này</button></div>
-<p class="read-para-text"><ruby>我<rt>Wǒ</rt></ruby><ruby>平<rt>píng</rt></ruby><ruby>时<rt>shí</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>听<rt>tīng</rt></ruby><ruby>音<rt>yīn</rt></ruby><ruby>乐<rt>yuè</rt></ruby>，<ruby>也<rt>yě</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>唱<rt>chàng</rt></ruby><ruby>歌<rt>gē</rt></ruby>。 <ruby>我<rt>Wǒ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>yǒu</rt></ruby><ruby>只<rt>zhǐ</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>唱<rt>chàng</rt></ruby><ruby>歌<rt>gē</rt></ruby>，<ruby>别<rt>bié</rt></ruby><ruby>人<rt>rén</rt></ruby><ruby>都<rt>dōu</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>听<rt>tīng</rt></ruby>。 <ruby>今<rt>Jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>跳<rt>tiào</rt></ruby><ruby>舞<rt>wǔ</rt></ruby>，<ruby>也<rt>yě</rt></ruby><ruby>跳<rt>tiào</rt></ruby><ruby>街<rt>jiē</rt></ruby><ruby>舞<rt>wǔ</rt></ruby>。 <ruby>哥<rt>Gē</rt></ruby><ruby>哥<rt>ge</rt></ruby><ruby>正<rt>zhèng</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>打<rt>dǎ</rt></ruby><ruby>篮<rt>lán</rt></ruby><ruby>球<rt>qiú</rt></ruby>，<ruby>弟<rt>dì</rt></ruby><ruby>弟<rt>di</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>视<rt>shì</rt></ruby>。</p>
+<p class="read-para-text"><ruby>我<rt>Wǒ</rt></ruby><ruby>平<rt>píng</rt></ruby><ruby>时<rt>shí</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>听<rt>tīng</rt></ruby><ruby>音<rt>yīn</rt></ruby><ruby>乐<rt>yuè</rt></ruby>，<ruby>也<rt>yě</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>唱<rt>chàng</rt></ruby><ruby>歌<rt>gē</rt></ruby>。 <ruby>我<rt>Wǒ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>朋<rt>péng</rt></ruby><ruby>友<rt>yǒu</rt></ruby><ruby>只<rt>zhǐ</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>唱<rt>chàng</rt></ruby><ruby>歌<rt>gē</rt></ruby>，<ruby>不<rt>bù</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>跳<rt>tiào</rt></ruby><ruby>舞<rt>wǔ</rt></ruby>。 <ruby>今<rt>Jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>跳<rt>tiào</rt></ruby><ruby>舞<rt>wǔ</rt></ruby>，<ruby>也<rt>yě</rt></ruby><ruby>跳<rt>tiào</rt></ruby><ruby>街<rt>jiē</rt></ruby><ruby>舞<rt>wǔ</rt></ruby>。 <ruby>哥<rt>Gē</rt></ruby><ruby>哥<rt>ge</rt></ruby><ruby>正<rt>zhèng</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>打<rt>dǎ</rt></ruby><ruby>篮<rt>lán</rt></ruby><ruby>球<rt>qiú</rt></ruby>，<ruby>弟<rt>dì</rt></ruby><ruby>弟<rt>di</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>视<rt>shì</rt></ruby>。</p>
 </section>
 <section class="read-para">
 <div class="read-para-head"><button class="tts-btn" onclick="playChunked('read', 0.88, 4, 7)">🔊 Nghe đoạn này</button></div>
-<p class="read-para-text"><ruby>下<rt>Xià</rt></ruby><ruby>次<rt>cì</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>打<rt>dǎ</rt></ruby><ruby>球<rt>qiú</rt></ruby>，<ruby>下<rt>xià</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>星<rt>xīng</rt></ruby><ruby>期<rt>qī</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>去<rt>qù</rt></ruby>。 <ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>听<rt>tīng</rt></ruby><ruby>音<rt>yīn</rt></ruby><ruby>乐<rt>lè</rt></ruby>，<ruby>也<rt>yě</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>唱<rt>chàng</rt></ruby><ruby>歌<rt>gē</rt></ruby>。 <ruby>哥<rt>Gē</rt></ruby><ruby>哥<rt>ge</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>打<rt>dǎ</rt></ruby><ruby>球<rt>qiú</rt></ruby>，<ruby>弟<rt>dì</rt></ruby><ruby>弟<rt>di</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>视<rt>shì</rt></ruby>。 <ruby>下<rt>Xià</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>星<rt>xīng</rt></ruby><ruby>期<rt>qī</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>跳<rt>tiào</rt></ruby><ruby>舞<rt>wǔ</rt></ruby>。</p>
+<p class="read-para-text"><ruby>下<rt>Xià</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>星<rt>xīng</rt></ruby><ruby>期<rt>qī</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>打<rt>dǎ</rt></ruby><ruby>球<rt>qiú</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>去<rt>qù</rt></ruby>。 <ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>听<rt>tīng</rt></ruby><ruby>音<rt>yīn</rt></ruby><ruby>乐<rt>lè</rt></ruby>，<ruby>也<rt>yě</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>唱<rt>chàng</rt></ruby><ruby>歌<rt>gē</rt></ruby>。 <ruby>哥<rt>Gē</rt></ruby><ruby>哥<rt>ge</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>打<rt>dǎ</rt></ruby><ruby>球<rt>qiú</rt></ruby>，<ruby>弟<rt>dì</rt></ruby><ruby>弟<rt>di</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>视<rt>shì</rt></ruby>。 <ruby>下<rt>Xià</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>星<rt>xīng</rt></ruby><ruby>期<rt>qī</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>跳<rt>tiào</rt></ruby><ruby>舞<rt>wǔ</rt></ruby>。</p>
 </section>
 </div>
-<script>window.CHUNK_DATA = window.CHUNK_DATA || {}; window.CHUNK_DATA['read'] = ["我平时喜欢听音乐，也喜欢唱歌。", "我的朋友只喜欢唱歌，别人都喜欢听。", "今天我们一起跳舞，也跳街舞。", "哥哥正在打篮球，弟弟在看电视。", "下次我们去打球，下个星期一起去。", "我们一起听音乐，也一起唱歌。", "哥哥喜欢打球，弟弟喜欢看电视。", "下个星期，我们一起去跳舞。"];</script>
+<script>window.CHUNK_DATA = window.CHUNK_DATA || {}; window.CHUNK_DATA['read'] = ["我平时喜欢听音乐，也喜欢唱歌。", "我的朋友只喜欢唱歌，不喜欢跳舞。", "今天我们一起跳舞，也跳街舞。", "哥哥正在打篮球，弟弟在看电视。", "下个星期我们去打球，我们一起去。", "我们一起听音乐，也一起唱歌。", "哥哥喜欢打球，弟弟喜欢看电视。", "下个星期，我们一起去跳舞。"];</script>
 <div class="reading-Controls">
 <button class="tts-btn dlg-play-btn" id="chunk-play-read" onclick="toggleChunkPlay('read')" title="Nghe / Tạm dừng">▶️</button>
 <button class="tts-btn" onclick="restartChunked('read')">↺ Nghe lại từ đầu</button>
@@ -608,8 +609,8 @@ img, svg { max-width: 100%; }
 <button class="btn-sm" onclick="document.querySelector('.reading-zh').classList.toggle('hide-ruby')">🔤 Ẩn/Hiện Pinyin trên chữ</button>
 </div>
 <div class="reading-help" id="read-help">
-<div class="read-para-trans"><p>Bình thường tôi thích nghe nhạc, cũng thích hát. Bạn tôi chỉ thích hát, người khác đều thích nghe. Hôm nay chúng tôi cùng nhảy, cũng nhảy đường phố. Anh trai đang chơi bóng rổ, em trai đang xem ti-vi.</p></div>
-<div class="read-para-trans"><p>Lần sau chúng tôi đi chơi bóng, tuần sau cùng đi. Chúng tôi cùng nghe nhạc, cũng cùng hát. Anh trai thích chơi bóng, em trai thích xem ti vi. Tuần sau, chúng tôi cùng đi nhảy.</p></div>
+<div class="read-para-trans"><p>Bình thường tôi thích nghe nhạc, cũng thích hát. Bạn tôi chỉ thích hát, không thích nhảy múa. Hôm nay chúng tôi cùng nhảy, cũng nhảy đường phố. Anh trai đang chơi bóng rổ, em trai đang xem ti-vi.</p></div>
+<div class="read-para-trans"><p>Tuần sau chúng tôi đi chơi bóng, chúng tôi cùng đi. Chúng tôi cùng nghe nhạc, cũng cùng hát. Anh trai thích chơi bóng, em trai thích xem ti vi. Tuần sau, chúng tôi cùng đi nhảy.</p></div>
 </div>
 </div>
 <div class="q-item read-q" id="read-1">
@@ -631,12 +632,12 @@ img, svg { max-width: 100%; }
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 <div class="q-item read-q" id="read-3">
-<div class="read-q-head"><span class="read-q-num">3</span><span>下次他们去做什么？</span></div>
+<div class="read-q-head"><span class="read-q-num">3</span><span>下个星期他们去做什么？</span></div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 下次我们去打球，下个星期一起去。')">A. 去跳舞</button>
-<button class="mc-btn" onclick="checkMC(this, true, 'read-3', '✓ Chính xác! 下次我们去打球，下个星期一起去。')">B. 去打球</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 下次我们去打球，下个星期一起去。')">C. 去看电视</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 下次我们去打球，下个星期一起去。')">D. 去唱歌</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 下个星期我们去打球，我们一起去。')">A. 去跳舞</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'read-3', '✓ Chính xác! 下个星期我们去打球，我们一起去。')">B. 去打球</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 下个星期我们去打球，我们一起去。')">C. 去看电视</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'read-3', '✗ Chưa đúng: 下个星期我们去打球，我们一起去。')">D. 去唱歌</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 </div>
@@ -661,7 +662,7 @@ img, svg { max-width: 100%; }
 <div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>好<rt>hǎo</rt></ruby>！<ruby>我<rt>Wǒ</rt></ruby><ruby>现<rt>xiàn</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>正<rt>zhèng</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>听<rt>tīng</rt></ruby><ruby>音<rt>yīn</rt></ruby><ruby>乐<rt>lè</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>呢<rt>ne</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>明<rt>Míng</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>再<rt>zài</rt></ruby><ruby>去<rt>qù</rt></ruby>。</span><div class="dlg-vi">Chào bạn! Bây giờ tôi đang nghe nhạc. Còn bạn? Bạn cũng thích không? Ngày mai chúng ta lại đi.</div></div>
 <div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>正<rt>zhèng</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>视<rt>shì</rt></ruby>。<ruby>音<rt>Yīn</rt></ruby><ruby>乐<rt>yuè</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>听<rt>tīng</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>我<rt>Wǒ</rt></ruby><ruby>明<rt>míng</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>去<rt>qù</rt></ruby>。</span><div class="dlg-vi">Tôi đang xem tivi. Nhạc có hay không? Bạn đi không? Ngày mai tôi cũng đi.</div></div>
 <div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>音<rt>Yīn</rt></ruby><ruby>乐<rt>yuè</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>听<rt>tīng</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>音<rt>yīn</rt></ruby><ruby>乐<rt>yuè</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>好<rt>Hǎo</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>去<rt>qù</rt></ruby>。</span><div class="dlg-vi">Nhạc rất hay. Bạn thích nhạc không? Được không? Chúng ta cùng đi.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>音<rt>yīn</rt></ruby><ruby>乐<rt>yuè</rt></ruby>。<ruby>我<rt>Wǒ</rt></ruby><ruby>只<rt>zhǐ</rt></ruby><ruby>听<rt>tīng</rt></ruby><ruby>音<rt>yīn</rt></ruby><ruby>乐<rt>lè</rt></ruby>，<ruby>不<rt>bú</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>视<rt>shì</rt></ruby>。<ruby>我<rt>Wǒ</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>视<rt>shì</rt></ruby>。<ruby>好<rt>Hǎo</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Tôi thích nhạc. Tôi chỉ nghe nhạc, không xem tivi. Tôi thích xem ti vi. Được không?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>音<rt>yīn</rt></ruby><ruby>乐<rt>yuè</rt></ruby>。<ruby>我<rt>Wǒ</rt></ruby><ruby>只<rt>zhǐ</rt></ruby><ruby>听<rt>tīng</rt></ruby><ruby>音<rt>yīn</rt></ruby><ruby>乐<rt>yuè</rt></ruby>，<ruby>不<rt>bú</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>视<rt>shì</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>呢<rt>ne</rt></ruby>？</span><div class="dlg-vi">Tôi thích nhạc. Tôi chỉ nghe nhạc, không xem ti vi. Còn bạn?</div></div>
 <div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>好<rt>Hǎo</rt></ruby>！<ruby>明<rt>Míng</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>听<rt>tīng</rt></ruby><ruby>音<rt>yīn</rt></ruby><ruby>乐<rt>lè</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>影<rt>yǐng</rt></ruby>。</span><div class="dlg-vi">Được! Ngày mai chúng ta cùng nghe nhạc nhé? Bạn thích không? Chúng ta cùng đi xem phim.</div></div>
 <div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>好<rt>Hǎo</rt></ruby>！<ruby>明<rt>Míng</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>听<rt>tīng</rt></ruby><ruby>音<rt>yīn</rt></ruby><ruby>乐<rt>lè</rt></ruby>。<ruby>我<rt>Wǒ</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>听<rt>tīng</rt></ruby><ruby>音<rt>yīn</rt></ruby><ruby>乐<rt>lè</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>明<rt>míng</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Được! Ngày mai chúng ta cùng nghe nhạc. Tôi thích nghe nhạc. Ngày mai bạn đi không?</div></div>
 </div>
@@ -746,7 +747,7 @@ img, svg { max-width: 100%; }
 <p><b>Bài 3 (Ghép cặp):</b> 音乐 = yīnyuè · 在 = zài · 正 = zhèng · 正在 = zhèngzài · 只 = zhǐ</p>
 <p><b>Bài 4 (Ngữ pháp):</b> 1. C — 正在 &nbsp;|&nbsp; 2. A — 他正在看电影。</p>
 <p><b>Bài 5 (Đoạn văn):</b> 音乐 → 在 → 正 → 正在 → 只</p>
-<p><b>Bài 6 (Sắp xếp câu):</b><br>1. 他正在听音乐，我只喜欢唱歌。<br>2. 哥哥正打篮球，弟弟只看电视。<br>3. 我在听音乐，也在唱歌。</p>
+<p><b>Bài 6 (Sắp xếp câu):</b><br>1. 他正在听音乐，我只喜欢唱歌，也正在唱歌。<br>2. 哥哥正打篮球，弟弟只看电视，哥哥也只喜欢打篮球。<br>3. 我在听音乐，也在唱歌，我只听音乐，不看电视。</p>
 <p><b>Bài 7 (Đọc hiểu):</b> 1. B — 跳舞 &nbsp;|&nbsp; 2. D — 哥哥 &nbsp;|&nbsp; 3. B — 去打球</p>
 <p><b>Bài 8 (Nghe hội thoại):</b> 1. C — 听音乐 &nbsp; 2. D — 喜欢 &nbsp; 3. A — 一起听音乐 &nbsp; 4. B — 去</p>
 </details>
@@ -841,15 +842,15 @@ var ITEM_INFO = {
   ],
   "scr-1": [
     "Sắp xếp câu 1",
-    "他正在听音乐，我只喜欢唱歌。"
+    "他正在听音乐，我只喜欢唱歌，也正在唱歌。"
   ],
   "scr-2": [
     "Sắp xếp câu 2",
-    "哥哥正打篮球，弟弟只看电视。"
+    "哥哥正打篮球，弟弟只看电视，哥哥也只喜欢打篮球。"
   ],
   "scr-3": [
     "Sắp xếp câu 3",
-    "我在听音乐，也在唱歌。"
+    "我在听音乐，也在唱歌，我只听音乐，不看电视。"
   ],
   "read-1": [
     "Đọc hiểu câu 1",
@@ -2948,7 +2949,7 @@ flashShuffleDeck(); flashRender();
 <script>
 // ====== Bài 8: Nghe hội thoại ======
 var DLG_SPEAKERS = [{"color": "#2563eb", "gender": "nam", "id": "ming", "name": "小明", "py": "Xiǎo Míng", "vi": "Minh"}, {"color": "#db2777", "gender": "nữ", "id": "hong", "name": "小红", "py": "Xiǎo Hóng", "vi": "Hồng"}];
-var DLG_LINES = [{"sp": "ming", "zh": "你好！你现在在做什么？你喜欢吗？我很喜欢。"}, {"sp": "hong", "zh": "你好！我现在正在听音乐。你呢？你也喜欢吗？明天我们再去。"}, {"sp": "ming", "zh": "我正看电视。音乐好听吗？你去吗？我明天也去。"}, {"sp": "hong", "zh": "音乐很好听。你喜欢音乐吗？好吗？我们一起去。"}, {"sp": "ming", "zh": "我喜欢音乐。我只听音乐，不看电视。我喜欢看电视。好吗？"}, {"sp": "hong", "zh": "好！明天我们一起听音乐吗？你喜欢吗？我们一起去看电影。"}, {"sp": "ming", "zh": "好！明天我们一起听音乐。我喜欢听音乐。你明天去吗？"}];
+var DLG_LINES = [{"sp": "ming", "zh": "你好！你现在在做什么？你喜欢吗？我很喜欢。"}, {"sp": "hong", "zh": "你好！我现在正在听音乐。你呢？你也喜欢吗？明天我们再去。"}, {"sp": "ming", "zh": "我正看电视。音乐好听吗？你去吗？我明天也去。"}, {"sp": "hong", "zh": "音乐很好听。你喜欢音乐吗？好吗？我们一起去。"}, {"sp": "ming", "zh": "我喜欢音乐。我只听音乐，不看电视。你呢？"}, {"sp": "hong", "zh": "好！明天我们一起听音乐吗？你喜欢吗？我们一起去看电影。"}, {"sp": "ming", "zh": "好！明天我们一起听音乐。我喜欢听音乐。你明天去吗？"}];
 var dlgPlaying = false;
 var dlgPaused = false;
 var dlgRate = 0.88;

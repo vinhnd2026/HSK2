@@ -588,6 +588,7 @@ img, svg { max-width: 100%; }
 <div class="gram-ex"><button class="tts-btn" onclick="speakRate('他没有我高兴。', 0.88)">🔊</button> <span class="hide-ruby"><ruby>他<rt>Tā</rt></ruby><ruby>没<rt>méi</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>高<rt>gāo</rt></ruby><ruby>兴<rt>xìng</rt></ruby>。</span> <span class="hint">(Anh ấy không vui bằng tôi.)</span></div>
 <div class="gram-ex"><button class="tts-btn" onclick="speakRate('我今天没有昨天高兴。', 0.88)">🔊</button> <span class="hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>今<rt>jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>没<rt>méi</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>昨<rt>zuó</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>高<rt>gāo</rt></ruby><ruby>兴<rt>xìng</rt></ruby>。</span> <span class="hint">(Hôm nay tôi không vui bằng hôm qua.)</span></div>
 <div class="gram-ex"><button class="tts-btn" onclick="speakRate('他今天没有昨天高兴。', 0.88)">🔊</button> <span class="hide-ruby"><ruby>他<rt>Tā</rt></ruby><ruby>今<rt>jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>没<rt>méi</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>昨<rt>zuó</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>高<rt>gāo</rt></ruby><ruby>兴<rt>xìng</rt></ruby>。</span> <span class="hint">(Hôm nay anh ấy không vui bằng hôm qua.)</span></div>
+
 <div class="q-item" id="gram-1">
 <div><b>1. Sửa câu sai sau: 他没有高兴我。:</b></div>
 <div class="mc-options">
@@ -619,22 +620,22 @@ img, svg { max-width: 100%; }
 <div class="card">
 <h2>🧩 Bài 6: Sắp xếp câu (连词成句) <span class="badge">Tư duy trật tự từ</span></h2>
 <div class="sub" style="margin-bottom:8px;">Chạm vào từng từ ở khung xám để ghép thành câu hoàn chỉnh:</div>
-<div class="scramble-box" id="scr-1" data-target="我早上很早起床，中午在家吃饭。">
-<div><b>Câu 1:</b> Buổi sáng tôi dậy rất sớm, buổi trưa ăn cơm ở nhà.</div>
+<div class="scramble-box" id="scr-1" data-target="我早上很早起床，中午在家吃饭，晚上去学校。">
+<div><b>Câu 1:</b> Buổi sáng tôi dậy rất sớm, buổi trưa ăn cơm ở nhà, buổi tối đi học.</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="早上|起床|中午|，|。|在|我|饭|很|家|吃|早"></div>
+<div class="word-bank" data-words="。|，|我|中午|起床|早|晚上|早上|去|学校|很|家|，|饭|吃|在"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
-<div class="scramble-box" id="scr-2" data-target="这么早，你还不去学校吗？">
-<div><b>Câu 2:</b> Sớm thế này, bạn còn chưa đi học à?</div>
+<div class="scramble-box" id="scr-2" data-target="这么早，你还不去学校吗？我的笔在学校，我去学校。">
+<div><b>Câu 2:</b> Sớm thế này, bạn còn chưa đi học à? Bút của tôi ở trường, tôi đi học.</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="吗|你|不|，|这么|去|早|学校|？|还"></div>
+<div class="word-bank" data-words="这么|学校|，|去|去|我|我的|还|不|。|笔|在|学校|早|你|学校|，|吗|？"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
-<div class="scramble-box" id="scr-3" data-target="我的笔在学校，我中午去学校。">
-<div><b>Câu 3:</b> Bút của tôi ở trường, buổi trưa tôi đi học.</div>
+<div class="scramble-box" id="scr-3" data-target="我中午左右去学校，我的笔很好，也很好看。">
+<div><b>Câu 3:</b> Tôi đi học vào khoảng buổi trưa, bút của tôi rất tốt, cũng rất đẹp.</div>
 <div class="answer-zone"></div>
-<div class="word-bank" data-words="学校|，|在|笔|我的|我|。|学校|去|中午"></div>
+<div class="word-bank" data-words="我的|很|。|好看|中午|，|学校|也|去|好|左右|我|，|很|笔"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
 </div>
@@ -654,10 +655,10 @@ img, svg { max-width: 100%; }
 </section>
 <section class="read-para">
 <div class="read-para-head"><button class="tts-btn" onclick="playChunked('read', 0.88, 8, 11)">🔊 Nghe đoạn này</button></div>
-<p class="read-para-text"><ruby>这<rt>Zhè</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>晚<rt>wǎn</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>他<rt>tā</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>还<rt>hái</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>这<rt>Zhè</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>早<rt>zǎo</rt></ruby>，<ruby>他<rt>tā</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>不<rt>bú</rt></ruby><ruby>去<rt>qù</rt></ruby>。 <ruby>两<rt>Liǎng</rt></ruby><ruby>点<rt>diǎn</rt></ruby><ruby>左<rt>zuǒ</rt></ruby><ruby>右<rt>yòu</rt></ruby>，<ruby>他<rt>tā</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>下<rt>xià</rt></ruby><ruby>课<rt>kè</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>他<rt>tā</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby><ruby>门<rt>mén</rt></ruby><ruby>口<rt>kǒu</rt></ruby>。 <ruby>小<rt>Xiǎo</rt></ruby><ruby>明<rt>Míng</rt></ruby><ruby>睡<rt>shuì</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>小<rt>Xiǎo</rt></ruby><ruby>红<rt>Hóng</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>睡<rt>shuì</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>他<rt>tā</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>明<rt>míng</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby>。 <ruby>小<rt>Xiǎo</rt></ruby><ruby>红<rt>Hóng</rt></ruby><ruby>吃<rt>chī</rt></ruby><ruby>半<rt>bàn</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>苹<rt>píng</rt></ruby><ruby>果<rt>guǒ</rt></ruby>，<ruby>她<rt>tā</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>苹<rt>píng</rt></ruby><ruby>果<rt>guǒ</rt></ruby>。</p>
+<p class="read-para-text"><ruby>这<rt>Zhè</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>早<rt>zǎo</rt></ruby><ruby>他<rt>tā</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby>，<ruby>这<rt>zhè</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>晚<rt>wǎn</rt></ruby><ruby>他<rt>tā</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>不<rt>bú</rt></ruby><ruby>去<rt>qù</rt></ruby>。 <ruby>两<rt>Liǎng</rt></ruby><ruby>点<rt>diǎn</rt></ruby><ruby>左<rt>zuǒ</rt></ruby><ruby>右<rt>yòu</rt></ruby>，<ruby>他<rt>tā</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>下<rt>xià</rt></ruby><ruby>课<rt>kè</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>他<rt>tā</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby><ruby>门<rt>mén</rt></ruby><ruby>口<rt>kǒu</rt></ruby>。 <ruby>小<rt>Xiǎo</rt></ruby><ruby>明<rt>Míng</rt></ruby><ruby>睡<rt>shuì</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>小<rt>Xiǎo</rt></ruby><ruby>红<rt>Hóng</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>睡<rt>shuì</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>他<rt>tā</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>明<rt>míng</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby>。 <ruby>小<rt>Xiǎo</rt></ruby><ruby>红<rt>Hóng</rt></ruby><ruby>吃<rt>chī</rt></ruby><ruby>半<rt>bàn</rt></ruby><ruby>个<rt>gè</rt></ruby><ruby>苹<rt>píng</rt></ruby><ruby>果<rt>guǒ</rt></ruby>，<ruby>她<rt>tā</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huān</rt></ruby><ruby>苹<rt>píng</rt></ruby><ruby>果<rt>guǒ</rt></ruby>。</p>
 </section>
 </div>
-<script>window.CHUNK_DATA = window.CHUNK_DATA || {}; window.CHUNK_DATA['read'] = ["小明每天起床很早，他去学校上课。", "他现在去学校门口，他在学校门口很高兴。", "小红起床很晚，她睡觉也很晚。", "他们两点上课，两点半下课。", "现在几点几分？现在两点两分，两点两刻有课。", "因为今天有课，他们不去看电影。", "有时他们去学校，有时候他们在家看电视。", "中午他们在家吃饭，或者去学校。", "这么晚了，他们还去学校吗？这么早，他们不去。", "两点左右，他们下课了，他们去学校门口。", "小明睡了，小红也睡了，他们明天去学校。", "小红吃半个苹果，她很喜欢苹果。"];</script>
+<script>window.CHUNK_DATA = window.CHUNK_DATA || {}; window.CHUNK_DATA['read'] = ["小明每天起床很早，他去学校上课。", "他现在去学校门口，他在学校门口很高兴。", "小红起床很晚，她睡觉也很晚。", "他们两点上课，两点半下课。", "现在几点几分？现在两点两分，两点两刻有课。", "因为今天有课，他们不去看电影。", "有时他们去学校，有时候他们在家看电视。", "中午他们在家吃饭，或者去学校。", "这么早他们去学校，这么晚他们不去。", "两点左右，他们下课了，他们去学校门口。", "小明睡了，小红也睡了，他们明天去学校。", "小红吃半个苹果，她很喜欢苹果。"];</script>
 <div class="reading-Controls">
 <button class="tts-btn dlg-play-btn" id="chunk-play-read" onclick="toggleChunkPlay('read')" title="Nghe / Tạm dừng">▶️</button>
 <button class="tts-btn" onclick="restartChunked('read')">↺ Nghe lại từ đầu</button>
@@ -668,7 +669,7 @@ img, svg { max-width: 100%; }
 <div class="reading-help" id="read-help">
 <div class="read-para-trans"><p>Tiểu Minh mỗi ngày thức dậy rất sớm, anh ấy đến trường học. Bây giờ anh ấy đến cổng trường, anh ấy ở cổng trường rất vui. Tiểu Hồng thức dậy rất muộn, cô ấy ngủ cũng rất muộn. Họ hai giờ vào học, hai giờ rưỡi tan học.</p></div>
 <div class="read-para-trans"><p>Bây giờ mấy giờ mấy phút? Bây giờ hai giờ hai phút, hai giờ mười lăm phút có tiết học. Vì hôm nay có tiết học, họ không đi xem phim. Có lúc họ đến trường, có lúc họ ở nhà xem ti vi. Buổi trưa họ ở nhà ăn cơm, hoặc đi đến trường.</p></div>
-<div class="read-para-trans"><p>Muộn thế này rồi, họ còn đi đến trường à? Sớm thế này, họ không đi. Khoảng hai giờ, họ tan học, họ đến cổng trường. Tiểu Minh ngủ rồi, Tiểu Hồng cũng ngủ rồi, ngày mai họ đến trường. Tiểu Hồng ăn nửa quả táo, cô ấy rất thích táo.</p></div>
+<div class="read-para-trans"><p>Sớm thế này họ đi học, muộn thế này họ không đi. Khoảng hai giờ, họ tan học, họ đến cổng trường. Tiểu Minh ngủ rồi, Tiểu Hồng cũng ngủ rồi, ngày mai họ đến trường. Tiểu Hồng ăn nửa quả táo, cô ấy rất thích táo.</p></div>
 </div>
 </div>
 <div class="q-item read-q" id="read-1">
@@ -716,7 +717,7 @@ img, svg { max-width: 100%; }
 <div class="hint" id="dlg-voice-note" style="margin-top:4px;"></div>
 <div style="margin:8px 0;"><span class="hint">Nghe từng câu:</span> <button class="tts-btn" onclick="playDlgLine(0)">1</button> <button class="tts-btn" onclick="playDlgLine(1)">2</button> <button class="tts-btn" onclick="playDlgLine(2)">3</button> <button class="tts-btn" onclick="playDlgLine(3)">4</button> <button class="tts-btn" onclick="playDlgLine(4)">5</button> <button class="tts-btn" onclick="playDlgLine(5)">6</button> <button class="tts-btn" onclick="playDlgLine(6)">7</button> <button class="tts-btn" onclick="playDlgLine(7)">8</button> <button class="tts-btn" onclick="playDlgLine(8)">9</button> <button class="tts-btn" onclick="playDlgLine(9)">10</button> <button class="tts-btn" onclick="playDlgLine(10)">11</button> <button class="tts-btn" onclick="playDlgLine(11)">12</button> <button class="tts-btn" onclick="playDlgLine(12)">13</button> <button class="tts-btn" onclick="playDlgLine(13)">14</button></div>
 <div class="dlg-script" id="dlg-script" style="display:none">
-<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>好<rt>hǎo</rt></ruby>！<ruby>你<rt>Nǐ</rt></ruby><ruby>每<rt>měi</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>几<rt>jǐ</rt></ruby><ruby>点<rt>diǎn</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>床<rt>chuáng</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>床<rt>chuáng</rt></ruby><ruby>早<rt>zǎo</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Chào bạn! Mỗi ngày bạn mấy giờ thức dậy? Bạn thức dậy sớm à?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>好<rt>hǎo</rt></ruby>！<ruby>你<rt>Nǐ</rt></ruby><ruby>每<rt>měi</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>几<rt>jǐ</rt></ruby><ruby>点<rt>diǎn</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>床<rt>chuáng</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>床<rt>chuáng</rt></ruby><ruby>这<rt>zhè</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>早<rt>zǎo</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Chào bạn! Mỗi ngày bạn mấy giờ thức dậy? Bạn thức dậy sớm thế này à?</div></div>
 <div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>好<rt>hǎo</rt></ruby>！<ruby>我<rt>Wǒ</rt></ruby><ruby>每<rt>měi</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>床<rt>chuáng</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>早<rt>zǎo</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby><ruby>上<rt>shàng</rt></ruby><ruby>课<rt>kè</rt></ruby>。</span><div class="dlg-vi">Chào bạn! Mỗi ngày tôi thức dậy rất sớm, tôi đến trường học.</div></div>
 <div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>现<rt>xiàn</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby><ruby>门<rt>mén</rt></ruby><ruby>口<rt>kǒu</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Bây giờ bạn đến trường à? Bạn ở cổng trường à?</div></div>
 <div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>现<rt>xiàn</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby><ruby>门<rt>mén</rt></ruby><ruby>口<rt>kǒu</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>高<rt>gāo</rt></ruby><ruby>兴<rt>xìng</rt></ruby>。</span><div class="dlg-vi">Bây giờ tôi đến trường, tôi ở cổng trường, tôi rất vui.</div></div>
@@ -728,8 +729,8 @@ img, svg { max-width: 100%; }
 <div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>有<rt>Yǒu</rt></ruby><ruby>时<rt>shí</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby>，<ruby>有<rt>yǒu</rt></ruby><ruby>时<rt>shí</rt></ruby><ruby>候<rt>hòu</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>家<rt>jiā</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>视<rt>shì</rt></ruby>。</span><div class="dlg-vi">Có lúc tôi đến trường, có lúc tôi ở nhà xem ti vi.</div></div>
 <div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>中<rt>Zhōng</rt></ruby><ruby>午<rt>wǔ</rt></ruby><ruby>你<rt>nǐ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>哪<rt>nǎ</rt></ruby><ruby>儿<rt>ér</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby><ruby>门<rt>mén</rt></ruby><ruby>口<rt>kǒu</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Buổi trưa bạn đi đâu? Bạn đến cổng trường à?</div></div>
 <div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>中<rt>Zhōng</rt></ruby><ruby>午<rt>wǔ</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>家<rt>jiā</rt></ruby><ruby>吃<rt>chī</rt></ruby><ruby>饭<rt>fàn</rt></ruby>，<ruby>或<rt>huò</rt></ruby><ruby>者<rt>zhě</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Buổi trưa tôi ở nhà ăn cơm, hoặc đi đến trường, bạn đi à?</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>这<rt>Zhè</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>晚<rt>wǎn</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>还<rt>hái</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>这<rt>Zhè</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>早<rt>zǎo</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>不<rt>bú</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Muộn thế này rồi, bạn còn đi đến trường à? Sớm thế này, bạn không đi à?</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>两<rt>Liǎng</rt></ruby><ruby>点<rt>diǎn</rt></ruby><ruby>左<rt>zuǒ</rt></ruby><ruby>右<rt>yòu</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>下<rt>xià</rt></ruby><ruby>课<rt>kè</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>晚<rt>wǎn</rt></ruby><ruby>上<rt>shang</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>睡<rt>shuì</rt></ruby><ruby>觉<rt>jiào</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>睡<rt>shuì</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Khoảng hai giờ tôi tan học, buổi tối tôi ngủ, bạn cũng ngủ rồi à?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>这<rt>Zhè</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>晚<rt>wǎn</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>还<rt>hái</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Muộn thế này rồi, bạn còn đi đến trường à?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>这<rt>Zhè</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>晚<rt>wǎn</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>不<rt>bú</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby>。<ruby>两<rt>Liǎng</rt></ruby><ruby>点<rt>diǎn</rt></ruby><ruby>左<rt>zuǒ</rt></ruby><ruby>右<rt>yòu</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>下<rt>xià</rt></ruby><ruby>课<rt>kè</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>晚<rt>wǎn</rt></ruby><ruby>上<rt>shang</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>睡<rt>shuì</rt></ruby><ruby>觉<rt>jiào</rt></ruby><ruby>了<rt>le</rt></ruby>，<ruby>你<rt>nǐ</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>睡<rt>shuì</rt></ruby><ruby>了<rt>le</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Muộn thế này rồi, tôi không đi học. Khoảng hai giờ tôi tan học, buổi tối tôi ngủ, bạn cũng ngủ rồi à?</div></div>
 </div>
 <div class="hint" id="dlg-tip">💡 Mẹo: nghe 2–3 lần trước khi hiện lời thoại. Chọn giọng cho từng người ở trên — giọng nam cho người nam, giọng nữ cho người nữ, bấm 🔊 Nghe thử để nghe giọng trước khi chọn.</div>
 </div>
@@ -812,7 +813,7 @@ img, svg { max-width: 100%; }
 <p><b>Bài 3 (Ghép cặp):</b> 早 = zǎo · 这么 = zhème · 中午 = zhōngwǔ · 左右 = zuǒyòu · 笔 = bǐ</p>
 <p><b>Bài 4 (Ngữ pháp):</b> 1. B — 他没有我高兴。 &nbsp;|&nbsp; 2. 他今天没有昨天高兴。</p>
 <p><b>Bài 5 (Đoạn văn):</b> 早 → 这么 → 中午 → 左右 → 笔</p>
-<p><b>Bài 6 (Sắp xếp câu):</b><br>1. 我早上很早起床，中午在家吃饭。<br>2. 这么早，你还不去学校吗？<br>3. 我的笔在学校，我中午去学校。</p>
+<p><b>Bài 6 (Sắp xếp câu):</b><br>1. 我早上很早起床，中午在家吃饭，晚上去学校。<br>2. 这么早，你还不去学校吗？我的笔在学校，我去学校。<br>3. 我中午左右去学校，我的笔很好，也很好看。</p>
 <p><b>Bài 7 (Đọc hiểu):</b> 1. B — 很早 &nbsp;|&nbsp; 2. D — 上课 &nbsp;|&nbsp; 3. C — 很晚</p>
 <p><b>Bài 8 (Nghe hội thoại):</b> 1. B — 很早 &nbsp; 2. C — 上课 &nbsp; 3. D — 两点两分 &nbsp; 4. A — 在家</p>
 </details>
@@ -907,15 +908,15 @@ var ITEM_INFO = {
   ],
   "scr-1": [
     "Sắp xếp câu 1",
-    "我早上很早起床，中午在家吃饭。"
+    "我早上很早起床，中午在家吃饭，晚上去学校。"
   ],
   "scr-2": [
     "Sắp xếp câu 2",
-    "这么早，你还不去学校吗？"
+    "这么早，你还不去学校吗？我的笔在学校，我去学校。"
   ],
   "scr-3": [
     "Sắp xếp câu 3",
-    "我的笔在学校，我中午去学校。"
+    "我中午左右去学校，我的笔很好，也很好看。"
   ],
   "read-1": [
     "Đọc hiểu câu 1",
@@ -3014,7 +3015,7 @@ flashShuffleDeck(); flashRender();
 <script>
 // ====== Bài 8: Nghe hội thoại ======
 var DLG_SPEAKERS = [{"id": "ming", "name": "小明", "py": "Xiǎo Míng", "gender": "nam", "vi": "Minh", "color": "#2563eb"}, {"id": "hong", "name": "小红", "py": "Xiǎo Hóng", "gender": "nữ", "vi": "Hồng", "color": "#db2777"}];
-var DLG_LINES = [{"sp": "ming", "zh": "你好！你每天几点起床？你起床早吗？"}, {"sp": "hong", "zh": "你好！我每天起床很早，我去学校上课。"}, {"sp": "ming", "zh": "你现在去学校吗？你在学校门口吗？"}, {"sp": "hong", "zh": "我现在去学校，我在学校门口，我很高兴。"}, {"sp": "ming", "zh": "今天有课吗？两点有课吗？"}, {"sp": "hong", "zh": "今天有课，两点上课，两点半下课。"}, {"sp": "ming", "zh": "现在几点几分？现在两点两分吗？"}, {"sp": "hong", "zh": "现在两点两分，两点两刻有课，你去吗？"}, {"sp": "ming", "zh": "我去，因为今天有课，我不去看电影。"}, {"sp": "hong", "zh": "有时我去学校，有时候我在家看电视。"}, {"sp": "ming", "zh": "中午你去哪儿？你去学校门口吗？"}, {"sp": "hong", "zh": "中午我在家吃饭，或者去学校，你去吗？"}, {"sp": "ming", "zh": "这么晚了，你还去学校吗？这么早，你不去吗？"}, {"sp": "hong", "zh": "两点左右我下课了，晚上我睡觉了，你也睡了吗？"}];
+var DLG_LINES = [{"sp": "ming", "zh": "你好！你每天几点起床？你起床这么早吗？"}, {"sp": "hong", "zh": "你好！我每天起床很早，我去学校上课。"}, {"sp": "ming", "zh": "你现在去学校吗？你在学校门口吗？"}, {"sp": "hong", "zh": "我现在去学校，我在学校门口，我很高兴。"}, {"sp": "ming", "zh": "今天有课吗？两点有课吗？"}, {"sp": "hong", "zh": "今天有课，两点上课，两点半下课。"}, {"sp": "ming", "zh": "现在几点几分？现在两点两分吗？"}, {"sp": "hong", "zh": "现在两点两分，两点两刻有课，你去吗？"}, {"sp": "ming", "zh": "我去，因为今天有课，我不去看电影。"}, {"sp": "hong", "zh": "有时我去学校，有时候我在家看电视。"}, {"sp": "ming", "zh": "中午你去哪儿？你去学校门口吗？"}, {"sp": "hong", "zh": "中午我在家吃饭，或者去学校，你去吗？"}, {"sp": "ming", "zh": "这么晚了，你还去学校吗？"}, {"sp": "hong", "zh": "这么晚了，我不去学校。两点左右我下课了，晚上我睡觉了，你也睡了吗？"}];
 var dlgPlaying = false;
 var dlgPaused = false;
 var dlgRate = 0.88;
