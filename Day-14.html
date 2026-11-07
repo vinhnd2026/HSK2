@@ -239,7 +239,7 @@ img, svg { max-width: 100%; }
   <div class="progress-bar">
     <span>🎯 Tiến độ:</span>
     <div class="progress-track"><div class="progress-fill" id="prog-fill"></div></div>
-    <b id="prog-text">0 / 32</b>
+    <b id="prog-text">0 / 33</b>
     <button class="btn-sm active" id="ime-toggle-btn" onclick="toggleIME()" title="Bật/tắt chế độ gõ Pinyin trực tiếp">⌨️ Gõ Pinyin: BẬT</button>
     <button class="btn-sm" onclick="resetAll()" title="Xoá tiến độ làm lại">↺</button>
   </div>
@@ -671,6 +671,12 @@ img, svg { max-width: 100%; }
 <div class="word-bank" data-words="？|慢|，|我|借|很|的|朋友|手机|可以|他的|很|可是|，|喜欢|手机|我|吗"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
+<div class="scramble-box" id="scr-4" data-target="你可以借我的手机，也可以给朋友打电话。">
+<div><b>Câu 4:</b> Bạn có thể mượn điện thoại di động của tôi, cũng có thể gọi điện thoại cho bạn.</div>
+<div class="answer-zone"></div>
+<div class="word-bank" data-words="手机|借|也|打电话|可以|给|你|可以|，|。|朋友|我的"></div>
+<div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
+</div>
 </div>
 <div class="card">
 <h2>📚 Bài 7: Đọc hiểu đoạn văn – Chọn đáp án <span class="badge">Đọc hiểu HSK 2 · Tổng kết tuần</span></h2>
@@ -821,7 +827,7 @@ img, svg { max-width: 100%; }
 </div>
 <div class="card">
 <h2>📋 Tổng kết để gửi em <span class="badge">Câu cần ôn lại</span></h2>
-<div>Đúng <b id="sum-score">0 / 32</b> mục.</div>
+<div>Đúng <b id="sum-score">0 / 33</b> mục.</div>
 <ul class="summary-list" id="wrong-list"><li>Chưa có câu sai nào — anh làm đến đâu, câu sai sẽ tự gom vào đây.</li></ul>
 <div class="input-check">
 <button class="btn-primary" onclick="copySummary()">📋 Chép kết quả</button>
@@ -852,7 +858,7 @@ img, svg { max-width: 100%; }
 <script>
 // ====== Trạng thái + lưu trữ (localStorage) ======
 var LS_KEY = 'hsk2-Day-14';
-var TOTAL_TASKS = 32;
+var TOTAL_TASKS = 33;
 var ITEM_INFO = {
   "rev-1": [
     "Ôn nhanh 1 (电脑)",
@@ -945,6 +951,10 @@ var ITEM_INFO = {
   "scr-3": [
     "Sắp xếp câu 3",
     "朋友的手机很慢，可是我很喜欢，我可以借他的手机吗？"
+  ],
+  "scr-4": [
+    "Sắp xếp câu 4",
+    "你可以借我的手机，也可以给朋友打电话。"
   ],
   "read-1": [
     "Đọc hiểu câu 1",
