@@ -239,7 +239,7 @@ img, svg { max-width: 100%; }
   <div class="progress-bar">
     <span>🎯 Tiến độ:</span>
     <div class="progress-track"><div class="progress-fill" id="prog-fill"></div></div>
-    <b id="prog-text">0 / 32</b>
+    <b id="prog-text">0 / 33</b>
     <button class="btn-sm active" id="ime-toggle-btn" onclick="toggleIME()" title="Bật/tắt chế độ gõ Pinyin trực tiếp">⌨️ Gõ Pinyin: BẬT</button>
     <button class="btn-sm" onclick="resetAll()" title="Xoá tiến độ làm lại">↺</button>
   </div>
@@ -687,6 +687,12 @@ img, svg { max-width: 100%; }
 <div class="word-bank" data-words="，|。|有意思|很|，|微信|用|喜欢|很|这个|打电话|我|电影|我们"></div>
 <div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
 </div>
+<div class="scramble-box" id="scr-4" data-target="我买好门票了，也写好名字了，我们去公园玩儿两个小时。">
+<div><b>Câu 4:</b> Tôi đã mua xong vé vào cửa, cũng đã viết xong tên, chúng tôi đi công viên chơi hai tiếng.</div>
+<div class="answer-zone"></div>
+<div class="word-bank" data-words="我|去|，|了|名字|写|我们|门票|玩儿|，|好|公园|小时|好|了|两个|。|也|买"></div>
+<div class="input-check"><button class="btn-primary" onclick="checkScramble(this)">Kiểm tra câu</button><button class="btn-sm" onclick="resetScramble(this)">Làm lại</button><span class="feedback"></span></div>
+</div>
 </div>
 <div class="card">
 <h2>📚 Bài 7: Đọc hiểu đoạn văn – Chọn đáp án <span class="badge">Đọc hiểu HSK 2</span></h2>
@@ -828,7 +834,7 @@ img, svg { max-width: 100%; }
 </div>
 <div class="card">
 <h2>📋 Tổng kết để gửi em <span class="badge">Câu cần ôn lại</span></h2>
-<div>Đúng <b id="sum-score">0 / 32</b> mục.</div>
+<div>Đúng <b id="sum-score">0 / 33</b> mục.</div>
 <ul class="summary-list" id="wrong-list"><li>Chưa có câu sai nào — anh làm đến đâu, câu sai sẽ tự gom vào đây.</li></ul>
 <div class="input-check">
 <button class="btn-primary" onclick="copySummary()">📋 Chép kết quả</button>
@@ -859,7 +865,7 @@ img, svg { max-width: 100%; }
 <script>
 // ====== Trạng thái + lưu trữ (localStorage) ======
 var LS_KEY = 'hsk2-Day-30';
-var TOTAL_TASKS = 32;
+var TOTAL_TASKS = 33;
 var ITEM_INFO = {
   "rev-1": [
     "Ôn nhanh 1 (年)",
@@ -952,6 +958,10 @@ var ITEM_INFO = {
   "scr-3": [
     "Sắp xếp câu 3",
     "我们用微信打电话，这个电影很有意思，我很喜欢。"
+  ],
+  "scr-4": [
+    "Sắp xếp câu 4",
+    "我买好门票了，也写好名字了，我们去公园玩儿两个小时。"
   ],
   "read-1": [
     "Đọc hiểu câu 1",
