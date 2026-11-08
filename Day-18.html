@@ -277,7 +277,7 @@ img, svg { max-width: 100%; }
 <button class="btn-sm" onclick="flashNext()">Tiếp ➡</button>
 <button class="btn-sm" onclick="flashReshuffle()">🔀 Trộn lại</button>
 <span class="flash-count" id="flash-count"></span>
-</div></div>
+</div></div><style>#flash-wrap .flash-card{height:216px}#flash-wrap .flash-ex{margin-top:7px;font-size:1.02rem;line-height:2;color:#1e3a8a}#flash-wrap .flash-ex ruby rt{font-size:.52em;color:#2563eb}#flash-wrap .flash-ex-label{font-size:.8rem;font-weight:700;color:#64748b}#flash-wrap .flash-ex-vi{font-size:.86rem;color:#475569}</style>
 <div class="card">
 <h2>1. 件 — jiàn · kiện <span class="badge">Lượng từ</span></h2>
 <div class="word-meaning">Nghĩa: <b>cái, chiếc (lượng từ cho quần áo)</b></div>
@@ -533,19 +533,19 @@ img, svg { max-width: 100%; }
 <div class="feedback" id="match-feedback" style="margin-top:10px;"></div>
 </div>
 <div class="card">
-<h2>⚖️ Bài 4: Ngữ pháp — 比较 + Adj <span class="badge">Điểm ngữ pháp hôm nay</span></h2>
+<h2>⚖️ Bài 4: Ngữ pháp — 比较 — tổng kết（phân biệt 比 / 很 / 最） <span class="badge">Điểm ngữ pháp hôm nay</span></h2>
 
 <div class="gram-intro">
-<div><b>Công thức:</b> N + 比较 + Adj</div>
-<div>比较 đặt trước tính từ, nghĩa là tương đối, khá. 比较 nhẹ hơn 很: 很 nói rất, còn 比较 chỉ nói khá, không nhấn mạnh lắm. Anh nhớ: 比较 đứng trước tính từ, không đứng sau, cũng không đứng cuối câu. Ví dụ: 衬衫比较贵, 我比较喜欢跳舞. 比较 khác 最: 最 nói nhất, còn 比较 chỉ nói tương đối. 比较 cũng khác 比: 比 so sánh hai bên, còn 比较 chỉ nói mức độ của một bên. Khi muốn nói áo nào khá đắt hay ai khá thích gì đó mà không cần nói rất thì dùng 比较.</div>
-<div class="gram-mistake"><div><b>⚠️ Lỗi thường gặp:</b> <span style="color:#b91c1c">✗ 这件衬衫贵比较。</span> → <span style="color:#15803d">✓ 这件衬衫比较贵。</span></div><div>比较 đặt trước tính từ: 比较贵, không nói 贵比较.</div></div>
+<div><b>Công thức:</b> S + 比较 + Adj（chỉ một bên）</div>
+<div>Điểm này tổng kết 比较, phân biệt với 比, 很 và 最. 比较 đặt trước tính từ, chỉ nói mức độ của một bên: 衬衫比较贵 (áo khá đắt). Anh nhớ: 比较 đứng trước tính từ, không đứng sau, cũng không đứng cuối câu. Ví dụ: 衬衫比较贵, 我比较喜欢跳舞. Khác 比: 比 so sánh hai bên, phải có đối tượng, ví dụ 他比我大; không nói 他比较我大. Khác 最: 最 nói nhất, mức cao nhất. Khác 很: 很 chỉ nói rất, không có nghĩa tương đối. Khi muốn nói một bên khá thế nào thì dùng 比较, muốn so hai bên thì dùng 比.</div>
+<div class="gram-mistake"><div><b>⚠️ Lỗi thường gặp:</b> <span style="color:#b91c1c">✗ 他比较我大。</span> → <span style="color:#15803d">✓ 他比我大。</span></div><div>So sánh hai bên phải dùng 比: 他比我大. 比较 chỉ nói mức độ một bên, không có đối tượng so sánh.</div></div>
 </div>
 <div class="sub" style="margin-bottom:8px;">Nghe 5 ví dụ rồi làm 2 bài tập dưới đây:</div>
 <div class="gram-ex"><button class="tts-btn" onclick="speakRate('衬衫比较贵。', 0.88)">🔊</button> <span class="hide-ruby"><ruby>衬<rt>Chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby><ruby>比<rt>bǐ</rt></ruby><ruby>较<rt>jiào</rt></ruby><ruby>贵<rt>guì</rt></ruby>。</span> <span class="hint">(Áo sơ mi khá đắt.)</span></div>
+<div class="gram-ex"><button class="tts-btn" onclick="speakRate('蓝衬衫比较大。', 0.88)">🔊</button> <span class="hide-ruby"><ruby>蓝<rt>Lán</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby><ruby>比<rt>bǐ</rt></ruby><ruby>较<rt>jiào</rt></ruby><ruby>大<rt>dà</rt></ruby>。</span> <span class="hint">(Áo sơ mi xanh khá to.)</span></div>
+<div class="gram-ex"><button class="tts-btn" onclick="speakRate('黑衬衫比较小，红衬衫比较大。', 0.88)">🔊</button> <span class="hide-ruby"><ruby>黑<rt>Hēi</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby><ruby>比<rt>bǐ</rt></ruby><ruby>较<rt>jiào</rt></ruby><ruby>小<rt>xiǎo</rt></ruby>，<ruby>红<rt>hóng</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby><ruby>比<rt>bǐ</rt></ruby><ruby>较<rt>jiào</rt></ruby><ruby>大<rt>dà</rt></ruby>。</span> <span class="hint">(Áo sơ mi đen khá nhỏ, áo sơ mi đỏ khá to.)</span></div>
+<div class="gram-ex"><button class="tts-btn" onclick="speakRate('我觉得衬衫比较贵。', 0.88)">🔊</button> <span class="hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby><ruby>比<rt>bǐ</rt></ruby><ruby>较<rt>jiào</rt></ruby><ruby>贵<rt>guì</rt></ruby>。</span> <span class="hint">(Tôi thấy áo sơ mi khá đắt.)</span></div>
 <div class="gram-ex"><button class="tts-btn" onclick="speakRate('我比较喜欢跳舞。', 0.88)">🔊</button> <span class="hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>比<rt>bǐ</rt></ruby><ruby>较<rt>jiào</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby><ruby>跳<rt>tiào</rt></ruby><ruby>舞<rt>wǔ</rt></ruby>。</span> <span class="hint">(Tôi tương đối thích nhảy.)</span></div>
-<div class="gram-ex"><button class="tts-btn" onclick="speakRate('他比较高兴。', 0.88)">🔊</button> <span class="hide-ruby"><ruby>他<rt>Tā</rt></ruby><ruby>比<rt>bǐ</rt></ruby><ruby>较<rt>jiào</rt></ruby><ruby>高<rt>gāo</rt></ruby><ruby>兴<rt>xìng</rt></ruby>。</span> <span class="hint">(Anh ấy tương đối vui.)</span></div>
-<div class="gram-ex"><button class="tts-btn" onclick="speakRate('我比较喜欢唱歌。', 0.88)">🔊</button> <span class="hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>比<rt>bǐ</rt></ruby><ruby>较<rt>jiào</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby><ruby>唱<rt>chàng</rt></ruby><ruby>歌<rt>gē</rt></ruby>。</span> <span class="hint">(Tôi tương đối thích hát.)</span></div>
-<div class="gram-ex"><button class="tts-btn" onclick="speakRate('蓝衬衫比较贵。', 0.88)">🔊</button> <span class="hide-ruby"><ruby>蓝<rt>Lán</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby><ruby>比<rt>bǐ</rt></ruby><ruby>较<rt>jiào</rt></ruby><ruby>贵<rt>guì</rt></ruby>。</span> <span class="hint">(Áo sơ mi xanh khá đắt.)</span></div>
 
 <div class="q-item" id="gram-1">
 <div><b>1. Điền từ đúng vào chỗ trống:</b> 衬衫<span class="gram-blank">......</span>贵。</div>
@@ -557,10 +557,10 @@ img, svg { max-width: 100%; }
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 <div class="q-item" id="gram-2">
-<div><b>2. 比较 + Adj:</b></div>
+<div><b>2. 比较 — tổng kết（phân biệt 比 / 很 / 最）:</b></div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, true, 'gram-2', '✓ Đúng! 比较 đặt trước tính từ: 比较贵.')">A. 衬衫比较贵。</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'gram-2', '✗ Sai: 比较 phải đặt trước tính từ, không đặt sau — 衬衫比较贵 mới đúng.')">B. 衬衫贵比较。</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'gram-2', '✓ Đúng! So hai bên dùng 比: 他比我大.')">A. 他比我大。</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'gram-2', '✗ Sai: 比较 không có đối tượng so sánh — so hai bên phải dùng 比: 他比我大.')">B. 他比较我大。</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 </div>
@@ -659,7 +659,7 @@ img, svg { max-width: 100%; }
 </div>
 <div class="card">
 <h2>🎧 Bài 8: Nghe hội thoại – Suy luận <span class="badge">Nghe hiểu HSK 2</span></h2>
-<div class="sub" style="margin-bottom:8px;">Nghe đoạn hội thoại giữa 小明 và 小红 (14 câu), rồi chọn đáp án đúng cho 4 câu hỏi bên dưới. Lời thoại đang ẩn — hãy nghe trước, chỉ hiện lời thoại khi nghe không rõ. Tình huống: 小明 và 小红 đi mua áo sơ mi xanh, nói chuyện về màu sắc và số lượng.</div>
+<div class="sub" style="margin-bottom:8px;">Nghe đoạn hội thoại giữa 小明 và 小红 (8 câu), rồi chọn đáp án đúng cho 4 câu hỏi bên dưới. Lời thoại đang ẩn — hãy nghe trước, chỉ hiện lời thoại khi nghe không rõ. Tình huống: 小明 và 小红 đi mua áo sơ mi xanh, nói chuyện về màu sắc và số lượng.</div>
 <div class="reading-box">
 <div class="reading-Controls dlg-controls-row">
 <span class="hint">Tốc độ:</span>
@@ -672,59 +672,53 @@ img, svg { max-width: 100%; }
 </div>
 <div id="dlg-voice-pickers" style="margin-top:8px;"><span class="hint">Đang kiểm tra giọng đọc trên thiết bị…</span></div>
 <div class="hint" id="dlg-voice-note" style="margin-top:4px;"></div>
-<div style="margin:8px 0;"><span class="hint">Nghe từng câu:</span> <button class="tts-btn" onclick="playDlgLine(0)">1</button> <button class="tts-btn" onclick="playDlgLine(1)">2</button> <button class="tts-btn" onclick="playDlgLine(2)">3</button> <button class="tts-btn" onclick="playDlgLine(3)">4</button> <button class="tts-btn" onclick="playDlgLine(4)">5</button> <button class="tts-btn" onclick="playDlgLine(5)">6</button> <button class="tts-btn" onclick="playDlgLine(6)">7</button> <button class="tts-btn" onclick="playDlgLine(7)">8</button> <button class="tts-btn" onclick="playDlgLine(8)">9</button> <button class="tts-btn" onclick="playDlgLine(9)">10</button> <button class="tts-btn" onclick="playDlgLine(10)">11</button> <button class="tts-btn" onclick="playDlgLine(11)">12</button> <button class="tts-btn" onclick="playDlgLine(12)">13</button> <button class="tts-btn" onclick="playDlgLine(13)">14</button></div>
+<div style="margin:8px 0;"><span class="hint">Nghe từng câu:</span> <button class="tts-btn" onclick="playDlgLine(0)">1</button> <button class="tts-btn" onclick="playDlgLine(1)">2</button> <button class="tts-btn" onclick="playDlgLine(2)">3</button> <button class="tts-btn" onclick="playDlgLine(3)">4</button> <button class="tts-btn" onclick="playDlgLine(4)">5</button> <button class="tts-btn" onclick="playDlgLine(5)">6</button> <button class="tts-btn" onclick="playDlgLine(6)">7</button> <button class="tts-btn" onclick="playDlgLine(7)">8</button></div>
 <div class="dlg-script" id="dlg-script" style="display:none">
-<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>好<rt>hǎo</rt></ruby>！<ruby>你<rt>Nǐ</rt></ruby><ruby>买<rt>mǎi</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>我<rt>Wǒ</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby>。</span><div class="dlg-vi">Chào bạn! Bạn có mua áo sơ mi không? Bạn thích không? Tôi rất thích.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>好<rt>hǎo</rt></ruby>！<ruby>我<rt>Wǒ</rt></ruby><ruby>买<rt>mǎi</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>呢<rt>ne</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>明<rt>Míng</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>再<rt>zài</rt></ruby><ruby>去<rt>qù</rt></ruby>。</span><div class="dlg-vi">Chào bạn! Tôi mua áo sơ mi. Còn bạn? Bạn cũng thích không? Ngày mai chúng ta lại đi.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>买<rt>mǎi</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>买<rt>mǎi</rt></ruby><ruby>什<rt>shén</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>我<rt>Wǒ</rt></ruby><ruby>明<rt>míng</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>去<rt>qù</rt></ruby>。</span><div class="dlg-vi">Tôi cũng mua áo sơ mi. Bạn mua áo sơ mi gì? Bạn đi không? Ngày mai tôi cũng đi.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>买<rt>mǎi</rt></ruby><ruby>蓝<rt>lán</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>蓝<rt>lán</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby><ruby>怎<rt>zěn</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>样<rt>yàng</rt></ruby>？<ruby>好<rt>Hǎo</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>去<rt>qù</rt></ruby>。</span><div class="dlg-vi">Tôi mua áo sơ mi xanh. Bạn thấy áo sơ mi xanh thế nào? Được không? Chúng ta cùng đi.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>蓝<rt>lán</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby><ruby>不<rt>bú</rt></ruby><ruby>错<rt>cuò</rt></ruby>，<ruby>蓝<rt>lán</rt></ruby><ruby>色<rt>sè</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>看<rt>kàn</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>明<rt>míng</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>唱<rt>chàng</rt></ruby><ruby>歌<rt>gē</rt></ruby>。</span><div class="dlg-vi">Tôi thấy áo sơ mi xanh đẹp, màu xanh dương rất đẹp. Ngày mai bạn đi không? Chúng ta cùng hát.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>蓝<rt>Lán</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>蓝<rt>lán</rt></ruby><ruby>色<rt>sè</rt></ruby><ruby>的<rt>de</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>买<rt>mǎi</rt></ruby><ruby>几<rt>jǐ</rt></ruby><ruby>件<rt>jiàn</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>怎<rt>zěn</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>样<rt>yàng</rt></ruby>？<ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>影<rt>yǐng</rt></ruby>。</span><div class="dlg-vi">Áo sơ mi xanh là màu xanh dương. Bạn mua mấy cái áo sơ mi? Bạn thấy thế nào? Chúng ta cùng đi xem phim.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>买<rt>mǎi</rt></ruby><ruby>两<rt>liǎng</rt></ruby><ruby>件<rt>jiàn</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>呢<rt>ne</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>我<rt>Wǒ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby>。</span><div class="dlg-vi">Tôi mua hai cái áo sơ mi. Còn bạn? Bạn thích không? Tôi thấy rất tốt.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>买<rt>mǎi</rt></ruby><ruby>两<rt>liǎng</rt></ruby><ruby>件<rt>jiàn</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>买<rt>mǎi</rt></ruby><ruby>蓝<rt>lán</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby><ruby>和<rt>hé</rt></ruby><ruby>红<rt>hóng</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby>。<ruby>衬<rt>Chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>合<rt>hé</rt></ruby><ruby>适<rt>shì</rt></ruby>。<ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>去<rt>qù</rt></ruby>。</span><div class="dlg-vi">Tôi mua hai cái áo sơ mi, tôi mua áo sơ mi xanh và áo sơ mi đỏ. Áo sơ mi rất vừa. Chúng ta cùng đi.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>红<rt>hóng</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby><ruby>怎<rt>zěn</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>样<rt>yàng</rt></ruby>？<ruby>你<rt>Nǐ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>我<rt>Wǒ</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby>。</span><div class="dlg-vi">Bạn thấy áo sơ mi đỏ thế nào? Bạn đi không? Tôi rất thích.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>红<rt>hóng</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>不<rt>bú</rt></ruby><ruby>错<rt>cuò</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>买<rt>mǎi</rt></ruby><ruby>黑<rt>hēi</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>好<rt>Hǎo</rt></ruby><ruby>吗<rt>ma</rt></ruby>？<ruby>明<rt>Míng</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>再<rt>zài</rt></ruby><ruby>去<rt>qù</rt></ruby>。</span><div class="dlg-vi">Tôi thấy áo sơ mi đỏ cũng đẹp. Bạn có mua áo sơ mi đen không? Được không? Ngày mai chúng ta lại đi.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>不<rt>bù</rt></ruby><ruby>买<rt>mǎi</rt></ruby><ruby>黑<rt>hēi</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>买<rt>mǎi</rt></ruby><ruby>蓝<rt>lán</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby>。<ruby>这<rt>Zhè</rt></ruby><ruby>件<rt>jiàn</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby>。<ruby>我<rt>Wǒ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby>。</span><div class="dlg-vi">Tôi không mua áo sơ mi đen, tôi mua áo sơ mi xanh. Chiếc áo sơ mi này rất tốt. Tôi thấy rất tốt.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>好<rt>Hǎo</rt></ruby>！<ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>买<rt>mǎi</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby>。<ruby>衬<rt>Chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>合<rt>hé</rt></ruby><ruby>适<rt>shì</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>怎<rt>zěn</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>样<rt>yàng</rt></ruby>？</span><div class="dlg-vi">Được! Chúng ta cùng mua áo sơ mi. Áo sơ mi rất vừa. Bạn thấy thế nào?</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>好<rt>Hǎo</rt></ruby>！<ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>买<rt>mǎi</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby>，<ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>穿<rt>chuān</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby>。<ruby>这<rt>Zhè</rt></ruby><ruby>件<rt>jiàn</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby>。<ruby>我<rt>Wǒ</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>高<rt>gāo</rt></ruby><ruby>兴<rt>xīng</rt></ruby>。</span><div class="dlg-vi">Được! Chúng ta cùng mua áo sơ mi, cùng mặc áo sơ mi. Chiếc áo sơ mi này rất tốt. Tôi rất vui.</div></div>
-<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>穿<rt>chuān</rt></ruby><ruby>蓝<rt>lán</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby><ruby>蓝<rt>lán</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby>。<ruby>衬<rt>Chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>合<rt>hé</rt></ruby><ruby>适<rt>shì</rt></ruby>。<ruby>我<rt>Wǒ</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby>。</span><div class="dlg-vi">Tôi mặc áo sơ mi xanh, tôi thích áo sơ mi xanh. Áo sơ mi rất vừa. Tôi rất thích.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>买<rt>mǎi</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby><ruby>吗<rt>ma</rt></ruby>？</span><div class="dlg-vi">Bạn mua áo sơ mi không?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>买<rt>mǎi</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby>。<ruby>我<rt>Wǒ</rt></ruby><ruby>想<rt>xiǎng</rt></ruby><ruby>买<rt>mǎi</rt></ruby><ruby>蓝<rt>lán</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby>。</span><div class="dlg-vi">Tôi mua áo sơ mi. Tôi muốn mua áo sơ mi xanh dương.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>你<rt>Nǐ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>蓝<rt>lán</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby><ruby>怎<rt>zěn</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>样<rt>yàng</rt></ruby>？</span><div class="dlg-vi">Bạn thấy áo sơ mi xanh dương thế nào?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>蓝<rt>lán</rt></ruby><ruby>色<rt>sè</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>啊<rt>a</rt></ruby>。</span><div class="dlg-vi">Tôi thấy màu xanh dương rất đẹp!</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>买<rt>mǎi</rt></ruby><ruby>两<rt>liǎng</rt></ruby><ruby>件<rt>jiàn</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby><ruby>红<rt>hóng</rt></ruby><ruby>的<rt>de</rt></ruby>，<ruby>也<rt>yě</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby><ruby>黑<rt>hēi</rt></ruby><ruby>的<rt>de</rt></ruby>。</span><div class="dlg-vi">Tôi mua hai chiếc, tôi thích màu đỏ, cũng thích màu đen.</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>红<rt>Hóng</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>不<rt>bú</rt></ruby><ruby>错<rt>cuò</rt></ruby>。<ruby>你<rt>Nǐ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>红<rt>hóng</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby><ruby>怎<rt>zěn</rt></ruby><ruby>么<rt>me</rt></ruby><ruby>样<rt>yàng</rt></ruby>？</span><div class="dlg-vi">Áo sơ mi đỏ cũng đẹp. Bạn thấy áo sơ mi đỏ thế nào?</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#2563eb">小明</span> <span class="dlg-zh hide-ruby"><ruby>我<rt>Wǒ</rt></ruby><ruby>觉<rt>jué</rt></ruby><ruby>得<rt>de</rt></ruby><ruby>红<rt>hóng</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby><ruby>也<rt>yě</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby><ruby>哇<rt>wa</rt></ruby>。</span><div class="dlg-vi">Tôi thấy áo sơ mi đỏ cũng rất tốt đấy!</div></div>
+<div class="dlg-line"><span class="dlg-sp" style="background:#db2777">小红</span> <span class="dlg-zh hide-ruby"><ruby>好<rt>Hǎo</rt></ruby>！<ruby>我<rt>Wǒ</rt></ruby><ruby>们<rt>men</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>起<rt>qǐ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>买<rt>mǎi</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby>。</span><div class="dlg-vi">Được! Chúng ta cùng đi mua áo sơ mi.</div></div>
 </div>
 <div class="hint" id="dlg-tip">💡 Mẹo: nghe 2–3 lần trước khi hiện lời thoại. Chọn giọng cho từng người ở trên — giọng nam cho người nam, giọng nữ cho người nữ, bấm 🔊 Nghe thử để nghe giọng trước khi chọn.</div>
 </div>
 <div class="q-item" id="dlg-1">
-<div><b>Câu 1.</b> 小红买什么衬衫？</div>
+<div><b>Câu 1.</b> 小红想买什么？</div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng: 我买蓝衬衫。')">A. 黑衬衫</button>
-<button class="mc-btn" onclick="checkMC(this, true, 'dlg-1', '✓ Chính xác! 我买蓝衬衫。')">B. 蓝衬衫</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng: 我买蓝衬衫。')">C. 没有衬衫</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng: 我买蓝衬衫。')">D. 红衬衫</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng：小红：我买衬衫。我想买蓝衬衫。')">A. 红衬衫</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'dlg-1', '✓ Chính xác！小红：我买衬衫。我想买蓝衬衫。')">B. 蓝衬衫</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng：小红：我买衬衫。我想买蓝衬衫。')">C. 不买衬衫</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-1', '✗ Chưa đúng：小红：我买衬衫。我想买蓝衬衫。')">D. 黑衬衫</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 <div class="q-item" id="dlg-2">
-<div><b>Câu 2.</b> 小明买什么衬衫？</div>
+<div><b>Câu 2.</b> 小红觉得蓝色怎么样？</div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng：小明：我买两件衬衫，我买蓝衬衫和红衬衫。')">A. 蓝电脑和红电脑</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng：小明：我买两件衬衫，我买蓝衬衫和红衬衫。')">B. 蓝手机和红手机</button>
-<button class="mc-btn" onclick="checkMC(this, true, 'dlg-2', '✓ Chính xác！小明：我买两件衬衫，我买蓝衬衫和红衬衫。')">C. 蓝衬衫和红衬衫</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng：小明：我买两件衬衫，我买蓝衬衫和红衬衫。')">D. 黑衬衫和红衬衫</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng：小红：我觉得蓝色很好看啊。')">A. 太大</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng：小红：我觉得蓝色很好看啊。')">B. 很贵</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-2', '✗ Chưa đúng：小红：我觉得蓝色很好看啊。')">C. 不好看</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'dlg-2', '✓ Chính xác！小红：我觉得蓝色很好看啊。')">D. 很好看</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 <div class="q-item" id="dlg-3">
-<div><b>Câu 3.</b> 谁买黑衬衫？</div>
+<div><b>Câu 3.</b> 小明买几件衬衫？</div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, true, 'dlg-3', '✓ Chính xác！小明：我不买黑衬衫，我买蓝衬衫。')">A. 没有人买黑衬衫</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng：小明：我不买黑衬衫，我买蓝衬衫。')">B. 老师买黑衬衫</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng：小明：我不买黑衬衫，我买蓝衬衫。')">C. 小明买黑衬衫</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng：小明：我不买黑衬衫，我买蓝衬衫。')">D. 小红买黑衬衫</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng：小明：我买两件，我喜欢红的，也喜欢黑的。')">A. 没有</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng：小明：我买两件，我喜欢红的，也喜欢黑的。')">B. 不买</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'dlg-3', '✓ Chính xác！小明：我买两件，我喜欢红的，也喜欢黑的。')">C. 两件</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-3', '✗ Chưa đúng：小明：我买两件，我喜欢红的，也喜欢黑的。')">D. 不知道</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 <div class="q-item" id="dlg-4">
-<div><b>Câu 4.</b> 他们觉得蓝衬衫怎么样？</div>
+<div><b>Câu 4.</b> 小明觉得红衬衫怎么样？</div>
 <div class="mc-options">
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng：小明：我觉得蓝衬衫不错。')">A. 他们觉得红衬衫不错</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng：小明：我觉得蓝衬衫不错。')">B. 他们觉得蓝衬衫不好</button>
-<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng：小明：我觉得蓝衬衫不错。')">C. 他们觉得黑衬衫不错</button>
-<button class="mc-btn" onclick="checkMC(this, true, 'dlg-4', '✓ Chính xác！小明：我觉得蓝衬衫不错。')">D. 他们觉得蓝衬衫不错</button>
+<button class="mc-btn" onclick="checkMC(this, true, 'dlg-4', '✓ Chính xác！小明：我觉得红衬衫也很好哇。')">A. 也很好</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng：小明：我觉得红衬衫也很好哇。')">B. 很贵</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng：小明：我觉得红衬衫也很好哇。')">C. 太小</button>
+<button class="mc-btn" onclick="checkMC(this, false, 'dlg-4', '✗ Chưa đúng：小明：我觉得红衬衫也很好哇。')">D. 不好</button>
 </div>
 <div class="feedback" style="margin-top:6px;"></div></div>
 </div>
@@ -768,11 +762,11 @@ img, svg { max-width: 100%; }
 <p><b>Bài 2 (Nghe):</b> Câu 1: C — 这是一件衬衫。 &nbsp;|&nbsp; Câu 2: A — 我喜欢蓝衬衫。</p>
 <p><b>Bài phụ (Pinyin):</b> Câu 1: B — jiàn &nbsp;|&nbsp; Câu 2: A — juéde</p>
 <p><b>Bài 3 (Ghép cặp):</b> 件 = jiàn · 觉得 = juéde · 蓝 = lán · 买 = mǎi · 色 = sè</p>
-<p><b>Bài 4 (Ngữ pháp):</b> 1. C — 比较 &nbsp;|&nbsp; 2. A — 衬衫比较贵。</p>
+<p><b>Bài 4 (Ngữ pháp):</b> 1. C — 比较 &nbsp;|&nbsp; 2. A — 他比我大。</p>
 <p><b>Bài 5 (Đoạn văn):</b> 件 → 觉得 → 蓝 → 买 → 色</p>
 <p><b>Bài 6 (Sắp xếp câu):</b><br>1. 我打了个电话问妈妈，她觉得这件蓝衬衫很好。<br>2. 我想买这件蓝衬衫，也想买这件黑衬衫，蓝衬衫很好。<br>3. 这个色很好，我喜欢这个色，也喜欢蓝色。<br>4. 这件蓝衬衫比较合适，我觉得大小也比较好。</p>
 <p><b>Bài 7 (Đọc hiểu):</b> 1. D — 很贵 &nbsp;|&nbsp; 2. B — 喜欢 &nbsp;|&nbsp; 3. C — 很好</p>
-<p><b>Bài 8 (Nghe hội thoại):</b> 1. B — 蓝衬衫 &nbsp; 2. C — 蓝衬衫和红衬衫 &nbsp; 3. A — 没有人买黑衬衫 &nbsp; 4. D — 他们觉得蓝衬衫不错</p>
+<p><b>Bài 8 (Nghe hội thoại):</b> 1. B — 蓝衬衫 &nbsp; 2. D — 很好看 &nbsp; 3. C — 两件 &nbsp; 4. A — 也很好</p>
 </details>
 </div>
 <div class="footer">Học tốt nhé anh! Làm xong anh chép phần Tổng kết gửi em nhé — câu nào sai em sẽ đưa vào danh sách “Cần ôn thêm”.</div>
@@ -857,7 +851,7 @@ var ITEM_INFO = {
   ],
   "gram-2": [
     "Ngữ pháp 2",
-    "A — 衬衫比较贵。"
+    "A — 他比我大。"
   ],
   "cloze-task": [
     "Đoạn văn (5 chỗ trống)",
@@ -892,20 +886,20 @@ var ITEM_INFO = {
     "C — 很好"
   ],
   "dlg-1": [
-    "Nghe hội thoại 1 (小红买什么衬衫？)",
+    "Nghe hội thoại 1 (小红想买什么？)",
     "蓝衬衫"
   ],
   "dlg-2": [
-    "Nghe hội thoại 2 (小明买什么衬衫？)",
-    "蓝衬衫和红衬衫"
+    "Nghe hội thoại 2 (小红觉得蓝色怎么样？)",
+    "很好看"
   ],
   "dlg-3": [
-    "Nghe hội thoại 3 (谁买黑衬衫？)",
-    "没有人买黑衬衫"
+    "Nghe hội thoại 3 (小明买几件衬衫？)",
+    "两件"
   ],
   "dlg-4": [
-    "Nghe hội thoại 4 (他们觉得蓝衬衫怎么样？)",
-    "他们觉得蓝衬衫不错"
+    "Nghe hội thoại 4 (小明觉得红衬衫怎么样？)",
+    "也很好"
   ],
   "py-1": [
     "Pinyin: 件",
@@ -2933,7 +2927,7 @@ restore();
 </script>
 <script>
 // ====== Flashcard ôn tập (mọi từ đã học các ngày trước; chiều thẻ ngẫu nhiên) ======
-var FLASH_DATA = [{"word": "可是", "pinyin": "kěshì", "hanviet": "khả thị", "meaning": "nhưng; tuy nhiên"}, {"word": "可以", "pinyin": "kěyǐ", "hanviet": "khả dĩ", "meaning": "có thể; được"}, {"word": "慢", "pinyin": "màn", "hanviet": "mạn", "meaning": "chậm"}, {"word": "没问题", "pinyin": "méiwèntí", "hanviet": "một vấn đề", "meaning": "không vấn đề gì; không sao"}, {"word": "手机", "pinyin": "shǒujī", "hanviet": "thủ cơ", "meaning": "điện thoại di động"}, {"word": "说", "pinyin": "shuō", "hanviet": "thuyết", "meaning": "nói"}, {"word": "写", "pinyin": "xiě", "hanviet": "tả", "meaning": "viết"}, {"word": "一下", "pinyin": "yíxià", "hanviet": "nhất hạ", "meaning": "một chút; một lát"}, {"word": "用", "pinyin": "yòng", "hanviet": "dụng", "meaning": "dùng; sử dụng"}, {"word": "找", "pinyin": "zhǎo", "hanviet": "trảo", "meaning": "tìm"}, {"word": "支", "pinyin": "zhī", "hanviet": "chi", "meaning": "cái; cây (lượng từ cho bút)"}, {"word": "不错", "pinyin": "búcuò", "hanviet": "bất thác", "meaning": "không tệ; khá tốt"}, {"word": "不太", "pinyin": "bútài", "hanviet": "bất thái", "meaning": "không lắm, không... lắm"}, {"word": "衬衫", "pinyin": "chènshān", "hanviet": "sấn sam", "meaning": "áo sơ mi"}, {"word": "穿", "pinyin": "chuān", "hanviet": "xuyên", "meaning": "mặc (quần áo, giày)"}, {"word": "大小", "pinyin": "dàxiǎo", "hanviet": "đại tiểu", "meaning": "kích cỡ; lớn nhỏ"}, {"word": "贵", "pinyin": "guì", "hanviet": "quý", "meaning": "đắt"}, {"word": "合适", "pinyin": "héshì", "hanviet": "hợp thích", "meaning": "vừa; hợp; thích hợp"}, {"word": "黑", "pinyin": "hēi", "hanviet": "hắc", "meaning": "đen"}, {"word": "红", "pinyin": "hóng", "hanviet": "hồng", "meaning": "đỏ"}];
+var FLASH_DATA = [{"word": "可是", "pinyin": "kěshì", "hanviet": "khả thị", "meaning": "nhưng; tuy nhiên", "exr": "<ruby>我<rt>Wǒ</rt></ruby><ruby>想<rt>xiǎng</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby>，<ruby>可<rt>kě</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>今<rt>jīn</rt></ruby><ruby>天<rt>tiān</rt></ruby><ruby>不<rt>bú</rt></ruby><ruby>去<rt>qù</rt></ruby>。", "exv": "Tôi muốn đi học, nhưng hôm nay không đi."}, {"word": "可以", "pinyin": "kěyǐ", "hanviet": "khả dĩ", "meaning": "có thể; được", "exr": "<ruby>我<rt>Wǒ</rt></ruby><ruby>可<rt>kě</rt></ruby><ruby>以<rt>yǐ</rt></ruby><ruby>去<rt>qù</rt></ruby><ruby>学<rt>xué</rt></ruby><ruby>校<rt>xiào</rt></ruby><ruby>吗<rt>ma</rt></ruby>？", "exv": "Tôi có thể đi học không?"}, {"word": "慢", "pinyin": "màn", "hanviet": "mạn", "meaning": "chậm", "exr": "<ruby>他<rt>Tā</rt></ruby><ruby>走<rt>zǒu</rt></ruby><ruby>路<rt>lù</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>慢<rt>màn</rt></ruby>。", "exv": "Anh ấy đi bộ rất chậm."}, {"word": "没问题", "pinyin": "méiwèntí", "hanviet": "một vấn đề", "meaning": "không vấn đề gì; không sao", "exr": "<ruby>没<rt>Méi</rt></ruby><ruby>问<rt>wèn</rt></ruby><ruby>题<rt>tí</rt></ruby>，<ruby>我<rt>wǒ</rt></ruby><ruby>可<rt>kě</rt></ruby><ruby>以<rt>yǐ</rt></ruby><ruby>去<rt>qù</rt></ruby>。", "exv": "Không vấn đề gì, tôi có thể đi."}, {"word": "手机", "pinyin": "shǒujī", "hanviet": "thủ cơ", "meaning": "điện thoại di động", "exr": "<ruby>这<rt>Zhè</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby>。", "exv": "Đây là điện thoại di động của tôi."}, {"word": "说", "pinyin": "shuō", "hanviet": "thuyết", "meaning": "nói", "exr": "<ruby>他<rt>Tā</rt></ruby><ruby>说<rt>shuō</rt></ruby><ruby>汉<rt>Hàn</rt></ruby><ruby>语<rt>yǔ</rt></ruby>。", "exv": "Anh ấy nói tiếng Trung."}, {"word": "写", "pinyin": "xiě", "hanviet": "tả", "meaning": "viết", "exr": "<ruby>我<rt>Wǒ</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>写<rt>xiě</rt></ruby>。", "exv": "Tôi đang viết."}, {"word": "一下", "pinyin": "yíxià", "hanviet": "nhất hạ", "meaning": "một chút; một lát", "exr": "<ruby>我<rt>Wǒ</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>一<rt>yí</rt></ruby><ruby>下<rt>xià</rt></ruby>。", "exv": "Tôi xem một chút."}, {"word": "用", "pinyin": "yòng", "hanviet": "dụng", "meaning": "dùng; sử dụng", "exr": "<ruby>我<rt>Wǒ</rt></ruby><ruby>用<rt>yòng</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby><ruby>打<rt>dǎ</rt></ruby><ruby>电<rt>diàn</rt></ruby><ruby>话<rt>huà</rt></ruby>。", "exv": "Tôi dùng điện thoại di động để gọi điện."}, {"word": "找", "pinyin": "zhǎo", "hanviet": "trảo", "meaning": "tìm", "exr": "<ruby>我<rt>Wǒ</rt></ruby><ruby>在<rt>zài</rt></ruby><ruby>找<rt>zhǎo</rt></ruby><ruby>我<rt>wǒ</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>笔<rt>bǐ</rt></ruby>。", "exv": "Tôi đang tìm bút của tôi."}, {"word": "支", "pinyin": "zhī", "hanviet": "chi", "meaning": "cái; cây (lượng từ cho bút)", "exr": "<ruby>我<rt>Wǒ</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>一<rt>yì</rt></ruby><ruby>支<rt>zhī</rt></ruby><ruby>笔<rt>bǐ</rt></ruby>。", "exv": "Tôi có một cây bút."}, {"word": "不错", "pinyin": "búcuò", "hanviet": "bất thác", "meaning": "không tệ; khá tốt", "exr": "<ruby>这<rt>Zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>手<rt>shǒu</rt></ruby><ruby>机<rt>jī</rt></ruby><ruby>不<rt>bú</rt></ruby><ruby>错<rt>cuò</rt></ruby>。", "exv": "Chiếc điện thoại này không tệ."}, {"word": "不太", "pinyin": "bútài", "hanviet": "bất thái", "meaning": "không lắm, không... lắm", "exr": "<ruby>这<rt>Zhè</rt></ruby><ruby>个<rt>ge</rt></ruby><ruby>不<rt>bú</rt></ruby><ruby>太<rt>tài</rt></ruby><ruby>贵<rt>guì</rt></ruby>。", "exv": "Cái này không đắt lắm."}, {"word": "衬衫", "pinyin": "chènshān", "hanviet": "sấn sam", "meaning": "áo sơ mi", "exr": "<ruby>这<rt>Zhè</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>贵<rt>guì</rt></ruby>。", "exv": "Chiếc áo sơ mi này rất đắt."}, {"word": "穿", "pinyin": "chuān", "hanviet": "xuyên", "meaning": "mặc (quần áo, giày)", "exr": "<ruby>我<rt>Wǒ</rt></ruby><ruby>穿<rt>chuān</rt></ruby><ruby>这<rt>zhè</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby>。", "exv": "Tôi mặc chiếc áo sơ mi này."}, {"word": "大小", "pinyin": "dàxiǎo", "hanviet": "đại tiểu", "meaning": "kích cỡ; lớn nhỏ", "exr": "<ruby>这<rt>Zhè</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>大<rt>dà</rt></ruby><ruby>小<rt>xiǎo</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>好<rt>hǎo</rt></ruby>。", "exv": "Kích cỡ của chiếc áo sơ mi này rất tốt."}, {"word": "贵", "pinyin": "guì", "hanviet": "quý", "meaning": "đắt", "exr": "<ruby>这<rt>Zhè</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby><ruby>贵<rt>guì</rt></ruby><ruby>吗<rt>ma</rt></ruby>？", "exv": "Chiếc áo sơ mi này đắt không?"}, {"word": "合适", "pinyin": "héshì", "hanviet": "hợp thích", "meaning": "vừa; hợp; thích hợp", "exr": "<ruby>这<rt>Zhè</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>合<rt>hé</rt></ruby><ruby>适<rt>shì</rt></ruby>。", "exv": "Chiếc áo sơ mi này rất vừa."}, {"word": "黑", "pinyin": "hēi", "hanviet": "hắc", "meaning": "đen", "exr": "<ruby>我<rt>Wǒ</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby><ruby>黑<rt>hēi</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby>。", "exv": "Tôi thích áo sơ mi đen."}, {"word": "红", "pinyin": "hóng", "hanviet": "hồng", "meaning": "đỏ", "exr": "<ruby>我<rt>Wǒ</rt></ruby><ruby>喜<rt>xǐ</rt></ruby><ruby>欢<rt>huan</rt></ruby><ruby>红<rt>hóng</rt></ruby><ruby>衬<rt>chèn</rt></ruby><ruby>衫<rt>shān</rt></ruby>。", "exv": "Tôi thích áo sơ mi đỏ."}];
 var flashDeck = [], flashIdx = 0;
 function flashShuffleDeck() {
   flashDeck = FLASH_DATA.map(function (w) { return { w: w, hanziFront: Math.random() < 0.5 }; });
@@ -2947,11 +2941,11 @@ function flashRender() {
   var cur = flashDeck[flashIdx], w = cur.w;
   var front = document.getElementById('flash-front'), back = document.getElementById('flash-back');
   if (cur.hanziFront) {
-    front.innerHTML = '<div class="flash-tag">Chữ Hán</div><div class="flash-hanzi">' + w.word + '</div><div class="flash-sub">Chạm giữa để lật · góc trái/phải để chuyển thẻ</div>';
-    back.innerHTML = '<div class="flash-tag">Nghĩa</div><div class="flash-meaning">' + w.meaning + '</div><div class="flash-sub">' + w.pinyin + ' · Hán Việt: ' + w.hanviet + '</div>';
+    front.innerHTML = '<div class="flash-hanzi">' + w.word + '</div>';
+    back.innerHTML = '<div class="flash-meaning">' + w.meaning + '</div><div class="flash-sub">' + w.pinyin + ' · Hán Việt: ' + w.hanviet + '</div>' + (w.exr ? '<div class="flash-ex"><span class="flash-ex-label">Ví dụ: </span>' + w.exr + '</div><div class="flash-ex-vi">' + w.exv + '</div>' : '');
   } else {
-    front.innerHTML = '<div class="flash-tag">Nghĩa tiếng Việt</div><div class="flash-meaning">' + w.meaning + '</div><div class="flash-sub">Chạm giữa để lật · góc trái/phải để chuyển thẻ</div>';
-    back.innerHTML = '<div class="flash-tag">Chữ Hán</div><div class="flash-hanzi">' + w.word + '</div><div class="flash-sub">' + w.pinyin + ' · Hán Việt: ' + w.hanviet + '</div>';
+    front.innerHTML = '<div class="flash-meaning">' + w.meaning + '</div>';
+    back.innerHTML = '<div class="flash-hanzi">' + w.word + '</div><div class="flash-sub">' + w.pinyin + ' · Hán Việt: ' + w.hanviet + '</div>' + (w.exr ? '<div class="flash-ex"><span class="flash-ex-label">Ví dụ: </span>' + w.exr + '</div><div class="flash-ex-vi">' + w.exv + '</div>' : '');
   }
   document.getElementById('flash-card').classList.remove('flipped');
   document.getElementById('flash-count').textContent = 'Thẻ ' + (flashIdx + 1) + ' / ' + flashDeck.length;
@@ -2976,7 +2970,7 @@ flashShuffleDeck(); flashRender();
 <script>
 // ====== Bài 8: Nghe hội thoại ======
 var DLG_SPEAKERS = [{"color": "#2563eb", "gender": "nam", "id": "ming", "name": "小明", "py": "Xiǎo Míng", "vi": "Minh"}, {"color": "#db2777", "gender": "nữ", "id": "hong", "name": "小红", "py": "Xiǎo Hóng", "vi": "Hồng"}];
-var DLG_LINES = [{"sp": "ming", "zh": "你好！你买衬衫吗？你喜欢吗？我很喜欢。"}, {"sp": "hong", "zh": "你好！我买衬衫。你呢？你也喜欢吗？明天我们再去。"}, {"sp": "ming", "zh": "我也买衬衫。你买什么衬衫？你去吗？我明天也去。"}, {"sp": "hong", "zh": "我买蓝衬衫。你觉得蓝衬衫怎么样？好吗？我们一起去。"}, {"sp": "ming", "zh": "我觉得蓝衬衫不错，蓝色很好看。你明天去吗？我们一起唱歌。"}, {"sp": "hong", "zh": "蓝衬衫是蓝色的。你买几件衬衫？你觉得怎么样？我们一起去看电影。"}, {"sp": "ming", "zh": "我买两件衬衫。你呢？你喜欢吗？我觉得很好。"}, {"sp": "hong", "zh": "我买两件衬衫，我买蓝衬衫和红衬衫。衬衫很合适。我们一起去。"}, {"sp": "ming", "zh": "你觉得红衬衫怎么样？你去吗？我很喜欢。"}, {"sp": "hong", "zh": "我觉得红衬衫也不错。你买黑衬衫吗？好吗？明天我们再去。"}, {"sp": "ming", "zh": "我不买黑衬衫，我买蓝衬衫。这件衬衫很好。我觉得很好。"}, {"sp": "hong", "zh": "好！我们一起买衬衫。衬衫很合适。你觉得怎么样？"}, {"sp": "ming", "zh": "好！我们一起买衬衫，一起穿衬衫。这件衬衫很好。我很高兴。"}, {"sp": "hong", "zh": "我穿蓝衬衫，我喜欢蓝衬衫。衬衫很合适。我很喜欢。"}];
+var DLG_LINES = [{"sp": "ming", "zh": "你买衬衫吗？"}, {"sp": "hong", "zh": "我买衬衫。我想买蓝衬衫。"}, {"sp": "ming", "zh": "你觉得蓝衬衫怎么样？"}, {"sp": "hong", "zh": "我觉得蓝色很好看啊。"}, {"sp": "ming", "zh": "我买两件，我喜欢红的，也喜欢黑的。"}, {"sp": "hong", "zh": "红衬衫也不错。你觉得红衬衫怎么样？"}, {"sp": "ming", "zh": "我觉得红衬衫也很好哇。"}, {"sp": "hong", "zh": "好！我们一起去买衬衫。"}];
 var dlgPlaying = false;
 var dlgPaused = false;
 var dlgRate = 0.88;
